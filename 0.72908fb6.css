@@ -324,7 +324,7 @@ footer.svelte-jl8vmr.svelte-jl8vmr {
   justify-content:space-between
 }
 .topnav-separator.svelte-jl8vmr.svelte-jl8vmr {
-  height:2px;
+  height:3px;
   background:radial-gradient(100% 40000% at 100% 100%,rgba(0,0,0,0) 0%,#FF6914 0%),var(--bg-color)
 }
 .topnav-options.svelte-jl8vmr.svelte-jl8vmr {
