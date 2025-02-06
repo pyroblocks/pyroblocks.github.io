@@ -1,1 +1,1 @@
-The code for this website is stolen from [RocketScience](https://rocketscience.fyi/).
+The base code for this website is taken from [RocketScience](https://rocketscience.fyi/).
