@@ -1,0 +1,49 @@
+.pagination-wrapper.svelte-6wsccd {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    border-radius: 10px;
+    background: #110E22;
+    padding: 16px
+}
+
+button.svelte-6wsccd {
+    padding: 20px;
+    border-radius: 6px
+}
+
+button.svelte-6wsccd:active {
+    transform: scale(.95)
+}
+
+.number.svelte-6wsccd {
+    background: #18142C
+}
+
+.prev.svelte-6wsccd {
+    background: #EB39491A;
+    color: var(--rs-red)
+}
+
+.prev.svelte-6wsccd,
+.next.svelte-6wsccd {
+    display: none
+}
+
+@media screen and (min-width: 1000px) {
+
+    .prev.svelte-6wsccd,
+    .next.svelte-6wsccd {
+        display: inline-block
+    }
+}
+
+button.svelte-6wsccd:not(.prev) {
+    text-shadow: 1px 1px 5px #00000080
+}
+
+.current.number.svelte-6wsccd {
+    background: var(--rs-blue);
+    transition: .2s
+}
