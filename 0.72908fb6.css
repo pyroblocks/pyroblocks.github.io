@@ -85,6 +85,20 @@ h6) {
   color:#fff;
   text-decoration:none
 }
+a:link
+{
+    color:#FFFFFF;
+}
+
+a:visited
+{
+    color:#FFFFFF;
+}
+
+a:hover 
+{
+    color:#FFFFFF;
+}
 h1,
 h2 {
   font-family:"SUSE",serif;
