@@ -77,15 +77,6 @@ h6) {
   text-decoration:none;
   color:#bca3f5
 }
-a :is(h1,
-h2,
-h3,
-h4,
-h5,
-h6) {
-  color:#fff;
-  text-decoration:none
-}
 a:link
 {
     color:#FFFFFF;
@@ -99,6 +90,15 @@ a:visited
 a:hover 
 {
     color:#FFFFFF;
+}
+a :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) {
+  color:#fff;
+  text-decoration:none
 }
 h1,
 h2 {
@@ -128,19 +128,42 @@ h6 {
   margin-top:14px
 }
 h1 {
-  font-size:36px
+  padding-top:5px;
+  font-size:32px;
 }
 h2 {
-  font-size:32px
+  font-size:28px
 }
 h3 {
-  font-size:26px
+  font-size:24px
 }
 h4 {
-  font-size:16px
+  font-size:14px
+}
+.social.svelte-jl8vmr.svelte-jl8vmr {
+  margin:auto;
+  padding:11px 6px;
+  display:inline-block;
+  vertical-align: middle;
+}
+@media screen and (min-width: 400px) {
+  h1 {
+    padding-top:0px;
+    font-size:36px;
+  }
+  h2 {
+    font-size:32px
+  }
+  h3 {
+    font-size:26px
+  }
+  h4 {
+    font-size:16px
+  }
 }
 @media screen and (min-width: 768px) {
   h1 {
+    padding-top:0px;
     font-size:48px
   }
   h2 {
@@ -151,6 +174,10 @@ h4 {
   }
   h4 {
     font-size:22px
+  }
+  .social.svelte-jl8vmr.svelte-jl8vmr {
+    transform: scale(1.2);
+    margin:6px
   }
 }
 input {
@@ -209,7 +236,7 @@ body {
 }
 .standard-box {
   background:var(--box-color);
-  border-radius:30px 30px 0 0;
+  border-radius:5px 5px 5px 5px;
   padding:var(--standard-padding);
   margin-bottom:30px
 }
@@ -353,10 +380,6 @@ nav.svelte-jl8vmr a.svelte-jl8vmr {
   color:#fff;
   text-decoration:none;
   margin:11px 12px;
-  display:inline-block
-}
-.social.svelte-jl8vmr.svelte-jl8vmr {
-  margin:11px 6px;
   display:inline-block
 }
 nav.svelte-jl8vmr a.svelte-jl8vmr:hover {
