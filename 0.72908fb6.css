@@ -64,7 +64,7 @@ h6 {
   overflow-wrap:break-word
 }
 a {
-  color:#31c4f5;
+  color:#F27D30;
   text-decoration:none
 }
 a:visited,
@@ -77,17 +77,17 @@ h6) {
   text-decoration:none;
   color:#bca3f5
 }
-a:link
+a.whitelink:link
 {
     color:#FFFFFF;
 }
 
-a:visited
+a.whitelink:visited
 {
     color:#FFFFFF;
 }
 
-a:hover 
+a.whitelink:hover
 {
     color:#FFFFFF;
 }
