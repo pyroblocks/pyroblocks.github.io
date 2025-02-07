@@ -38,7 +38,7 @@
 
 .article-img.svelte-4bjsid.svelte-4bjsid {
     clip-path: path("M152.806 8.58825C157.366 3.1447 164.102 0 171.203 0L577 0C590.255 0 601 10.7452 601 24V674.085C601 687.339 590.255 698.085 577 698.085H24C10.7452 698.085 0 687.339 0 674.085L0 199.724C0 194.088 1.98325 188.632 5.60223 184.312L152.806 8.58825Z");
-    width: 150%
+    width: 150%;
 }
 
 .authorname.svelte-4bjsid.svelte-4bjsid {
@@ -74,7 +74,7 @@
 }
 
 .article-img.svelte-1brwhpx.svelte-1brwhpx {
-    border-radius: 12px
+    border-radius: 12px;
 }
 
 .narrow-article.svelte-gj5y2p.svelte-gj5y2p {
