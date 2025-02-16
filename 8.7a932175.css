@@ -167,14 +167,14 @@ a.svelte-z9iu7d.svelte-z9iu7d {
     width: inherit;
     height: inherit;
     box-sizing: inherit;
-    background: url(../../../public/quickaccess/shape.svg);
+    background: url(./src/card_bg.png);
     padding: 15px;
     display: flex;
     align-items: flex-end;
     justify-content: safe;
     line-height: 1;
     text-overflow: ellipsis;
-    font-family: Outfit;
+    font-family: "SUSE";
     font-weight: 400;
     font-size: 17px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, .4)
