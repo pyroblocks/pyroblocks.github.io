@@ -182,16 +182,22 @@
     if (window.innerWidth < 1001) {
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     //console.log(rboxes)
-    rboxes.forEach((element,index) => element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px");
+    rboxes.forEach((element,index) => {
+
+    element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px"
+    });
+
 
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px");
-
+    
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
+    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    //console.log(fullbox)
     ticklines.forEach((element,index) => {
-      if((tickline_x[index]*(window.innerWidth/888)-(tickline_x[index]*(112/888))) <=50) {
+      if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
         element.width.baseVal.value = 0
       }
       else {
@@ -202,12 +208,13 @@
           element.width.baseVal.value = 1
         }
       }
-    element.x.baseVal.value = (tickline_x[index]*(window.innerWidth/888)-(tickline_x[index]*(112/888)))
+    //console.log(fullbox*tickline_x[index]+50)
+    element.x.baseVal.value = (fullbox*tickline_x[index]+50)
   });
 
     var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
     //console.log(tickmark)
-    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]*(window.innerWidth/888)-(tickmark_x[index]*(112/888))));
+    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50));
 
     var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
     rtexts.forEach((element,index) => {
@@ -248,12 +255,12 @@
 
   var tickline_x_get = Array.from(document.getElementsByClassName("tickline"));
   var tickline_x = []
-  tickline_x_get.forEach((element) => tickline_x.push(element.x.baseVal.value));
+  tickline_x_get.forEach((element) => tickline_x.push((element.x.baseVal.value-50)/rbox_widths[0]));
   //console.log(tickline_x)
 
   var tickmark_x_get = Array.from(document.getElementsByClassName("tickmark"));
   var tickmark_x = []
-  tickmark_x_get.forEach((element) => tickmark_x.push(element.x.baseVal[0].value));
+  tickmark_x_get.forEach((element) => tickmark_x.push((element.x.baseVal[0].value-50)/rbox_widths[0]));
   //console.log(tickmark_x)
 
   var rtext_x_get = Array.from(document.getElementsByClassName("ratingtext"));
@@ -264,7 +271,7 @@
   var rteam_x_get = Array.from(document.getElementsByClassName("ratingteam"));
   var rteam_x = []
   rteam_x_get.forEach((element) => rteam_x.push(element.x.baseVal.value));
-  console.log(rteam_x)
+  //console.log(rteam_x)
 
 
 window.onresize = function(event){
@@ -279,8 +286,10 @@ window.onresize = function(event){
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
+    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    //console.log(fullbox)
     ticklines.forEach((element,index) => {
-      if((tickline_x[index]*(window.innerWidth/888)-(tickline_x[index]*(112/888))) <=50) {
+      if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
         element.width.baseVal.value = 0
       }
       else {
@@ -291,12 +300,13 @@ window.onresize = function(event){
           element.width.baseVal.value = 1
         }
       }
-    element.x.baseVal.value = (tickline_x[index]*(window.innerWidth/888)-(tickline_x[index]*(112/888)))
+    //console.log(fullbox*tickline_x[index]+50)
+    element.x.baseVal.value = (fullbox*tickline_x[index]+50)
   });
 
     var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
     //console.log(tickmark)
-    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]*(window.innerWidth/888)-(tickmark_x[index]*(112/888))));
+    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50));
 
     var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
     rtexts.forEach((element,index) => {
@@ -332,14 +342,16 @@ window.onresize = function(event){
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     rboxes.forEach((element,index) => element.style.width = (rbox_widths[index])+ "px");
 
+    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     bline.forEach((element,index) => element.style.width = (bottomline[index])+ "px");
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
-    ticklines.forEach((element,index) => element.x.baseVal.value = (tickline_x[index]));
+    ticklines.forEach((element,index) => element.x.baseVal.value = (tickline_x[index]*fullbox+50));
 
     var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
-    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]));
+    tickmarks.forEach((element,index) => element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50));
 
     var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
     rtexts.forEach((element,index) => {
