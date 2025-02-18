@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/src/favicon.png">
+    <meta property="og:title" content="RAE's Birmingham Open #3 and Major Odds (Week One)">
+    <meta property="og:description" content="Who does the rating system predict to make it to Birmingham?">
+    <meta name="description" content="Who does the rating system predict to make it to Birmingham?">
+    <link rel="canonical" href="https://pyroblocks.github.io/articles/rae-birmingham-open-3-odds-p1">
+    <meta property="og:url" content="https://pyroblocks.github.io/articles/rae-birmingham-open-3-odds-p1">
+    <meta name="theme-color" content="#F27D30">
+    <meta name="news_keywords" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Pyroblocks">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pyroblocks.github.io/src/birmingham-o3-p1.png">
+    <meta property="article:published_time" content="2025-02-17T-12:00:00-12:00">
+    <meta property="article:publisher" content="https://pyroblocks.github.io">
+    <meta property="article:author" content="https://twitter.com/Pyroblockx">
+    <meta name="viewport" content="width=device-width">
+    <meta name="application-name" content="Pyroblocks">
+    <meta name="author" content="Pyroblocks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://pyroblocks.github.io/src/birmingham-o3-p1.png">
+    <link href="/0.72908fb6.css" rel="stylesheet">
+    <link href="/8.7a932175.css" rel="stylesheet">
+    <link href="/Pagination.a69edf7a.css" rel="stylesheet">
+    <link href="/dataframe.602cb131.css" rel="stylesheet">
+    <title>RAE's Birmingham Open #3 and Major Odds (Week One)</title>
+</head>
+
+<body data-sveltekit-preload-data="hover" cz-shortcut-listen="true">
+    <div style="display: contents">
+        <div class="centerpiece svelte-jl8vmr">
+            <header class="topnav svelte-jl8vmr" text-align="center">
+                <div class="topnav-upper svelte-jl8vmr">
+                    <header>
+                        <h1><a href="https://pyroblocks.github.io" style="vertical-align: middle"
+                                class="whitelink">Pyroblocks</a></h1>
+                    </header>
+                    <div class="topnav-options svelte-jl8vmr">
+                        <div class="notext"><a class="social notext svelte-jl8vmr"
+                                href="https://twitter.com/Pyroblockx"><img height="45" width="54.68px"
+                                    src="/src/twitter.svg" alt="Twitter"></a>
+                            <a class="social notext svelte-jl8vmr" href="https://www.youtube.com/@Pyroblocks"><img
+                                    height="45" width="63.86px" src="/src/yt.svg" alt="YouTube"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topnav-separator svelte-jl8vmr"></div>
+                <div class="topnav-highlight"></div>
+            </header>
+            </header>
+            <main>
+                <article>
+                    <div class="standard-box" style="margin-top:20px">
+                        <div class="article-img corner-top svelte-1ko9v02"><img src="/src/birmingham-o3-p1.png"
+                                width="1000" height=auto alt="RAE's Birmingham Open #3 and Major Odds (Week One)"
+                                style="margin-top:20px;border-radius:5px 5px 5px 5px;"></div>
+                        <hr style="margin-bottom:20px; margin-top:20px">
+                        <h1>RAE's Birmingham Open #3 and Major Odds (Week One)</h1>
+                        <span slot="articletop">
+                            <p>Who does the rating system predict to make it to Birmingham?</p>
+                        </span>
+                        <p style="display:flex; justify-content: space-between; margin-bottom:30px"><span><img
+                                    src="/src/calendar-white.svg" width="24" height="24" class="notext"
+                                    style="vertical-align:middle;" alt="Published:"> <span
+                                    style="font-size:18px;vertical-align:middle; text-align: left; "><time
+                                        datetime="2025-02-07T00:00:00.000Z">February 17, 2024</time></span></span> </p>
+                        <p class="color-article">The race for the RLCS 2025 Birmingham Major is heating up. Europe,
+                            South America, and Asia-Pacifc will be sending a collective seven representatives to
+                            England, of which we know two: <eu>Karmine Corp</eu> and <sam>FURIA Esports</sam>. Here's
+                            who else my model predicts to qualify.</p>
+                        <h3>What is RAE?</h3>
+                        <p>Alright, I probably owe you an explanation of what exactly RAE is.</p>
+                        <p>RAE, or Region-Adjusted Elo, is exactly what it sounds like: Each team is given an Elo (or
+                            skill rating), which is adjusted based on their region. Elo specifically is based off the
+                            assumption that a team's skill level in any given match is normally distributed. If you want
+                            to learn more about the math behind it, I'd recommend watching <a
+                                href="https://www.youtube.com/watch?v=inXUp5j107I">this video</a> by j3m.</p>
+                        <p>I've been updating RAE Ratings for the RLCS in some form since the 2021-22 season, which
+                            <i>technically</i> makes me the first person to keep track of team ratings in RLCS, to my
+                            knowledge – RocketScience first created his system prior to the 21-22 Spring Major.
+                            The very first system I used went off of team placements instead of match results, which
+                            made it a pretty poor predictor of results. I switched to a proper rating system for the
+                            2022-23 season, and got to a working version I was happy with in 2024, when I finally began
+                            tracking region ratings formulaically instead of estimating them by hand.
+                        </p>
+                        <p>RAE has always been maintained on spreadsheets, and as of now that's where you can find all
+                            of its detailed rankings and predictions – though I did finally get a working version of the
+                            <a href="https://pyroblocks.github.io/projects/rae-rankings">rankings list</a> up a few days
+                            ago, which included me learning how to use JavaScript for the first time. I'll work on
+                            getting more functionality onto this site soon enough. Maybe it'll even become automated if
+                            I can re-learn how to use the Google Sheets API.
+                        </p>
+                        <p>Anyways, getting back on topic, RAE ratings are relative, meaning that how likely a team is
+                            to win a series against any other team is determined by the difference in their two ratings.
+                            What rating differences correspond to what win probabilities is roughly as follows:</p>
+                        <ul class="mo">
+                            <li>50 rating difference: ~57% win in a Bo5, ~58% in a Bo7</li>
+                            <li>100: ~64%, ~66%</li>
+                            <li>200: ~76%, ~79%</li>
+                            <li>300: ~84%, ~89%</li>
+                            <li>400: ~91%, ~94%</li>
+                        </ul>
+                        <p>These probabilities may seem fairly small, but they add up over the course of a tournament:
+                            For instance, Karmine Corp is only about ~150 rating clear of the rest of the field in EU,
+                            but (spoilers) win a majority of all simulations for the third Birmingham Open.</p>
+                        <p>For each respective region, I run 50,000 simulations of its event. This number is a little low as far as simulating tournament odds goes, but does the job within ~2% of the mathematical probabilities for each outcome. Why don't I use more simulations? Because my Python code is inefficient, bloated, and built from a version I made three years ago when I was even worse at programming.</p>
+                        <p>Just a few more things before I get to the actual predictions:</p>
+                        <p>I am currently testing an alternative region rating system. I'll weigh its performance
+                            against the current model's for the Birmingham Major and proceed from there.</p>
+                        <p>RAE uses Elo, not Glicko. Glicko is a version of Elo that adjusts for uncertainty for teams with fewer games played (in mathematical terms, adjusts the standard deviation of the normal distribution of skill for each team rather than just the mean). <a href="https://rocketscience.fyi/esports">RocketScience's model</a> used Glicko.</p>
+                        <p>Don't expect anything much on here for a while. The <a
+                                href="https://docs.google.com/spreadsheets/d/1YpM1AbvYpJArVzom3J1xWWIJq2MU7vyaBGvzoepwAiE/edit?usp=sharing">spreadsheet</a>
+                            will always have the most up-to-date info available, though, and I encourage keeping an eye
+                            on it.</p>
+                        <p>All series scores and results are entered <b>by hand</b>, including the updating of the
+                            rankings page on this website. If results take a while to be processed, that's why. It's
+                            also the reason why these ratings are limited to RLCS <i>only</i>. Maybe I'll consider
+                            automating it over the offseason if octane.gg comes back.</p>
+                        <p>Alright. Without further ado, let's get into which teams the RAE model predicts are headed to
+                            Birmingham.</p>
+                    </div>
+                    <div class="alt-box corner-top">
+                        <h2>Europe</h2>
+                        <div><svg overflow="visible" width="950" height="1080" style="margin-top: 10px;"
+                                class='bottomline rankings-bg'>
+                                <rect x="50" width="1" height="1055" fill="#EEEEEE19" rx="1" class="tickline"></rect>
+                                <rect x="50" y="1055" width="764.5749999999999" height="1" fill="#EEEEEE19" rx="1"
+                                    class="bottomline">
+                                </rect>
+                                <rect x="111.13186927855838" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="184.41010746137496" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="184.41010746137496" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1300</text><text text-anchor="middle" x="184.41010746137496" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1300</text>
+                                <rect x="257.6883456441915" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="330.9665838270081" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="404.24482200982465" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="477.5230601926412" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="550.8012983754577" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="550.8012983754577" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1775</text><text text-anchor="middle" x="550.8012983754577" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1775</text>
+                                <rect x="624.0795365582743" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="697.3577747410909" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+
+                                <text text-anchor='end' x='37' y='40' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>1</text>
+                                <rect x='50' width='899.5' height='50' y='15' rx='5' fill='#131D2EE0' class='ratingbox'>
+                                </rect>
+                                <rect x='50' width='597.807727969852' height='50' y='15' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1914</title>
+                                </rect>
+                                <text text-anchor='end' x='637.807727969852' y='40' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1914</text>
+                                <svg x='660.807727969852' y='15' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Karmine Corp.png'>
+                                        <desc>Karmine Corp Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600' font-size='18px'>Karmine
+                                            Corp</text><text x='45' y='43.5' dominant-baseline='ideographic'
+                                            font-weight='300' font-size='12px'>Atow., dralii, Vatira</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='105' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>2</text>
+                                <rect x='50' width='899.5' height='50' y='80' rx='5' fill='#131D2EE0' class='ratingbox'>
+                                </rect>
+                                <rect x='50' width='510.571730133166' height='50' y='80' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1789</title>
+                                </rect>
+                                <text text-anchor='end' x='550.571730133166' y='105' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1789</text>
+                                <svg x='573.571730133166' y='80' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Team Vitality.png'>
+                                        <desc>Team Vitality Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600' font-size='18px'>Team
+                                            Vitality</text><text x='45' y='43.5' dominant-baseline='ideographic'
+                                            font-weight='300' font-size='12px'>ExoTiiK, M0nkey M00n, zen</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='170' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>3</text>
+                                <rect x='50' width='899.5' height='50' y='145' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='465.906899240783' height='50' y='145' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1725</title>
+                                </rect>
+                                <text text-anchor='end' x='505.906899240783' y='170' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1725</text>
+                                <svg x='528.906899240783' y='145' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35'
+                                        xlink:href='/src/logos/Ninjas in Pyjamas.png'>
+                                        <desc>Ninjas in Pyjamas Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600' font-size='18px'>Ninjas in
+                                            Pyjamas</text><text x='45' y='43.5' dominant-baseline='ideographic'
+                                            font-weight='300' font-size='12px'>itachi, nass, Oski</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='235' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>4</text>
+                                <rect x='50' width='899.5' height='50' y='210' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='432.408276071495' height='50' y='210' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1677</title>
+                                </rect>
+                                <text text-anchor='end' x='472.408276071495' y='235' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1677</text>
+                                <svg x='495.408276071495' y='210' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35'
+                                        xlink:href='/src/logos/Gentle Mates Alpine.png'>
+                                        <desc>Gentle Mates Alpine Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600' font-size='18px'>Gentle Mates
+                                            Alpine</text><text x='45' y='43.5' dominant-baseline='ideographic'
+                                            font-weight='300' font-size='12px'>juicy, Radosin, Seikoo</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='300' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>5</text>
+                                <rect x='50' width='899.5' height='50' y='275' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='430.314612123414' height='50' y='275' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1674</title>
+                                </rect>
+                                <text text-anchor='end' x='470.314612123414' y='300' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1674</text>
+                                <svg x='493.314612123414' y='275' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Geekay Esports.png'>
+                                        <desc>Geekay Esports Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600' font-size='18px'>Geekay
+                                            Esports</text><text x='45' y='43.5' dominant-baseline='ideographic'
+                                            font-weight='300' font-size='12px'>Archie, Joyo, oaly.</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='365' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>6</text>
+                                <rect x='50' width='899.5' height='50' y='340' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='403.096980798368' height='50' y='340' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1635</title>
+                                </rect>
+                                <text text-anchor='end' x='443.096980798368' y='365' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1635</text>
+                                <svg x='466.096980798368' y='340' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Dignitas.png'>
+                                        <desc>Dignitas Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Dignitas</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300'
+                                            font-size='12px'>ApparentlyJack, Joreuz, stizzy</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='430' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>7</text>
+                                <rect x='50' width='899.5' height='50' y='405' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='391.232885092579' height='50' y='405' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1618</title>
+                                </rect>
+                                <text text-anchor='end' x='431.232885092579' y='430' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1618</text>
+                                <svg x='454.232885092579' y='405' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/100.png'>
+                                        <desc>100% Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>100%</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>accro,
+                                            LuiisP, rehzzy</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='495' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>8</text>
+                                <rect x='50' width='899.5' height='50' y='470' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='344.474390252115' height='50' y='470' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1551</title>
+                                </rect>
+                                <text text-anchor='end' x='384.474390252115' y='495' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1551</text>
+                                <svg x='407.474390252115' y='470' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Startpoint.png'>
+                                        <desc>Startpoint Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Startpoint</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>AcroniK.,
+                                            Mittaen, yujin</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='560' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>9</text>
+                                <rect x='50' width='899.5' height='50' y='535' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='306.090551203973' height='50' y='535' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1496</title>
+                                </rect>
+                                <text text-anchor='end' x='346.090551203973' y='560' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1496</text>
+                                <svg x='369.090551203973' y='535' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Synergy.png'>
+                                        <desc>Synergy Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Synergy</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>ajg,
+                                            DORITO, TehQoz</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='625' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>10</text>
+                                <rect x='50' width='899.5' height='50' y='600' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='301.205335325119' height='50' y='600' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1489</title>
+                                </rect>
+                                <text text-anchor='end' x='341.205335325119' y='625' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1489</text>
+                                <svg x='364.205335325119' y='600' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Redemption.png'>
+                                        <desc>Redemption Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Redemption</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>Kash,
+                                            Smokez, Toxiic</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='690' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>11</text>
+                                <rect x='50' width='899.5' height='50' y='665' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='288.643351636636' height='50' y='665' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1471</title>
+                                </rect>
+                                <text text-anchor='end' x='328.643351636636' y='690' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1471</text>
+                                <svg x='351.643351636636' y='665' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/CALIENTE.png'>
+                                        <desc>CALIENTE Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>CALIENTE</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>growlii,
+                                            Kaydop, saizen</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='755' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>12</text>
+                                <rect x='50' width='899.5' height='50' y='730' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='283.060247775088' height='50' y='730' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1463</title>
+                                </rect>
+                                <text text-anchor='end' x='323.060247775088' y='755' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1463</text>
+                                <svg x='346.060247775088' y='730' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/F4WD.png'>
+                                        <desc>F4WD Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>F4WD</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>Compact,
+                                            ejby, Mikeboy</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='820' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>13</text>
+                                <rect x='50' width='899.5' height='50' y='795' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='274.685591982766' height='50' y='795' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1451</title>
+                                </rect>
+                                <text text-anchor='end' x='314.685591982766' y='820' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1451</text>
+                                <svg x='337.685591982766' y='795' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Ascend.png'>
+                                        <desc>Ascend Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Ascend</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>GiuK,
+                                            Mat., Nico</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='885' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>14</text>
+                                <rect x='50' width='899.5' height='50' y='860' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='264.915160225057' height='50' y='860' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1437</title>
+                                </rect>
+                                <text text-anchor='end' x='304.915160225057' y='885' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1437</text>
+                                <svg x='327.915160225057' y='860' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/RRG.png'>
+                                        <desc>RRG Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>RRG</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>Gawfs,
+                                            Rizex45, Rysfox.</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='950' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>15</text>
+                                <rect x='50' width='899.5' height='50' y='925' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='252.353176536574' height='50' y='925' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1419</title>
+                                </rect>
+                                <text text-anchor='end' x='292.353176536574' y='950' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1419</text>
+                                <svg x='315.353176536574' y='925' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/JJROX.png'>
+                                        <desc>JJROX Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>JJROX</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300'
+                                            font-size='12px'>MaRc_By_8., Rxii, Stake</text></g>
+                                </svg>
+                                <text text-anchor='end' x='37' y='1015' dominant-baseline='central' fill='#ffffff'
+                                    font-family='Inter' font-weight='700' font-size='28' class='num'>16</text>
+                                <rect x='50' width='899.5' height='50' y='990' rx='5' fill='#131D2EE0'
+                                    class='ratingbox'></rect>
+                                <rect x='50' width='199.313689851869' height='50' y='990' rx='5' fill='#3078F4'
+                                    class='ratingbox colored'>
+                                    <title>Rating: 1343</title>
+                                </rect>
+                                <text text-anchor='end' x='239.313689851869' y='1015' dominant-baseline='central'
+                                    fill='#00000050' font-family='Inter' font-weight='800' font-size='20'
+                                    style='user-select:none' class='ratingtext'>1343</text>
+                                <svg x='262.313689851869' y='990' class='ratingteam'>
+                                    <image y='7.5' width='35' height='35' xlink:href='/src/logos/Sick.png'>
+                                        <desc>Sick! Logo</desc>
+                                    </image>
+                                    <g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5'
+                                            dominant-baseline='hanging' font-weight='600'
+                                            font-size='18px'>Sick!</text><text x='45' y='43.5'
+                                            dominant-baseline='ideographic' font-weight='300' font-size='12px'>beasty,
+                                            JWeyts, uncle bill</text></g>
+                                </svg>
+                            </svg>
+                            <p class="color-article">Both in rating and on the field, <eu>Karmine</eu> is well ahead of
+                                both Europe and the rest of the world, so it's no surprise that they check in at 1st,
+                                with <eu>Vitality</eu> in a distant 2nd and <eu>Ninjas</eu> ahead of the rest of the
+                                field in 3rd.</p>
+                            <p>Let's go over some of the more controversial picks.</p>
+                            <h3>Why are Gentle Mates and Geekay so high?</h3>
+                            <p>The reason for these two teams' persistence in the top six boils down to the pre-season
+                                initial ratings and their results on the field.</p>
+                            <p class="color-article">Pre-season ratings are based on the ratings of each of the players'
+                                teams the previous season (I don't have individual player ratings – I don't plan to
+                                create them for the time beingm either). Due to this, <eu>Gentle Mates</eu>, comprised
+                                of ⅔ of last season's roster (who finished at EU3 in rating) and one ex-Vitality player
+                                (EU4), started as EU's third best team according to RAE. Since then, they've been on a
+                                steady decline, dropping from a rating of 1744 before the season started to 1677.</p>
+                            <p class="color-article">The reason for the <eu>Mates</eu> only falling in RAE by ~70 points
+                                is because while they've had some bad results, they haven't completely bottomed out.
+                                They only lost to <eu>Karmine</eu> and <eu>Ninjas</eu> in Open #1, and while their loss
+                                to <eu>Ascend</eu> in Open #2 was poor, they mostly balanced it out by beating a strong
+                                <eu>100%</eu> roster, though their 0-3 defeat to the Blue Wall still resulted in a
+                                sizeable drop.</p>
+                            <p class="color-article">As for <eu>Geekay</eu>, they started at a rating of 1692, which
+                                dropped after Open #1 and held steady in Open #2. The teams they lost to are <eu>Gentle
+                                    Mates</eu>, <eu>Ninjas</eu>, and <eu>100%</eu>, none of whom are pushovers, while
+                                taking wins over decent rosters like <eu>Startpoint</eu>, <eu>Save the game</eu>, and
+                                <eu>Synergy</eu>. At least from their results, <eu>Geekay</eu> is still towards the top
+                                in Europe, even if they struggle against those above them.</p>
+                            <p class="color-article">The real question you should be asking is why <eu>Dignitas</eu> is
+                                as low as they are, which is mostly because they had a rough Open #1 and started at
+                                around 1580. That's what happens when your group stage runs are easier than they should
+                                be: Your rating will lag behind where you feel it should be. If they can keep up their
+                                Open #2 form, they'll continue to rise.</p>
+                            <h3>How are Synergy and Redemption both top 10?</h3>
+                            <p>Same story, different chapter.</p>
+                            <p class="color-article">
+                                <eu>Synergy</eu>'s first regional, while underwhelming, wasn't a disaster. Missing the
+                                second one knocked them by 50 points, though. It just comes down to the roster's talent
+                                buoying them to the placement, though to be fair, it's a bit of a scrap once you get
+                                below the top 8.
+                            </p>
+                            <p class="color-article">
+                                <eu>Redemption</eu>, on the other hand, has collapsed in the first two opens, going 0-2
+                                both times. Open #1 was especially rough, as losses to <eu>RRG</eu> and <eu>Ascend</eu>
+                                knocked them down a peg. The second time around was better, but taking two 2-3 losses to
+                                <eu>Startpoint</eu> and <eu>JJROX</eu> killed their chances of earning any rating back.
+                                Neither of these teams have performed up to par, but in terms of talent, they're still
+                                main event-caliber. We'll see if they can reach their potential.
+                            </p>
+                            <h3>RAE Odds for EU Open #3</h3>
+                            <div class="standard-box corner-top">
+                                <div class="sticky-scroll svelte-l969s8">
+                                    <table class="svelte-l969s8">
+                                        <thead>
+                                            <tr>
+                                                <th class="firstcol svelte-l969s8" style="cursor: pointer;">Name </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Major </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 1 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 2 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 4 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 6 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 8 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 12 </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Karmine Corp.png' alt=''>&nbsp; Karmine Corp</td>
+                                                <td class=' svelte-l969s8'>&nbsp;✓</td>
+                                                <td class=' svelte-l969s8'>&nbsp;59.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;74.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;89.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;93.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;95.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;99.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Team Vitality.png' alt=''>&nbsp; Team Vitality</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;16.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;34.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;58.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;70.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;78.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;96.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Dignitas.png' alt=''>&nbsp; Dignitas</td>
+                                                <td class=' svelte-l969s8'>&nbsp;86.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;40.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;65.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;80.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;93.7%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Ninjas in Pyjamas.png' alt=''>&nbsp; Ninjas in Pyjamas</td>
+                                                <td class=' svelte-l969s8'>&nbsp;75.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;9.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;28.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;56.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;67.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;72.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;95.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/100.png' alt=''>&nbsp; 100%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;28.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;10.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;31.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;54.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;74.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;89.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Gentle Mates Alpine.png' alt=''>&nbsp; Gentle Mates Alpine</td>
+                                                <td class=' svelte-l969s8'>&nbsp;8.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;4.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;17.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;43.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;57.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;63.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;93.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Geekay Esports.png' alt=''>&nbsp; Geekay Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;10.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;28.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;42.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;56.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;90.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Startpoint.png' alt=''>&nbsp; Startpoint</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;4.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;16.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;38.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;61.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;82.4%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/CALIENTE.png' alt=''>&nbsp; CALIENTE</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;24.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;44.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;78.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Redemption.png' alt=''>&nbsp; Redemption</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;6.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;19.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;40.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;65.6%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Ascend.png' alt=''>&nbsp; Ascend</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;13.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;50.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Synergy.png' alt=''>&nbsp; Synergy</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;5.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;12.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;18.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;60.7%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/RRG.png' alt=''>&nbsp; RRG</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;30.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;61.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/JJROX.png' alt=''>&nbsp; JJROX</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;31.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;66.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/F4WD.png' alt=''>&nbsp; F4WD</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;5.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;17.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;37.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;63.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Sick.png' alt=''>&nbsp; Sick!</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.1%</td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="color-article"><eu>Karmine</eu> has already booked their spot at the major, and <eu>Vitality</eu> is a near-lock to join them; no surprises there.</p>
+                            <p class="color-article">Thanks in part to their favorable bracket, <eu>Dignitas</eu> checks in with nearly a 90% chance of qualifying to Birmingham, and should be through as long as they can avoid any slip-ups before top 8.</p>
+                            <p class="color-article"><eu>Ninjas</eu> and <eu>100%</eu> are battling for the final spot (assuming <eu>Dignitas</eu> holds steady), with <eu>NiP's</eu> quality and two-point lead giving them the leg up.
+                                The only real advantage <eu>100%</eu> has is that their bracket is <i>much</i> softer: the Englishmen have winnable matches versus <eu>Redemption</eu> and likely <eu>Startpoint</eu>, while the <eu>Ninjas</eu> could be looking at back-to-back matches versus <eu>Gentle Mates</eu> and <eu>Geekay</eu> before they even get to top 8.</p>
+                            <p class="color-article">Speaking of the two underperformers, <eu>Mates</eu> and <eu>Geekay</eu> are the only other teams with a spark of life, and they'll each need a grand finals berth to have a shot. We'll see if they can pull it off.</p>
+                        </div>
+                    </div>
+                    <div class="alt-box corner-top">
+                        <h2>South America</h2>
+                        <div><svg overflow="visible" width="950" height="1080" style="margin-top: 10px;"
+                                class='bottomline rankings-bg'>
+                                <rect x="50" width="1" height="1055" fill="#EEEEEE19" rx="1" class="tickline"></rect>
+                                <rect x="50" y="1055" width="764.5749999999999" height="1" fill="#EEEEEE19" rx="1"
+                                    class="bottomline">
+                                </rect>
+                                <rect x="111.13186927855838" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="184.41010746137496" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="184.41010746137496" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1050</text><text text-anchor="middle" x="184.41010746137496" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1050</text>
+                                <rect x="257.6883456441915" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="330.9665838270081" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="404.24482200982465" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="477.5230601926412" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="550.8012983754577" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="550.8012983754577" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1675</text><text text-anchor="middle" x="550.8012983754577" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1675</text>
+                                <rect x="624.0795365582743" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="697.3577747410909" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+
+                                    <text text-anchor='end' x='37' y='40' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>1</text>
+                                    <rect x='50' width='899.5' height='50' y='15' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='570.562181125498' height='50' y='15' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1794</title></rect>
+                                    <text text-anchor='end' x='610.562181125498' y='40' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1794</text>
+                                    <svg x='633.562181125498' y='15' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/FURIA Esports.png'><desc>FURIA Esports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>FURIA Esports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>DRUFINHO, Lostt, yANXNZ</text></g></svg>
+                                    <text text-anchor='end' x='37' y='105' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>2</text>
+                                    <rect x='50' width='899.5' height='50' y='80' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='478.524713967881' height='50' y='80' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1637</title></rect>
+                                    <text text-anchor='end' x='518.524713967881' y='105' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1637</text>
+                                    <svg x='541.524713967881' y='80' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Team Secret.png'><desc>Team Secret Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Team Secret</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Motta, kv1, swiftt</text></g></svg>
+                                    <text text-anchor='end' x='37' y='170' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>3</text>
+                                    <rect x='50' width='899.5' height='50' y='145' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='429.281737909028' height='50' y='145' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1553</title></rect>
+                                    <text text-anchor='end' x='469.281737909028' y='170' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1553</text>
+                                    <svg x='492.281737909028' y='145' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Corinthians Esports.png'><desc>Corinthians Esports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Corinthians Esports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>brad, droppz, Sad</text></g></svg>
+                                    <text text-anchor='end' x='37' y='235' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>4</text>
+                                    <rect x='50' width='899.5' height='50' y='210' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='401.142894446826' height='50' y='210' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1505</title></rect>
+                                    <text text-anchor='end' x='441.142894446826' y='235' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1505</text>
+                                    <svg x='464.142894446826' y='210' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Godfidence.png'><desc>Godfidence Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Godfidence</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Aztromick, Bemmz, suco</text></g></svg>
+                                    <text text-anchor='end' x='37' y='365' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>6</text>
+                                    <rect x='50' width='899.5' height='50' y='340' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='398.797990824976' height='50' y='340' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1501</title></rect>
+                                    <text text-anchor='end' x='438.797990824976' y='365' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1501</text>
+                                    <svg x='461.797990824976' y='340' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Blazar.png'><desc>Blazar Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Blazar</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>LeoDkn, nxghtt, wisty</text></g></svg>
+                                    <text text-anchor='end' x='37' y='300' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>5</text>
+                                    <rect x='50' width='899.5' height='50' y='275' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='398.797990824976' height='50' y='275' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1501</title></rect>
+                                    <text text-anchor='end' x='438.797990824976' y='300' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1501</text>
+                                    <svg x='461.797990824976' y='275' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Novus Aevi.png'><desc>Novus Aevi Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Novus Aevi</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>alpe, caiotg1, Royales</text></g></svg>
+                                    <text text-anchor='end' x='37' y='430' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>7</text>
+                                    <rect x='50' width='899.5' height='50' y='405' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='357.175951537136' height='50' y='405' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1430</title></rect>
+                                    <text text-anchor='end' x='397.175951537136' y='430' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1430</text>
+                                    <svg x='420.175951537136' y='405' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Team Reds.png'><desc>Team Reds Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Team Reds</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>caard, crn, davinsano</text></g></svg>
+                                    <text text-anchor='end' x='37' y='495' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>8</text>
+                                    <rect x='50' width='899.5' height='50' y='470' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='345.451433427886' height='50' y='470' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1410</title></rect>
+                                    <text text-anchor='end' x='385.451433427886' y='495' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1410</text>
+                                    <svg x='408.451433427886' y='470' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Yonkō.png'><desc>Yonkō Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Yonkō</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Davitrox, klaus, pan</text></g></svg>
+                                    <text text-anchor='end' x='37' y='560' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>9</text>
+                                    <rect x='50' width='899.5' height='50' y='535' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='330.795785791323' height='50' y='535' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1385</title></rect>
+                                    <text text-anchor='end' x='370.795785791323' y='560' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1385</text>
+                                    <svg x='393.795785791323' y='535' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Moonrise.png'><desc>Moonrise Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Moonrise</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>KnS, yanD, Yukeo</text></g></svg>
+                                    <text text-anchor='end' x='37' y='625' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>10</text>
+                                    <rect x='50' width='899.5' height='50' y='600' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='310.864105005596' height='50' y='600' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1351</title></rect>
+                                    <text text-anchor='end' x='350.864105005596' y='625' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1351</text>
+                                    <svg x='373.864105005596' y='600' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Fear of God.png'><desc>Fear of God Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Fear of God</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Brenox, Dappluto, ianpinheiro</text></g></svg>
+                                    <text text-anchor='end' x='37' y='690' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>11</text>
+                                    <rect x='50' width='899.5' height='50' y='665' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='288.58752059802' height='50' y='665' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1313</title></rect>
+                                    <text text-anchor='end' x='328.58752059802' y='690' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1313</text>
+                                    <svg x='351.58752059802' y='665' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Genesis.png'><desc>Genesis Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Genesis</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Rmnn, mazikeen, misery</text></g></svg>
+                                    <text text-anchor='end' x='37' y='755' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>12</text>
+                                    <rect x='50' width='899.5' height='50' y='730' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='263.379806663131' height='50' y='730' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1270</title></rect>
+                                    <text text-anchor='end' x='303.379806663131' y='755' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1270</text>
+                                    <svg x='326.379806663131' y='730' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Gratia.png'><desc>Gratia Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Gratia</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>JG, PJ, roods</text></g></svg>
+                                    <text text-anchor='end' x='37' y='820' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>13</text>
+                                    <rect x='50' width='899.5' height='50' y='795' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='244.62057768833' height='50' y='795' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1238</title></rect>
+                                    <text text-anchor='end' x='284.62057768833' y='820' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1238</text>
+                                    <svg x='307.62057768833' y='795' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/LUK Esports.png'><desc>LUK Esports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>LUK Esports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>FirefoxD, Haberkamper, lucas06</text></g></svg>
+                                    <text text-anchor='end' x='37' y='885' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>14</text>
+                                    <rect x='50' width='899.5' height='50' y='860' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='213.550604698816' height='50' y='860' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1185</title></rect>
+                                    <text text-anchor='end' x='253.550604698816' y='885' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1185</text>
+                                    <svg x='276.550604698816' y='860' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Papo de Visão.png'><desc>Papo de Visão Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Papo de Visão</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>LagLy, Laucha, seck</text></g></svg>
+                                    <text text-anchor='end' x='37' y='950' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>15</text>
+                                    <rect x='50' width='899.5' height='50' y='925' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='203.584764305953' height='50' y='925' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1168</title></rect>
+                                    <text text-anchor='end' x='243.584764305953' y='950' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1168</text>
+                                    <svg x='266.584764305953' y='925' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/FOFOS.png'><desc>FOFOS Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>FOFOS</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>aguz, oviitin, starwindss</text></g></svg>
+                                    <text text-anchor='end' x='37' y='1015' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>16</text>
+                                    <rect x='50' width='899.5' height='50' y='990' rx='5' fill='#2F290DE0' class='ratingbox'></rect>
+                                    <rect x='50' width='180.721953992914' height='50' y='990' rx='5' fill='#FFCE00' class='ratingbox colored'><title>Rating: 1129</title></rect>
+                                    <text text-anchor='end' x='220.721953992914' y='1015' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1129</text>
+                                    <svg x='243.721953992914' y='990' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/True Neutral Academy.png'><desc>True Neutral Academy Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>True Neutral Academy</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Kevinacho, plgabriel, Reisplasma</text></g></svg>
+                            </svg>
+                            <p class="color-article">Mirroring Europe, SAM sees <sam>FURIA</sam> well ahead of the rest of the region, with <sam>Team Secret</sam> being a step ahead of everyone else. Third place sees <sam>Corinthians</sam> a cut above the strong-but-inconsistent trio of <sam>Godfidence</sam>, <sam>Novus Aevi</sam>, and <sam>Blazar</sam>.</p>
+                            <h3>Is FURIA really the second best team in the world?</h3>
+                            <p>Short answer: Kinda?</p>
+                            <p class="color-article">Long answer: The fact that <sam>FURIA</sam> are the second highest team in the <a href="https://pyroblocks.github.io/projects/rae-rankings">global rankings</a> is probably the most eye-catching thing about the RAE model. Most people tend to have FURIA sitting at around 5th, around the same tier as <mena>Twisted Minds</mena> and <eu>Ninjas</eu>. RAE instead sees their level closer to that of <na>NRG</na> or <mena>Falcons</mena>, and in fact sit higher than both (although the difference between <sam>FURIA</sam> at 2nd and <mena>Falcons</mena> at 5th is 11 points, or roughly a 52% chance of victory in a Bo5).</p>
+                            <p class="color-article">The reason for this is fairly simple: <sam>FURIA</sam> haven't lost a series yet this season.* The closest they've come is a pair of Champions Field sets against <sam>Team Secret</sam> and one against <sam>Godfidence</sam>. At least thus far, the panthers are having one of the best SAM splits of all time. The org typically ends up dropping one regional per split, so they might end up at the level that everyone has them pegged as at the end of the day.</p>
+                            <p class="color-article"><sam>FURIA</sam>'s dominance is part of a broader trend across RLCS of one- or one-and-a-half-team regions**. In every region, there's a top dog that's clearly ahead of the pack, sometimes a second place team that can make them sweat, and then everyone else. This leads to some massive gaps in rating, but also means that if the top team drops a series then their rating will also drop significantly. It's already happened to <oce>Wildcard</oce>, and <mena>Falcons</mena>; for <eu>Karmine</eu>, <na>NRG</na>, <apac>Luminosity</apac>, and, of course, <sam>FURIA</sam>, it's likely just a matter of time.</p>
+                            <small class="color-article">*Alright, yes, they lost to <sam>MAMÍFEROS</sam> in the Swiss Stage of Open #1, but it was by forfeit and I don't track Swiss results, anyways.</small>
+                            <br><br>
+                            <small class="color-article">**The average gap in RAE between a region's best and second best team is 110 rating points, while the average gap between 1st and 3rd is 174 points. This is similar to last season, but well off from 22-23 – the average gaps were 77 and 93, respectively, with most of the difference being made up by APAC and SSA.</small>
+                            <h3>RAE Odds for SAM Open #3</h3>
+                            <div class="standard-box corner-top">
+                                <div class="sticky-scroll svelte-l969s8">
+                                    <table class="svelte-l969s8">
+                                        <thead>
+                                            <tr>
+                                                <th class="firstcol svelte-l969s8" style="cursor: pointer;">Name </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Major </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 1 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 2 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 4 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 6 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 8 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 12 </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/FURIA Esports.png' alt=''>&nbsp; FURIA Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;✓</td>
+                                                <td class=' svelte-l969s8'>&nbsp;65.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;80.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;94.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;>99%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Team Secret.png' alt=''>&nbsp; Team Secret</td>
+                                                <td class=' svelte-l969s8'>&nbsp;96.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;18.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;46.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;78.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;89.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;94.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;99.4%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Corinthians Esports.png' alt=''>&nbsp; Corinthians Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;6.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;25.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;59.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;77.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;84.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.7%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Godfidence.png' alt=''>&nbsp; Godfidence</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;12.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;37.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;57.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;69.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;96.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Blazar.png' alt=''>&nbsp; Blazar</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;42.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;66.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;79.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;92.4%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Novus Aevi.png' alt=''>&nbsp; Novus Aevi</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;8.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;25.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;45.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;62.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;92.5%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Team Reds.png' alt=''>&nbsp; Team Reds</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;5.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;18.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;41.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;64.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;95.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Moonrise.png' alt=''>&nbsp; Moonrise</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;13.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;31.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;49.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;76.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Fear of God.png' alt=''>&nbsp; Fear of God</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;6.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;19.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;33.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;81.6%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Yonkō.png' alt=''>&nbsp; Yonkō</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;9.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;23.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;41.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;81.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Genesis.png' alt=''>&nbsp; Genesis</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;24.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;46.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;71.5%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Gratia.png' alt=''>&nbsp; Gratia</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;15.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;34.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;60.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/LUK Esports.png' alt=''>&nbsp; LUK Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;26.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Papo de Visão.png' alt=''>&nbsp; Papo de Visão</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;16.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;49.8%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/FOFOS.png' alt=''>&nbsp; FOFOS</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;15.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;54.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/True Neutral Academy.png' alt=''>&nbsp; True Neutral Academy</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;4.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;24.6%</td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="color-article"><sam>FURIA</sam> clinched their place in Birmingham in Open #2, with <sam>Team Secret</sam> having the second spot all but wrapped up. <sam>Corinthians</sam> and <sam>Godfidence</sam> are the only teams with a semblance of an outside shot, but even winning the event might not be enough to move them past Secret.</p>
+                        </div>
+                    </div>
+                    <div class="alt-box corner-top">
+                        <h2>Asia-Pacific</h2>
+                        <div><svg overflow="visible" width="950" height="1080" style="margin-top: 10px;"
+                                class='bottomline rankings-bg'>
+                                <rect x="50" width="1" height="1055" fill="#EEEEEE19" rx="1" class="tickline"></rect>
+                                <rect x="50" y="1055" width="764.5749999999999" height="1" fill="#EEEEEE19" rx="1"
+                                    class="bottomline">
+                                </rect>
+                                <rect x="111.13186927855838" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="184.41010746137496" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="184.41010746137496" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">725</text><text text-anchor="middle" x="184.41010746137496" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">725</text>
+                                <rect x="257.6883456441915" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="330.9665838270081" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="404.24482200982465" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="477.5230601926412" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="550.8012983754577" width="3" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <text text-anchor="middle" x="550.8012983754577" y="1067" dominant-baseline="hanging"
+                                    fill="#ffffff" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1375</text><text text-anchor="middle" x="550.8012983754577" y="-5"
+                                    fill="#EEEEEE19" font-family="Inter" font-weight="400" font-size="18"
+                                    class="tickmark">1375</text>
+                                <rect x="624.0795365582743" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+                                <rect x="697.3577747410909" width="1" height="1055" fill="#EEEEEE19" rx="1"
+                                    class="tickline"></rect>
+
+                                    <text text-anchor='end' x='37' y='40' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>1</text>
+                                    <rect x='50' width='899.5' height='50' y='15' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='537.440417466865' height='50' y='15' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1440</title></rect>
+                                    <text text-anchor='end' x='577.440417466865' y='40' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1440</text>
+                                    <svg x='600.440417466865' y='15' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Luminosity Gaming.png'><desc>Luminosity Gaming Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Luminosity Gaming</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Catalysm, sosa, Sphinx</text></g></svg>
+                                    <text text-anchor='end' x='37' y='105' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>2</text>
+                                    <rect x='50' width='899.5' height='50' y='80' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='466.980573060311' height='50' y='80' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1315</title></rect>
+                                    <text text-anchor='end' x='506.980573060311' y='105' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1315</text>
+                                    <svg x='529.980573060311' y='80' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Elevate.png'><desc>Elevate Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Elevate</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Maxeew, Oscillon, ThO.</text></g></svg>
+                                    <text text-anchor='end' x='37' y='170' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>3</text>
+                                    <rect x='50' width='899.5' height='50' y='145' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='437.105599031932' height='50' y='145' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1262</title></rect>
+                                    <text text-anchor='end' x='477.105599031932' y='170' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1262</text>
+                                    <svg x='500.105599031932' y='145' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Overlooked.png'><desc>Overlooked Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Overlooked</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Breezi, drku., Kevin</text></g></svg>
+                                    <text text-anchor='end' x='37' y='235' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>4</text>
+                                    <rect x='50' width='899.5' height='50' y='210' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='395.957049898504' height='50' y='210' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1189</title></rect>
+                                    <text text-anchor='end' x='435.957049898504' y='235' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1189</text>
+                                    <svg x='458.957049898504' y='210' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Lokomotiv eSports.png'><desc>Lokomotiv eSports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Lokomotiv eSports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>ballerrees, kroado, LCT</text></g></svg>
+                                    <text text-anchor='end' x='37' y='300' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>5</text>
+                                    <rect x='50' width='899.5' height='50' y='275' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='368.336790891135' height='50' y='275' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1140</title></rect>
+                                    <text text-anchor='end' x='408.336790891135' y='300' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1140</text>
+                                    <svg x='431.336790891135' y='275' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/KINOTROPE gaming.png'><desc>KINOTROPE gaming Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>KINOTROPE gaming</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>furlashh, Lunatic., ReaLize</text></g></svg>
+                                    <text text-anchor='end' x='37' y='365' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>6</text>
+                                    <rect x='50' width='899.5' height='50' y='340' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='364.391039604368' height='50' y='340' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1133</title></rect>
+                                    <text text-anchor='end' x='404.391039604368' y='365' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1133</text>
+                                    <svg x='427.391039604368' y='340' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Dekubopdumnem.png'><desc>Dekubopdumnem Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Dekubopdumnem</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Danksu, Porsas, regser</text></g></svg>
+                                    <text text-anchor='end' x='37' y='430' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>7</text>
+                                    <rect x='50' width='899.5' height='50' y='405' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='306.895806568619' height='50' y='405' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1031</title></rect>
+                                    <text text-anchor='end' x='346.895806568619' y='430' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1031</text>
+                                    <svg x='369.895806568619' y='405' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Blue Torch.png'><desc>Blue Torch Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Blue Torch</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Burn, Echo., popo^-^</text></g></svg>
+                                    <text text-anchor='end' x='37' y='495' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>8</text>
+                                    <rect x='50' width='899.5' height='50' y='470' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='305.204770302862' height='50' y='470' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1028</title></rect>
+                                    <text text-anchor='end' x='345.204770302862' y='495' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1028</text>
+                                    <svg x='368.204770302862' y='470' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/SENZA Esports.png'><desc>SENZA Esports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>SENZA Esports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>hxll0., paraapelka, Sozya</text></g></svg>
+                                    <text text-anchor='end' x='37' y='560' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>9</text>
+                                    <rect x='50' width='899.5' height='50' y='535' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='300.13166150559' height='50' y='535' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 1019</title></rect>
+                                    <text text-anchor='end' x='340.13166150559' y='560' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>1019</text>
+                                    <svg x='363.13166150559' y='535' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/God Speed.png'><desc>God Speed Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>God Speed</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Blue, risk, Squigly</text></g></svg>
+                                    <text text-anchor='end' x='37' y='625' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>10</text>
+                                    <rect x='50' width='899.5' height='50' y='600' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='270.256687477211' height='50' y='600' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 966</title></rect>
+                                    <text text-anchor='end' x='310.256687477211' y='625' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>966</text>
+                                    <svg x='333.256687477211' y='600' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Revenue Redeemers.png'><desc>Revenue Redeemers Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Revenue Redeemers</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>AbsCrazy, BunnyDummy, Poofy</text></g></svg>
+                                    <text text-anchor='end' x='37' y='690' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>11</text>
+                                    <rect x='50' width='899.5' height='50' y='665' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='261.801506148424' height='50' y='665' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 951</title></rect>
+                                    <text text-anchor='end' x='301.801506148424' y='690' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>951</text>
+                                    <svg x='324.801506148424' y='665' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Jungle Juicers.png'><desc>Jungle Juicers Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Jungle Juicers</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Bacon, Nym, Tossis</text></g></svg>
+                                    <text text-anchor='end' x='37' y='755' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>12</text>
+                                    <rect x='50' width='899.5' height='50' y='730' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='243.200107225094' height='50' y='730' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 918</title></rect>
+                                    <text text-anchor='end' x='283.200107225094' y='755' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>918</text>
+                                    <svg x='306.200107225094' y='730' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Machis Minions.png'><desc>Machi's Minions Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Machi's Minions</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Hireo, Machi, Tank</text></g></svg>
+                                    <text text-anchor='end' x='37' y='820' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>13</text>
+                                    <rect x='50' width='899.5' height='50' y='795' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='216.70720572823' height='50' y='795' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 871</title></rect>
+                                    <text text-anchor='end' x='256.70720572823' y='820' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>871</text>
+                                    <svg x='279.70720572823' y='795' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Eleoroo.png'><desc>Eleoroo Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Eleoroo</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Aziz, Jushu, Kylo</text></g></svg>
+                                    <text text-anchor='end' x='37' y='885' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>14</text>
+                                    <rect x='50' width='899.5' height='50' y='860' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='196.414770539142' height='50' y='860' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 835</title></rect>
+                                    <text text-anchor='end' x='236.414770539142' y='885' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>835</text>
+                                    <svg x='259.414770539142' y='860' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Executioners.png'><desc>Executioners Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Executioners</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>BKQSS, Mohanned, Weins</text></g></svg>
+                                    <text text-anchor='end' x='37' y='950' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>15</text>
+                                    <rect x='50' width='899.5' height='50' y='925' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='190.777982986618' height='50' y='925' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 825</title></rect>
+                                    <text text-anchor='end' x='230.777982986618' y='950' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>825</text>
+                                    <svg x='253.777982986618' y='925' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Small Esports.png'><desc>Small Esports Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Small Esports</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Kuro, Profile_RL, Waavy._</text></g></svg>
+                                    <text text-anchor='end' x='37' y='1015' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>16</text>
+                                    <rect x='50' width='899.5' height='50' y='990' rx='5' fill='#20152AE0' class='ratingbox'></rect>
+                                    <rect x='50' width='169.921869042277' height='50' y='990' rx='5' fill='#8D3BDA' class='ratingbox colored'><title>Rating: 788</title></rect>
+                                    <text text-anchor='end' x='209.921869042277' y='1015' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'>788</text>
+                                    <svg x='232.921869042277' y='990' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href='/src/logos/Southwest Side.png'><desc>Southwest Side Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'>Southwest Side</text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'>Mu, Rayan, Sultan.</text></g></svg>
+                            </svg>
+                            <p class="color-article">And again, there's a clear top team in <apac>Luminosity</apac>, a clear second best team in <apac>Elevate</apac>, and a clear third place in <apac>Overlooked</apac>. Once you get past <apac>Lokomotiv</apac>, <apac>KINOTROPE</apac>, and <apac>Dekubopdumnem</apac>, the depth falls off.</p>
+                            <h3>How are import teams seeded?</h3>
+                            <p>I really don't have anything to add regarding the APAC Open itself, so I'm going to use this slot to talk about how I seed import rosters in APAC and SSA.</p>
+                            <p class="color-article">New players qualify for regionals all the time; I seed them using the Non-Qualifying Team ratings that you may have seen on the <a href="https://pyroblocks.github.io/projects/rae-rankings">global rankings</a>. However, import players are odd, because they are better than their new region's non-qualifying players but worse than their old region's ones.</p>
+                            <p class="color-article">If they were on a team that had a rating in the past, I will use that and adjust it for updates across seasons. If they were a bubble player (consistent top ~32), I will use their old region's non-qualifying team rating – I did so for <ssa>Mustu Fluck</ssa> in SSA.</p>
+                            <p class="color-article">If the import player wasn't competing seriously in their old region, I just kind of wing it. This is probably bad practice, but unless a team is clearly better than the rest of the region, the ratings will get to the right values eventually. It was a bit of a problem with <ssa>Team Mobula</ssa> last season, but at this point I feel fairly good about where <ssa>Maestros</ssa> are rated.</p>
+                            <h3>RAE Odds for APAC Open #3</h3>
+                            <div class="standard-box corner-top">
+                                <div class="sticky-scroll svelte-l969s8">
+                                    <table class="svelte-l969s8">
+                                        <thead>
+                                            <tr>
+                                                <th class="firstcol svelte-l969s8" style="cursor: pointer;">Name </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Major </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 1 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 2 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 4 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 6 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 8 </th>
+                                                <th class=" svelte-l969s8" style="cursor: pointer;"> Top 12 </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Luminosity Gaming.png' alt=''>&nbsp; Luminosity Gaming</td>
+                                                <td class=' svelte-l969s8'>&nbsp;98.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;59.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;77.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;94.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;97.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;>99%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Elevate.png' alt=''>&nbsp; Elevate</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;22.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;52.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;86.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;95.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;98.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;>99%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Overlooked.png' alt=''>&nbsp; Overlooked</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;10.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;30.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;65.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;81.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;85.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;93.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Lokomotiv eSports.png' alt=''>&nbsp; Lokomotiv eSports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;4.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;20.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;58.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;84.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;93.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;98.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/KINOTROPE gaming.png' alt=''>&nbsp; KINOTROPE gaming</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;27.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;49.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;60.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;79.8%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Dekubopdumnem.png' alt=''>&nbsp; Dekubopdumnem</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;6.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;25.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;47.4%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;58.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;78.6%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/God Speed.png' alt=''>&nbsp; God Speed</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;14.7%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;40.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;68.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;92.2%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Blue Torch.png' alt=''>&nbsp; Blue Torch</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;23.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;35.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;85.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/SENZA Esports.png' alt=''>&nbsp; SENZA Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;19.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;28.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;48.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Jungle Juicers.png' alt=''>&nbsp; Jungle Juicers</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;4.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;19.8%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;50.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;88.3%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Revenue Redeemers.png' alt=''>&nbsp; Revenue Redeemers</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;3.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;12.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;23.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;72.9%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Machis Minions.png' alt=''>&nbsp; Machi's Minions</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;5.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;10.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;42.4%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Eleoroo.png' alt=''>&nbsp; Eleoroo</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;8.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;32.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;75.0%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Executioners.png' alt=''>&nbsp; Executioners</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;1.1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;7.2%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;26.0%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;60.5%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Small Esports.png' alt=''>&nbsp; Small Esports</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;5.3%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;19.6%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;49.1%</td>
+                                                </tr>
+                                                <tr class='svelte-l969s8'>
+                                                <td class='firstcol svelte-l969s8'><img class='table-icon'
+                                                src='/src/logos/Southwest Side.png' alt=''>&nbsp; Southwest Side</td>
+                                                <td class=' svelte-l969s8'>&nbsp;-</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;<1%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;2.5%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;10.9%</td>
+                                                <td class=' svelte-l969s8'>&nbsp;37.1%</td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="color-article"><apac>Luminosity</apac> are all but a lock to make it to Birmingham. It'll take a miracle for <apac>Elevate</apac> to catch them.</p>
+                        </div>
+                    </div>
+                    <div class="alt-box corner-top">
+                        <div>
+                            <p class="color-article">To summarize, here's who RAE thinks qualifies for the major out of each region:</p>
+                            <ul class="mo color-article">
+                                <li>EU: <eu>Karmine Corp</eu>, <eu>Team Vitality</eu>, <eu>Dignitas</eu>, <eu>Ninjas in Pyjamas</eu></li>
+                                <li>SAM: <sam>FURIA Esports</sam>, <sam>Team Secret</sam></li>
+                                <li>APAC: <apac>Luminosity Gaming</apac></li>
+                            </ul>
+                            <p class="color-article">It's all chalk! Maybe I didn't need to draft a 2,000 word write-up, after all.</p>
+                            <p class="color-article">To be a little fair to the RAE model and my time, most regions went exactly according to the script, and the only regions with real major races are NA, EU, and OCE (to give you a preview of next week, RAE probably won't see NA as all that close; it has SSG as NA9). So, in general, not much good analysis to be done there.</p>
+                            <p class="color-article">Lastly, I'd like to take a moment to give a shoutout to <a href="https://www.youtube.com/@RocketScience">RocketScience</a>. If it wasn't painfully obvious, I ripped a ton from his website, and by a ton, I mean all of the CSS and most of the HTML that I could. I guess me learning how to use JavaScript was an appropriate punishment. Go ahead and give him a sub and follow him on <a href="https://x.com/HalfwayDeadRL">Twitter</a>.</p>
+                            <h4 class="color-article">RLCS 2025 RAE Prediction Accuracy: <b>80%</b></h4>
+                    </div>
+                </article>
+            </main>
+
+            <script>
+                window.addEventListener("load", (event) => {
+                    if (window.innerWidth < 768) {
+                        var colorboxes = Array.from(document.getElementsByClassName("colored"));
+                        //console.log(colorboxes);
+                        colorboxes.forEach((element, index) => element.height.baseVal.value = 24)
+
+                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
+                        //console.log(rboxes)
+                        rboxes.forEach((element, index) => {
+                            if (!element.classList.contains("colored")) {
+                                element.height.baseVal.value = 76
+                            }
+                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
+                            if(index <=31){
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor(index / 2))
+                        } else if(index <=63){
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-32) / 2))
+                        } else{
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-64) / 2))
+                        }
+
+
+                        })
+
+                        var nums = Array.from(document.getElementsByClassName("num"));
+                        nums.forEach((element, index) => {
+                        if(index <=15){
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index)
+                        } else if(index <=31){
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-16)
+                        } else{
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-32)
+                        }
+                        });
+
+                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
+                        rteams.forEach((element, index) => {
+                            element.x.baseVal.value = 60
+                                if(index <=15){
+                                element.y.baseVal.value = 40 + (15 + 76) * (index)
+                            } else if(index <=31){
+                                element.y.baseVal.value = 40 + (15 + 76) * (index-16)
+                            } else{
+                                element.y.baseVal.value = 40 + (15 + 76) * (index-32)
+                            }
+                            element.children[1].children[0].style.fontSize = "18px"
+                            element.children[1].children[1].style.fontSize = "12px"
+                        });
+
+                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
+                        rtexts.forEach((element, index) => {
+                            if(index <=15){
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index)
+                        } else if(index <=31){
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-16)
+                        } else{
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-32)
+                        };
+                            element.style.fontSize = "20px"
+                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 45)
+                        });
+
+                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
+                        //console.log(ticklines)
+                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
+                        //console.log(fullbox)
+                        ticklines.forEach((element, index) => {
+                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
+                                element.width.baseVal.value = 0
+                            }
+                            else {
+                                if (element.classList.contains("thickline")) {
+                                    element.width.baseVal.value = 3
+                                }
+                                else {
+                                    element.width.baseVal.value = 1
+                                }
+                            }
+                            //console.log(fullbox*tickline_x[index]+50)
+                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
+                            element.height.baseVal.value = tickline_height + 26 * 32 / 2
+                        });
+
+                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
+                        //console.log(tickmark)
+                        tickmarks.forEach((element, index) => {
+                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
+                            if (element.y.baseVal[0].value != -5) {
+                                element.y.baseVal[0].value = tickline_height + 26 * 32 / 2 + 12
+                            }
+                        });
+
+                        var bline = Array.from(document.getElementsByClassName("bottomline"));
+                        //console.log(rboxes)
+                        bline.forEach((element, index) => {
+                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
+                            if (element.classList.contains("rankings-bg")) {
+                                element.height.baseVal.value = tickline_height + 26 * 32 / 2 + 35
+                            } else {
+                                element.y.baseVal.value = tickline_height + 26 * 32 / 2
+                            }
+                        });
+
+                    } else if (window.innerWidth < 1001) {
+
+                        var nums = Array.from(document.getElementsByClassName("num"));
+                        nums.forEach((element, index) => {
+                            element.y.baseVal[0].value = num_ypos[index]
+                        });
+
+
+                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
+                        //console.log(rboxes)
+                        rboxes.forEach((element, index) => {
+                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
+                            element.height.baseVal.value = 50
+                            element.y.baseVal.value = rbox_ypos[index]
+                        });
+
+                        var bline = Array.from(document.getElementsByClassName("bottomline"));
+                        //console.log(rboxes)
+                        bline.forEach((element, index) => {
+                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
+                            if (element.classList.contains("rankings-bg")) {
+                                element.height.baseVal.value = tickline_height + 35
+                            } else {
+                                element.y.baseVal.value = tickline_height
+                            }
+                        });
+
+                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
+                        //console.log(ticklines)
+                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
+                        //console.log(fullbox)
+                        ticklines.forEach((element, index) => {
+                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
+                                element.width.baseVal.value = 0
+                            }
+                            else {
+                                if (element.classList.contains("thickline")) {
+                                    element.width.baseVal.value = 3
+                                }
+                                else {
+                                    element.width.baseVal.value = 1
+                                }
+                            }
+                            //console.log(fullbox*tickline_x[index]+50)
+                            element.height.baseVal.value = tickline_height
+                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
+                        });
+
+                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
+                        //console.log(tickmark)
+                        tickmarks.forEach((element, index) => {
+                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
+                            if (element.y.baseVal[0].value != -5) {
+                                element.y.baseVal[0].value = tickline_height + 12;
+                            }
+                        });
+
+                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
+                        rtexts.forEach((element, index) => {
+                            element.y.baseVal[0].value = (rtext_y[index])
+                            element.style.fontSize = "20px"
+                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 40)
+                        });
+
+                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
+                        rteams.forEach((element, index) => {
+                            element.x.baseVal.value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 63)
+                            element.y.baseVal.value = rteam_y[index]
+                            //console.log(element.getBoundingClientRect()['left'])
+                            //console.log(window.innerWidth)
+                            element.children[1].children[0].style.fontSize = "18px"
+                            element.children[1].children[1].style.fontSize = "12px"
+                        });
+
+
+
+                    }
+                });
+
+
+                var num_ypos_get = Array.from(document.getElementsByClassName("num"));
+                var num_ypos = []
+                num_ypos_get.forEach((element) => num_ypos.push(element.y.baseVal[0].value));
+                //console.log(num_ypos)
+
+                var rbox_widths_get = Array.from(document.getElementsByClassName("ratingbox"));
+                var rbox_widths = []
+                var rbox_ypos = []
+                rbox_widths_get.forEach((element) => rbox_widths.push(element.getBoundingClientRect()['width']));
+                rbox_widths_get.forEach((element) => rbox_ypos.push(element.y.baseVal.value));
+                //onsole.log(rbox_ypos)
+
+                var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
+                var bottomline = []
+                bottomline_get.forEach((element) => bottomline.push(element.getBoundingClientRect()['width']));
+                //console.log(bottomline)
+
+                var tickline_x_get = Array.from(document.getElementsByClassName("tickline"));
+                var tickline_x = []
+                var tickline_height = tickline_x_get[0].height.baseVal.value
+                tickline_x_get.forEach((element) => tickline_x.push((element.x.baseVal.value - 50) / rbox_widths[0]));
+                //console.log(tickline_height)
+
+                var tickmark_x_get = Array.from(document.getElementsByClassName("tickmark"));
+                var tickmark_x = []
+                tickmark_x_get.forEach((element) => tickmark_x.push((element.x.baseVal[0].value - 50) / rbox_widths[0]));
+                //console.log(tickmark_y)
+
+                var rtext_x_get = Array.from(document.getElementsByClassName("ratingtext"));
+                var rtext_x = []
+                var rtext_y = []
+                rtext_x_get.forEach((element) => rtext_x.push(element.x.baseVal[0].value));
+                rtext_x_get.forEach((element) => rtext_y.push(element.y.baseVal[0].value));
+                //console.log(rtext_y)
+
+                var rteam_x_get = Array.from(document.getElementsByClassName("ratingteam"));
+                var rteam_x = []
+                var rteam_y = []
+                rteam_x_get.forEach((element) => rteam_x.push(element.x.baseVal.value));
+                rteam_x_get.forEach((element) => rteam_y.push(element.y.baseVal.value));
+                //console.log(rteam_x)
+
+
+                window.onresize = function (event) {
+                    if (window.innerWidth < 768) {
+                        var colorboxes = Array.from(document.getElementsByClassName("colored"));
+                        //console.log(colorboxes);
+                        colorboxes.forEach((element, index) => element.height.baseVal.value = 24)
+
+                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
+                        //console.log(rboxes)
+                        rboxes.forEach((element, index) => {
+                            if (!element.classList.contains("colored")) {
+                                element.height.baseVal.value = 76
+                            }
+                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
+                            if(index <=31){
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor(index / 2))
+                        } else if(index <=63){
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-32) / 2))
+                        } else{
+                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-64) / 2))
+                        }
+
+
+                        })
+
+                        var nums = Array.from(document.getElementsByClassName("num"));
+                        nums.forEach((element, index) => {
+                        if(index <=15){
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index)
+                        } else if(index <=31){
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-16)
+                        } else{
+                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-32)
+                        }
+                        });
+
+                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
+                        rteams.forEach((element, index) => {
+                            element.x.baseVal.value = 60
+                                if(index <=15){
+                                element.y.baseVal.value = 40 + (15 + 76) * (index)
+                            } else if(index <=31){
+                                element.y.baseVal.value = 40 + (15 + 76) * (index-16)
+                            } else{
+                                element.y.baseVal.value = 40 + (15 + 76) * (index-32)
+                            }
+                            element.children[1].children[0].style.fontSize = "18px"
+                            element.children[1].children[1].style.fontSize = "12px"
+                        });
+
+                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
+                        rtexts.forEach((element, index) => {
+                            if(index <=15){
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index)
+                        } else if(index <=31){
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-16)
+                        } else{
+                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-32)
+                        };
+                            element.style.fontSize = "20px"
+                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 45)
+                        });
+
+                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
+                        //console.log(ticklines)
+                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
+                        //console.log(fullbox)
+                        ticklines.forEach((element, index) => {
+                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
+                                element.width.baseVal.value = 0
+                            }
+                            else {
+                                if (element.classList.contains("thickline")) {
+                                    element.width.baseVal.value = 3
+                                }
+                                else {
+                                    element.width.baseVal.value = 1
+                                }
+                            }
+                            //console.log(fullbox*tickline_x[index]+50)
+                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
+                            element.height.baseVal.value = tickline_height + 26 * 32 / 2
+                        });
+
+                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
+                        //console.log(tickmark)
+                        tickmarks.forEach((element, index) => {
+                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
+                            if (element.y.baseVal[0].value != -5) {
+                                element.y.baseVal[0].value = tickline_height + 26 * 32 / 2 + 12
+                            }
+                        });
+
+                        var bline = Array.from(document.getElementsByClassName("bottomline"));
+                        //console.log(rboxes)
+                        bline.forEach((element, index) => {
+                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
+                            if (element.classList.contains("rankings-bg")) {
+                                element.height.baseVal.value = tickline_height + 26 * 32 / 2 + 35
+                            } else {
+                                element.y.baseVal.value = tickline_height + 26 * 32 / 2
+                            }
+                        });
+
+                    }
+                    else if (window.innerWidth < 1001) {
+
+                        var nums = Array.from(document.getElementsByClassName("num"));
+                        nums.forEach((element, index) => {
+                            element.y.baseVal[0].value = num_ypos[index]
+                        });
+
+
+                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
+                        //console.log(rboxes)
+                        rboxes.forEach((element, index) => {
+                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
+                            element.height.baseVal.value = 50
+                            element.y.baseVal.value = rbox_ypos[index]
+                        });
+
+                        var bline = Array.from(document.getElementsByClassName("bottomline"));
+                        //console.log(rboxes)
+                        bline.forEach((element, index) => {
+                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
+                            if (element.classList.contains("rankings-bg")) {
+                                element.height.baseVal.value = tickline_height + 35
+                            } else {
+                                element.y.baseVal.value = tickline_height
+                            }
+                        });
+
+                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
+                        //console.log(ticklines)
+                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
+                        //console.log(fullbox)
+                        ticklines.forEach((element, index) => {
+                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
+                                element.width.baseVal.value = 0
+                            }
+                            else {
+                                if (element.classList.contains("thickline")) {
+                                    element.width.baseVal.value = 3
+                                }
+                                else {
+                                    element.width.baseVal.value = 1
+                                }
+                            }
+                            //console.log(fullbox*tickline_x[index]+50)
+                            element.height.baseVal.value = tickline_height
+                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
+                        });
+
+                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
+                        //console.log(tickmark)
+                        tickmarks.forEach((element, index) => {
+                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
+                            if (element.y.baseVal[0].value != -5) {
+                                element.y.baseVal[0].value = tickline_height + 12;
+                            }
+                        });
+
+                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
+                        rtexts.forEach((element, index) => {
+                            element.y.baseVal[0].value = (rtext_y[index])
+                            element.style.fontSize = "20px"
+                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 40)
+                        });
+
+                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
+                        rteams.forEach((element, index) => {
+                            element.x.baseVal.value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 63)
+                            element.y.baseVal.value = rteam_y[index]
+                            //console.log(element.getBoundingClientRect()['left'])
+                            //console.log(window.innerWidth)
+                            element.children[1].children[0].style.fontSize = "18px"
+                            element.children[1].children[1].style.fontSize = "12px"
+                        });
+
+
+
+                    }
+                    else {
+                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
+                        rboxes.forEach((element, index) => {
+                            element.style.width = (rbox_widths[index]) + "px"
+                            element.height.baseVal.value = 50
+                            element.y.baseVal.value = rbox_ypos[index]
+                        });
+                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
+
+                        var bline = Array.from(document.getElementsByClassName("bottomline"));
+                        bline.forEach((element, index) => {
+                            element.style.width = (bottomline[index]) + "px"
+                            if (element.classList.contains("rankings-bg")) {
+                                element.height.baseVal.value = tickline_height + 35
+                            } else {
+                                element.y.baseVal.value = tickline_height
+                            }
+                        });
+
+                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
+                        ticklines.forEach((element, index) => {
+                            element.x.baseVal.value = (tickline_x[index] * fullbox + 50)
+                            element.height.baseVal.value = tickline_height;
+                        });
+
+                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
+                        tickmarks.forEach((element, index) => {
+                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
+                            if (element.y.baseVal[0].value != -5) {
+                                element.y.baseVal[0].value = tickline_height + 12;
+                            }
+                        });
+
+                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
+                        rtexts.forEach((element, index) => {
+                            element.x.baseVal[0].value = (rtext_x[index])
+                            element.y.baseVal[0].value = (rtext_y[index])
+                            element.style.fontSize = "20px"
+                        });
+
+                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
+                        rteams.forEach((element, index) => {
+                            element.x.baseVal.value = (rteam_x[index])
+                            element.y.baseVal.value = (rteam_y[index])
+                            element.children[1].children[0].style.fontSize = "18px"
+                            element.children[1].children[1].style.fontSize = "12px"
+                        });
+
+                        var nums = Array.from(document.getElementsByClassName("num"));
+                        nums.forEach((element, index) => {
+                            element.y.baseVal[0].value = num_ypos[index]
+                        });
+
+                    }
+                }
+            </script>
+</body>
+
+</html>
