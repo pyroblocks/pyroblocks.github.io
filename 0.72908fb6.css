@@ -19,13 +19,13 @@
   --rs-red: #FF493C;
   --rs-green: #ADEB41;
   --rs-lightblue: #B3ECEF;
-  --region-EU: #31C4F5;
+  --region-EU: #3078F4;
   --region-NA: #FF493C;
   --region-MENA: #01BE6E;
   --region-SAM: #FFCE00;
-  --region-OCE: #8000FF;
-  --region-APAC: #FF0075;
-  --region-SSA: #D2FF00;
+  --region-OCE: #D231FF;
+  --region-APAC: #8D3BDA;
+  --region-SSA: #B7B7B7;
   --region-: #808080;
   --standard-padding: 6px 25px 6px 25px;
   --screen-scale: calc(100vw/2346)
@@ -225,16 +225,6 @@ button,
 ul {
   padding-left:26px
 }
-body {
-  background:url(../../../other/background-narrow.svg);
-  background-size:100%
-}
-@media screen and (min-width: 1001px) {
-  body {
-    background:url(../../../other/background.svg);
-    background-size:100%
-  }
-}
 .standard-box {
   background:var(--box-color);
   border-radius:5px 5px 5px 5px;
@@ -385,4 +375,36 @@ nav.svelte-jl8vmr a.svelte-jl8vmr {
 }
 nav.svelte-jl8vmr a.svelte-jl8vmr:hover {
   color:#ef5d5d
+}
+
+.color-article {
+  color: #fff;
+}
+
+.color-article na {
+ color: var(--region-NA) 
+}
+
+.color-article eu {
+color: var(--region-EU) 
+}
+
+.color-article sam {
+color: var(--region-SAM) 
+}
+
+.color-article oce {
+color: var(--region-OCE) 
+}
+
+.color-article mena {
+color: var(--region-MENA) 
+}
+
+.color-article apac {
+color: var(--region-APAC) 
+}
+
+.color-article ssa {
+color: var(--region-SSA) 
 }
