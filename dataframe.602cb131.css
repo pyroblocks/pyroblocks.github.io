@@ -1,0 +1,103 @@
+.sticky-scroll.svelte-l969s8.svelte-l969s8::-webkit-scrollbar {
+  height:6px;
+  width:6px
+}
+.sticky-scroll.svelte-l969s8.svelte-l969s8::-webkit-scrollbar-thumb {
+  background:#FFFFFF60;
+  -webkit-border-radius:3px;
+  border-radius:3px
+}
+.sticky-scroll.svelte-l969s8.svelte-l969s8::-webkit-scrollbar-corner {
+  background:none
+}
+.sticky-scroll.svelte-l969s8.svelte-l969s8 {
+  width:100%;
+  max-height:88vh;
+  overflow:auto;
+  margin-top:12px;
+  margin-bottom:12px
+}
+.sticky-scroll.svelte-l969s8 table td.svelte-l969s8:first-child,
+.sticky-scroll.svelte-l969s8 table th.svelte-l969s8:first-child {
+  position:-webkit-sticky;
+  position:sticky;
+  left:0
+}
+.sticky-scroll.svelte-l969s8 table th.svelte-l969s8 {
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
+  background-color:var(--nav-color);
+  z-index:1
+}
+.sticky-scroll.svelte-l969s8 table th.svelte-l969s8:first-child {
+  z-index:2
+}
+th.svelte-l969s8.svelte-l969s8,
+td.svelte-l969s8.svelte-l969s8 {
+  border-color:#F27D30;
+  border-bottom-style:solid;
+  border-left-style:solid;
+  border-top-style:solid;
+  border-right-style:solid;
+  border-width:1px;
+  text-align:center;
+  padding:6px;
+  font-size:14px;
+  width:50px
+}
+.firstcol.svelte-l969s8.svelte-l969s8 {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:80px
+}
+tr.svelte-l969s8:nth-child(odd) td.svelte-l969s8 {
+  background-color:#0E0E0E
+}
+tr.svelte-l969s8:nth-child(2n) td.svelte-l969s8 {
+  background-color:#1E1E1E
+}
+th.svelte-l969s8.svelte-l969s8:first-child,
+td.svelte-l969s8.svelte-l969s8:first-child {
+  text-align:left
+}
+th.svelte-l969s8.svelte-l969s8:first-child {
+  border-top-left-radius:10px
+}
+th.svelte-l969s8.svelte-l969s8:last-child {
+  border-top-right-radius:10px
+}
+table.svelte-l969s8.svelte-l969s8 {
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:fixed
+}
+.table-icon {
+  max-width:24px;
+  max-height:24px;
+  vertical-align:middle;
+  margin-top:-10px;
+  margin-bottom:-10px
+}
+@media (min-width: 950px) {
+  .table-icon {
+    max-width:32px;
+    max-height:32px
+  }
+  th.svelte-l969s8.svelte-l969s8,
+  td.svelte-l969s8.svelte-l969s8 {
+    font-size:16px;
+    padding:12px
+  }
+  .firstcol.svelte-l969s8.svelte-l969s8 {
+    width:185px
+  }
+  th.svelte-l969s8.svelte-l969s8:first-child {
+    border-top-left-radius:20px
+  }
+  th.svelte-l969s8.svelte-l969s8:last-child {
+    border-top-right-radius:20px
+  }
+}
