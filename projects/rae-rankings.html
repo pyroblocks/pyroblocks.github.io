@@ -715,7 +715,7 @@ if(resizework==100){
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -746,7 +746,7 @@ if(resizework==100){
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2 + 35
       } else{
@@ -765,7 +765,7 @@ if(resizework==100){
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     //console.log(rboxes)
     rboxes.forEach((element,index) => {
-      element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px"
+      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
       element.height.baseVal.value = 50
       element.y.baseVal.value = rbox_ypos[index]
   });
@@ -773,7 +773,7 @@ if(resizework==100){
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+35
       } else{
@@ -783,7 +783,7 @@ if(resizework==100){
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -886,7 +886,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
   var tickmark_x_get = Array.from(document.getElementsByClassName("tickmark"));
   var tickmark_x = []
   tickmark_x_get.forEach((element) => tickmark_x.push((element.x.baseVal[0].value-50)/rbox_widths[0]));
-  //console.log(tickmark_y)
+  //console.log(tickmark_x)
 
   var rtext_x_get = Array.from(document.getElementsByClassName("ratingtext"));
   var rtext_x = []
@@ -942,7 +942,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -973,7 +973,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2 + 35
       } else{
@@ -992,7 +992,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     //console.log(rboxes)
     rboxes.forEach((element,index) => {
-      element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px"
+      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
       element.height.baseVal.value = 50
       element.y.baseVal.value = rbox_ypos[index]
   });
@@ -1000,7 +1000,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+35
       } else{
@@ -1010,7 +1010,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -1067,12 +1067,11 @@ window.onresize = function(event){
     colorboxes.forEach((element,index) => element.height.baseVal.value = 24)
 
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
-    //console.log(rboxes)
     rboxes.forEach((element,index) => {
       if (!element.classList.contains("colored")) {
       element.height.baseVal.value = 76
     }
-    element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px"
+    element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
     element.y.baseVal.value = 15+(15+76)*(Math.floor(index/2))
 
 
@@ -1100,7 +1099,8 @@ window.onresize = function(event){
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    //console.log(rboxes[0])
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -1131,7 +1131,7 @@ window.onresize = function(event){
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2 + 35
       } else{
@@ -1150,7 +1150,7 @@ window.onresize = function(event){
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     //console.log(rboxes)
     rboxes.forEach((element,index) => {
-      element.style.width = (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px"
+      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
       element.height.baseVal.value = 50
       element.y.baseVal.value = rbox_ypos[index]
   });
@@ -1158,7 +1158,7 @@ window.onresize = function(event){
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     //console.log(rboxes)
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px"
+      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+35
       } else{
@@ -1168,7 +1168,7 @@ window.onresize = function(event){
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
     //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
     //console.log(fullbox)
     ticklines.forEach((element,index) => {
       if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
@@ -1219,15 +1219,15 @@ window.onresize = function(event){
   else {
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     rboxes.forEach((element,index) => {
-      element.style.width = (rbox_widths[index])+ "px"
+      element.setAttribute('width', (rbox_widths[index])+ "px")
       element.height.baseVal.value = 50
     element.y.baseVal.value = rbox_ypos[index]
   });
-    fullbox = parseFloat(rboxes[0].style.width,100.000000)
+    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
 
     var bline = Array.from(document.getElementsByClassName("bottomline"));
     bline.forEach((element,index) => {
-      element.style.width = (bottomline[index])+ "px"
+      element.setAttribute('width',(bottomline[index])+ "px")
       if (element.classList.contains("rankings-bg")){
         element.height.baseVal.value = tickline_height+35
       } else{
