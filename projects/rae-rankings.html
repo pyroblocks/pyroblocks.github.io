@@ -403,7 +403,7 @@
         <rect x='50' width='899.5' height='50' y='4240' rx='5' fill='#222222E0' class='ratingbox'></rect>
         <rect x='50' width=468.0715318 height='50' y='4240' rx='5' fill='#666666' class='ratingbox colored'><title>Rating: </title></rect>
         <text text-anchor='end' x='401.64349545747496' y='4265' dominant-baseline='central' fill='#00000050' font-family='Inter' font-weight='800' font-size='20' style='user-select:none' class='ratingtext'></text>
-        <svg x='424.64349545747496' y='4240' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href=''><desc> Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='16.5' dominant-baseline='hanging' font-weight='600' font-size='18px'></text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'></text></g></svg>
+        <svg x='424.64349545747496' y='4240' class='ratingteam'><image y='7.5' width='35' height='35' xlink:href=''><desc> Logo</desc></image><g font-family='SUSE, sans-serif' fill='#ffffff'><text x='45' y='9.5' dominant-baseline='hanging' font-weight='600' font-size='18px'></text><text x='45' y='43.5' dominant-baseline='ideographic' font-weight='300' font-size='12px'></text></g></svg>
         <text text-anchor='end' x='37' y='4330' dominant-baseline='central' fill='#ffffff' font-family='Inter' font-weight='700' font-size='28' class='num'>67</text>
         <rect x='50' width='899.5' height='50' y='4305' rx='5' fill='#222222E0' class='ratingbox'></rect>
         <rect x='50' width=468.0715318 height='50' y='4305' rx='5' fill='#666666' class='ratingbox colored'><title>Rating: </title></rect>
@@ -672,6 +672,10 @@ rbox_widths[index*2]=889.5
 rbox_widths[index*2+1]=def_barlength
 rteam_x[index] = def_barlength+63
 rtext_x[index] = def_barlength+40
+if (team.includes("Non-Qualifying Team")){
+  rteam_get[index].children[1].children[0].setAttribute('y',16.5)
+}
+
 resizework += 1
 if(resizework==100){
   
