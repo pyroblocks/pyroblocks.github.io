@@ -4,7 +4,7 @@
     flex-direction: row;
     gap: 15px;
     border-radius: 10px;
-    background: #110E22;
+    background: #111111;
     padding: 16px
 }
 
@@ -18,7 +18,7 @@ button.svelte-6wsccd:active {
 }
 
 .number.svelte-6wsccd {
-    background: #18142C
+    background: #181818
 }
 
 .prev.svelte-6wsccd {
@@ -44,6 +44,6 @@ button.svelte-6wsccd:not(.prev) {
 }
 
 .current.number.svelte-6wsccd {
-    background: var(--rs-blue);
+    background: #F27D30;
     transition: .2s
 }
