@@ -92,9 +92,8 @@
                         <p>RAE has always been maintained on spreadsheets, and as of now that's where you can find all
                             of its detailed rankings and predictions – though I did finally get a working version of the
                             <a href="https://pyroblocks.github.io/projects/rae-rankings">rankings list</a> up a few days
-                            ago, which included me learning how to use JavaScript for the first time. I'll work on
-                            getting more functionality onto this site soon enough. Maybe it'll even become automated if
-                            I can re-learn how to use the Google Sheets API.
+                            ago, which included me learning how to use JavaScript for the first time. The rankings are automated and update alongside the spreadsheet – I'll work on
+                            getting more functionality onto this site soon enough.
                         </p>
                         <p>Anyways, getting back on topic, RAE ratings are relative, meaning that how likely a team is
                             to win a series against any other team is determined by the difference in their two ratings.
@@ -109,7 +108,8 @@
                         <p>These probabilities may seem fairly small, but they add up over the course of a tournament:
                             For instance, Karmine Corp is only about ~150 rating clear of the rest of the field in EU,
                             but (spoilers) win a majority of all simulations for the third Birmingham Open.</p>
-                        <p>For each respective region, I run 50,000 simulations of its event. This number is a little low as far as simulating tournament odds goes, but does the job within ~2% of the mathematical probabilities for each outcome. Why don't I use more simulations? Because my Python code is inefficient, bloated, and built from a version I made three years ago when I was even worse at programming.</p>
+                        <p><s>For each respective region, I run 50,000 simulations of its event. This number is a little low as far as simulating tournament odds goes, but does the job within ~2% of the mathematical probabilities for each outcome. Why don't I use more simulations? Because my Python code is inefficient, bloated, and built from a version I made three years ago when I was even worse at programming.</s></p>
+                        <p>I run 1,000,000 simulations of each regions' respective event, which does well enough to get within ~0.5% of the theoretical probabilities for each outcome. For any mid-day odds updates you might see, those will likely use 100,000 simulations instead, in order to save time.</p>
                         <p>Just a few more things before I get to the actual predictions:</p>
                         <p>I am currently testing an alternative region rating system. I'll weigh its performance
                             against the current model's for the Birmingham Major and proceed from there.</p>
