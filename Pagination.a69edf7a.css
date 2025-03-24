@@ -44,6 +44,6 @@ button.svelte-6wsccd:not(.prev) {
 }
 
 .current.number.svelte-6wsccd {
-    background: #F27D30;
+    background: #FF6914;
     transition: .2s
 }

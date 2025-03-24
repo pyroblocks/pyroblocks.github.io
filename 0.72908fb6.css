@@ -2,11 +2,11 @@
 :root {
   --main-content-width: 1000px;
   --standard-gradient: linear-gradient(105deg,
-  #F27D30 18%,
+  #FF6914 18%,
   #EF2F2F 80%);
   --pink-gradient: linear-gradient(105deg,
   #EF2F2F 18%,
-  #F27D30 80%);
+  #FF6914 80%);
   --bg-color: #171717;
   --darkbox-color: #171717DD;
   --box-color: #0E0E0EDD;
@@ -65,7 +65,7 @@ h6 {
   overflow-wrap:break-word
 }
 a {
-  color:#F27D30;
+  color:#FF6914;
   text-decoration:none
 }
 a:visited,
