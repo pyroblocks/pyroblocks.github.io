@@ -1,0 +1,24 @@
+nav.svelte-1pkbe26 {
+  display:flex;
+  flex-wrap:wrap-reverse;
+  align-content:flex-end;
+  list-style:none;
+  gap:3px;
+  margin-block-start:0;
+  margin-block-end:0;
+  padding-inline-start:0;
+  border-bottom:3px solid #FF6914;
+}
+a.svelte-1pkbe26 {
+  color:#fff;
+  padding:10px;
+  display:block;
+  background-color:var(--nav-color);
+  border-radius:10px 10px 0 0;
+  border:1px solid transparent;
+  border-bottom:none;
+  font-size:18px
+}
+a.svelte-1pkbe26:visited {
+  color:#fff
+}
