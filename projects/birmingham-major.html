@@ -666,25 +666,28 @@ fetch(sheetURL1)
 function handleResponseTable(csvText) {
 let sheetObjects = csvToObjects(csvText).slice(0,16);
 // sheetObjects is now an Array of Objects
-console.log(sheetObjects)
+//console.log(sheetObjects)
 //console.log(top16[0])
 timestampTable=sheetObjects[0]["datetime"] + "m ET"
 timestampTable = timestampTable.replace("|",",")
 
 var tRows = Array.from(document.getElementsByClassName("tablerow"));
 //console.log(tRows)
-
+cols = ['1st', 'Top 2', 'Top 4', 'Top 6', 'Top 8', 'Top 11', 'Top 14']
 sheetObjects.forEach((element,index) =>{
   //console.log(element)
-  //console.log(tRows[index].children)
+  console.log(tRows[index].children)
   tRows[index].children[0].innerHTML = `<img class="table-icon" src="/src/logos/${element['Team']}.png" alt="">&nbsp; ${element['Team']}`
-  tRows[index].children[1].innerHTML = `&nbsp;${element['1st']}`
-  tRows[index].children[2].innerHTML = `&nbsp;${element['Top 2']}`
-  tRows[index].children[3].innerHTML = `&nbsp;${element['Top 4']}`
-  tRows[index].children[4].innerHTML = `&nbsp;${element['Top 6']}`
-  tRows[index].children[5].innerHTML = `&nbsp;${element['Top 8']}`
-  tRows[index].children[6].innerHTML = `&nbsp;${element['Top 11']}`
-  tRows[index].children[7].innerHTML = `&nbsp;${element['Top 14']}`
+  cols.forEach((el,ind) =>{
+    tRows[index].children[ind+1].innerHTML = `&nbsp;${element[el]}`
+  if (element[el] === ">99%") {
+    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,1)'
+  } else if (element[el] === "<1%" || element[el] === "-") {
+    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,0)'
+  } else {
+    tRows[index].children[ind+1].style = `background-color: rgba(239,47,47,${parseFloat(element[el])/100})`
+  }
+  })
 })
 var timestamp_get = Array.from(document.getElementsByClassName("table_timestamp"))[0];
 timestamp_get.innerText = timestampTable

@@ -52,11 +52,8 @@ td.svelte-l969s8.svelte-l969s8 {
   text-overflow:ellipsis;
   width:80px
 }
-tr.svelte-l969s8:nth-child(odd) td.svelte-l969s8 {
+tr.svelte-l969s8 td.svelte-l969s8 {
   background-color:#0E0E0E
-}
-tr.svelte-l969s8:nth-child(2n) td.svelte-l969s8 {
-  background-color:#1E1E1E
 }
 th.svelte-l969s8.svelte-l969s8:first-child,
 td.svelte-l969s8.svelte-l969s8:first-child {
