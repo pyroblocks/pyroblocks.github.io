@@ -676,7 +676,7 @@ var tRows = Array.from(document.getElementsByClassName("tablerow"));
 cols = ['1st', 'Top 2', 'Top 4', 'Top 6', 'Top 8', 'Top 11', 'Top 14']
 sheetObjects.forEach((element,index) =>{
   //console.log(element)
-  console.log(tRows[index].children)
+  //console.log(tRows[index].children)
   tRows[index].children[0].innerHTML = `<img class="table-icon" src="/src/logos/${element['Team']}.png" alt="">&nbsp; ${element['Team']}`
   cols.forEach((el,ind) =>{
     tRows[index].children[ind+1].innerHTML = `&nbsp;${element[el]}`
