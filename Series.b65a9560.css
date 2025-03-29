@@ -1,0 +1,182 @@
+.tt-team-group.svelte-1fljsgt.svelte-1fljsgt {
+  display:flex;
+  flex-direction:column;
+  align-items:center
+}
+.tt-pred.svelte-1fljsgt.svelte-1fljsgt {
+  text-align:center;
+  font-size:20px;
+  line-height:1;
+  font-family:Inter,sans-serif
+}
+.fancysep.svelte-1fljsgt.svelte-1fljsgt {
+  grid-column:span 3;
+  text-align:center;
+  margin:0 -5px
+}
+.fancysep.svelte-1fljsgt h4.svelte-1fljsgt {
+  margin:0
+}
+.tt-score.svelte-1fljsgt.svelte-1fljsgt {
+  justify-self:center;
+  font-family:SUSE,sans-serif;
+  font-size:32px;
+  font-weight:700;
+  line-height:1;
+  margin-bottom:5px
+}
+ul.svelte-1fljsgt.svelte-1fljsgt {
+  list-style:none;
+  padding-inline-start:0;
+  margin-block-start:0;
+  margin-block-end:0
+}
+input.svelte-1fljsgt.svelte-1fljsgt {
+  width:30px
+}
+.bar.svelte-1fljsgt.svelte-1fljsgt {
+  --region-color:var(--region-);
+  height:12px;
+  background-color:var(--region-color);
+  border-radius:3px
+}
+.tooltip-team.svelte-1fljsgt.svelte-1fljsgt {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size:12px;
+  font-family:Inter,sans-serif;
+  font-weight:300
+}
+.tooltip.svelte-1fljsgt>.svelte-1fljsgt:nth-child(1) {
+  --region-color:var(--region-);
+  border-right:solid 3px var(--region-color);
+  padding-right:5px
+}
+.tooltip.svelte-1fljsgt>.svelte-1fljsgt:nth-child(3) {
+  --region-color:var(--region-);
+  border-left:solid 3px var(--region-color);
+  padding-left:5px
+}
+.vs.svelte-1fljsgt.svelte-1fljsgt {
+  font-family:Inter,sans-serif;
+  font-size:24px;
+  text-align:center;
+  align-self:center
+}
+.team-name.svelte-1fljsgt.svelte-1fljsgt {
+  font-weight:600;
+  font-size:14px
+}
+.tooltip.svelte-1fljsgt.svelte-1fljsgt {
+  position:fixed;
+  background-color:var(--box-color);
+  box-shadow:10px 10px 10px #00000030;
+  border:solid 1px black;
+  -webkit-backdrop-filter:blur(3px);
+  backdrop-filter:blur(3px);
+  display:none;
+  z-index:2;
+  width:min(90%,320px);
+  gap:5px;
+  row-gap:10px;
+  padding:5px;
+  border-radius:10px;
+  align-items:stretch;
+  box-sizing:border-box
+}
+.sub-box.svelte-1fljsgt:hover .tooltip.svelte-1fljsgt {
+  display:grid;
+  grid-template-columns:1fr auto 1fr
+}
+.sub-box.svelte-1fljsgt .tooltip.svelte-1fljsgt:hover {
+  display:none
+}
+.likelihood.svelte-1fljsgt.svelte-1fljsgt {
+  font-size:12px;
+  display:flex;
+  gap:3px;
+  align-items:center
+}
+.sub-box.svelte-1fljsgt.svelte-1fljsgt {
+  padding:0;
+  box-shadow:10px 10px 10px #00000030;
+  border:1px solid #FFFFFF15;
+  border-radius:6px;
+  --narrow-name:none;
+  --wide-name:inline;
+  position:relative
+}
+.sub-box.svelte-1fljsgt .svelte-1fljsgt {
+  -webkit-user-select:none;
+  user-select:none
+}
+.team.svelte-1fljsgt.svelte-1fljsgt {
+  display:grid;
+  grid-template-columns:[Logo] 30px [TeamName] 1fr [Score] 30px;
+  align-items:stretch
+}
+.team.svelte-1fljsgt.svelte-1fljsgt:first-child {
+  border-bottom:1px solid #FFFFFF
+}
+.team-logo.svelte-1fljsgt.svelte-1fljsgt {
+  display:flex;
+  align-items:center;
+  justify-self:center;
+  min-height:30px;
+  margin:0 5px
+}
+.team-separator.svelte-1fljsgt.svelte-1fljsgt {
+  --highlight:var(--region-);
+  border-left:3px solid var(--highlight);
+  border-right:1px dotted #FFFFFF80;
+  min-width:55px;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  line-height:1.5;
+  justify-content:center;
+  font-family:Inter,sans-serif;
+  container-type:inline-size
+}
+@keyframes svelte-1fljsgt-pulse {
+  0% {
+    opacity:1
+  }
+  50% {
+    opacity:.5
+  }
+  to {
+    opacity:1
+  }
+}
+.score.svelte-1fljsgt.svelte-1fljsgt {
+  font-family:SUSE,cursive;
+  font-size:x-large;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-self:center;
+  line-height:1.2;
+  margin:0 5px
+}
+.running.svelte-1fljsgt.svelte-1fljsgt {
+  animation:svelte-1fljsgt-pulse 3s infinite
+}
+.winner.svelte-1fljsgt.svelte-1fljsgt {
+  color:var(--rs-green)
+}
+.fullname.svelte-1fljsgt.svelte-1fljsgt {
+  display:none
+}
+@container (min-width: 155px) {
+  .fullname.svelte-1fljsgt.svelte-1fljsgt {
+    display:var(--wide-name)
+  }
+  .abbr.svelte-1fljsgt.svelte-1fljsgt {
+    display:var(--narrow-name)
+  }
+}

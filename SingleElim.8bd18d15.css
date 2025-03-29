@@ -1,0 +1,60 @@
+.singleelim.svelte-1xxbb3d {
+  display:grid;
+  grid-auto-flow:column;
+  grid-template-columns:[Quarters] 1fr [Semis] 1fr [Grands] 1fr;
+  grid-template-rows:auto;
+  justify-content:space-between;
+  row-gap:10px;
+  column-gap:20px;
+  overflow:auto visible;
+  padding-bottom:20px
+}
+span.svelte-1xxbb3d {
+  position:relative
+}
+.Quarters.svelte-1xxbb3d {
+  grid-column:Quarters
+}
+.Semis.svelte-1xxbb3d {
+  grid-column:Semis
+}
+.Grands.svelte-1xxbb3d {
+  grid-column:Grands
+}
+span.Quarters.svelte-1xxbb3d:nth-child(1):after {
+  position:absolute;
+  z-index:1;
+  top:calc(50% - 1px);
+  left:calc(100% - 1px);
+  content:"";
+  white-space:nowrap;
+  background:url(../../../src/bracket-connection.svg);
+  width:22px;
+  height:23px;
+  opacity:.5
+}
+span.Quarters.svelte-1xxbb3d:nth-child(2):after {
+  position:absolute;
+  z-index:1;
+  top:calc(50% - 1px);
+  left:calc(100% - 1px);
+  content:"";
+  white-space:nowrap;
+  background:url(../../../src/bracket-connection.svg);
+  width:22px;
+  height:23px;
+  opacity:.5
+}
+
+span.Semis.svelte-1xxbb3d:nth-child(odd):after {
+  position:absolute;
+  z-index:1;
+  top:calc(50% - 1px);
+  left:calc(100% - 1px);
+  content:"";
+  white-space:nowrap;
+  background:url(../../../src/bracket-connection-round2.svg);
+  width:22px;
+  height:148px;
+  opacity:.5
+}
