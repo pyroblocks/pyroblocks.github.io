@@ -92,10 +92,12 @@
                 }
                 article_objects = Array.from(document.getElementsByClassName("bar-article corner-all svelte-1brwhpx"))
                 article_objects.forEach((element,index) =>{
-                if (index < toshow) {
-                    element.innerHTML = articles[3*(pagenumber-1)+index].toHTML()
+                if ((2-index) < toshow) {
+                    element.setAttribute('style','')
+                    element.innerHTML = articles[3*(pagenumber-1)+(2-index)].toHTML()
                 } else {
-                    element.innerHTML = ""
+                    element.setAttribute('style','display: none;background: #171717')
+                    element.innerHTML = ``
                 }
             });
 
@@ -123,11 +125,23 @@
                     return(`<div class="image-area svelte-1brwhpx"><a href="${this.link}"><img src="${this.img}" width="400" height="200" class="article-img svelte-1brwhpx" alt="${this.alt_text}" loading="lazy"></a></div>\n<div class="text-area svelte-1brwhpx"><a href="${this.link}" class="svelte-1brwhpx"><h3 class="mto">${this.title}</h3></a>\n    <span class="svelte-1brwhpx"><img src="./src/calendar-white.svg" width="24" height="24" class="notext" style="vertical-align:middle;" alt="Published:"> \n        <span style="font-size:18px;vertical-align:middle; text-align: left; "><time datetime="2025-01-01T00:00:00.000Z">${this.date}</time></span></span>\n    <p class="description mbo svelte-1brwhpx">${this.description}</p>\n    </div>\n`)
                 }
             }
-            a0 = new article_template("Birmingham Major RAE Predictions","Birmingham Major RAE Predictions","./articles/birmingham-major-predictions","March 12, 2025","Who does RAE predict to raise the trophy?","./src/birmingham-major-predictions.png");
-            a1 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week Two)","RAE's Birmingham Open #3 and Major Odds (Week Two)","./articles/rae-birmingham-open-3-odds-p2","February 25, 2025","Which sixteen teams are set to qualify for the major?","./src/birmingham-o3-p2.png");
-            a2 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week One)","RAE's Birmingham Open #3 and Major Odds (Week One)","./articles/rae-birmingham-open-3-odds-p1","February 17, 2025","Who does the rating system predict to make it to Birmingham?","./src/birmingham-o3-p1.png");
-            a3 = new article_template("Esportswashing: The Cost of Doing Business","Local fans of Team Falcons cheer for their team at Gamers8 2023.","./articles/esportswashing-the-cost-of-doing-business","May 9, 2024","Saudi Arabia is coming to esports' rescue. What price will the industry pay?","./src/esportswashing.jpeg");
-            articles = [a0,a1,a2,a3]
+            a3 = new article_template("Birmingham Major RAE Predictions","Birmingham Major RAE Predictions","./articles/birmingham-major-predictions","March 12, 2025","Who does RAE predict to raise the trophy?","./src/birmingham-major-predictions.png");
+            a2 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week Two)","RAE's Birmingham Open #3 and Major Odds (Week Two)","./articles/rae-birmingham-open-3-odds-p2","February 25, 2025","Which sixteen teams are set to qualify for the major?","./src/birmingham-o3-p2.png");
+            a1 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week One)","RAE's Birmingham Open #3 and Major Odds (Week One)","./articles/rae-birmingham-open-3-odds-p1","February 17, 2025","Who does the rating system predict to make it to Birmingham?","./src/birmingham-o3-p1.png");
+            a0 = new article_template("Esportswashing: The Cost of Doing Business","Local fans of Team Falcons cheer for their team at Gamers8 2023.","./articles/esportswashing-the-cost-of-doing-business","May 9, 2024","Saudi Arabia is coming to esports' rescue. What price will the industry pay?","./src/esportswashing.jpeg");
+            articles_base = [a3,a2,a1,a0]
+            articles = []
+            articles_base.forEach((element,index) => {
+                if(index%3==0) {
+                    articles.push(element)
+                }
+                else if(index%3==1){
+                    articles.splice(index-1,0,element)
+                }
+                else if(index%3==2){
+                    articles.splice(index-2,0,element)
+                }
+            });
             setPage(1)
         </script>
 	</body>
