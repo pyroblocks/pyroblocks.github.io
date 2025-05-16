@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/src/favicon.png">
+  <meta property="og:title" content="RLCS RAE Matchup Maker">
+  <meta property="og:description" content="Create hypothetical RLCS matchups and see who RAE thinks will win">
+  <meta name="description" content="Create hypothetical RLCS matchups and see who RAE thinks will win">
+  <meta name="viewport" content="initial-scale=1" />
+  <meta name="theme-color" content="#FF6914">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="application-name" content="Pyroblocks">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="">
+  <meta property="og:image" content="">
+  <meta property="article:publisher" content="https://pyroblocks.github.io">
+  <meta property="article:author" content="Pyroblocks">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://pyroblocks.github.io/projects/rae-matchup-maker">
+
+
+    <link href="/0.72908fb6.css" rel="stylesheet">
+    <link href="/8.7a932175.css" rel="stylesheet">
+    <link href="/Pagination.a69edf7a.css" rel="stylesheet">
+    <link href="/dataframe.602cb131.css" rel="stylesheet">
+    <link href="/dropdown.css" rel="stylesheet">
+  <title>RLCS RAE Matchup Maker</title><!-- HEAD_svelte-h4fcos_START --><!-- HEAD_svelte-h4fcos_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover" cz-shortcut-listen="true">
+    <div style="display: contents">
+        <div class="centerpiece svelte-jl8vmr">
+            <header class="topnav svelte-jl8vmr" text-align="center">
+                <div class="topnav-upper svelte-jl8vmr">
+                    <header>
+                        <h1><a href="https://pyroblocks.github.io" style="vertical-align: middle"
+                                class="whitelink">Pyroblocks</a></h1>
+                    </header>
+                    <div class="topnav-options svelte-jl8vmr">
+                        <div class="notext"><a class="social notext svelte-jl8vmr"
+                                href="https://twitter.com/Pyroblockx"><img height="45" width="54.68px"
+                                    src="/src/twitter.svg" alt="Twitter"></a>
+                            <a class="social notext svelte-jl8vmr" href="https://www.youtube.com/@Pyroblocks"><img
+                                    height="45" width="63.86px" src="/src/yt.svg" alt="YouTube"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topnav-separator svelte-jl8vmr"></div>
+                <div class="topnav-highlight"></div>
+            </header>
+            </header>
+            <main>
+            <div class="standard-box" style="margin-top:20px;border-radius:30px">
+                <div class="article-img corner-all svelte-1ko9v02"></div>
+                <h1>RLCS RAE Matchup Maker</h1>
+                <div style="margin: 0; display: flex; justify-content:space-between; align-items:center;"><span style="display:inline-block; "><img src="/src/calendar-white.svg" width="24" height="24" class="notext" style="vertical-align:middle;" alt="Last update:">
+            <span class="textgradient sheet_timestamp" style="font-size:18px;vertical-align:middle; text-align: left;">Loading...</span></span></div>
+            <div class="container" style="display:flex;">
+                <div id="team1" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px">
+                    <img width='250' height='250' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px)"  id="teamlogo1"></image>
+                    <div class="dropdown" style="margin-top:10px;height:60px">
+                        <button class="dropdown-button" style="width:250px; font-size:28px;height:60px;vertical-align:middle" onclick="activateDropdown('dropdown1')"id='dropdown1'>Loading...</button>
+                        <div class="dropdown-menu"style="overflow-y:scroll;height: 250px;overflow-x:hidden;top:0px">
+                             <input autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown1-search" style="margin-top:5px;position:sticky;top:5px">
+                            <svg>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 style="margin-top:10px" id="players1">⠀</h4>
+                    <h2 style="margin-bottom:15px" id="rating1">⠀</h2>
+                </div>
+                <div id="versus" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
+                    <div style="width:100px;height:150px;position: absolute;margin-top:60px;margin-left:-16px">
+                        <input autocomplete="off" class="score-input hide" placeholder="   " maxlength="1" id="score1" style="text-align:center"></input>
+                    </div>
+                    <h1 style="font-size:75px;margin-top:80px;align-self:center;top:0px">VS</h1>
+                        <div class="dropdownSELECT" style="margin-top:10px;height:60px">
+                        <button class="dropdown-buttonSELECT" style="width:120px; font-size:36px;height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdownSELECT')"id='dropdownSELECT'>Bo7</button>
+                        <div class="dropdown-menuSELECT"style="overflow-y:scroll;height:250px;overflow-x:hidden;top:0px">
+                            <button class="dropdown-button-option" onclick="selectSeriesLength(1)">Bo1</button>
+                            <button class="dropdown-button-option" onclick="selectSeriesLength(3)">Bo3</button>
+                            <button class="dropdown-button-option" onclick="selectSeriesLength(5)">Bo5</button>
+                            <button class="dropdown-button-option" onclick="selectSeriesLength(7)">Bo7</button>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                    <div style="width:100px;height:150px;position: relative;margin-top:-184px; margin-left:auto; margin-right:-16px">
+                        <input autocomplete="off" class="score-input hide" placeholder="   " maxlength="1" id="score2" style="text-align:center"></input>
+                    </div>
+                        <div style="vertical-align:middle;display:flex;align-items:center">
+                            <div style="display:inline-block;position:relative;margin-top:60px;width:150px">
+                            <img width='150' height='150' src='/src/logos/_empty_.webp'style="filter: drop-shadow(1rem, 1rem, 10px)" id="finallogo"></image>
+                                        <h4 id="finalname"style='width:316px;left:200px;fontSize=12px'>⠀</h4>
+                            </div>
+                            <h1 style="width:150px;height:150px;font-size:45px;display:inline;vertical-align: middle;text-align:center;margin-top:33%" id="finalodds"></h1>
+                        </div>
+                </div>
+                <div id="team2" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
+                    <img width='250' height='250' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px)" id="teamlogo2"></image>
+                    <div class="dropdown" style="margin-top:10px;height:60px">
+                        <button class="dropdown-button" style="width:250px; font-size:28px;height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdown2')"id='dropdown2'>Loading...</button>
+                        <div class="dropdown-menu"style="overflow-y:scroll;height: 250px;overflow-x:hidden;top:0px">
+                             <input autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown2-search" style="margin-top:5px;position:sticky;top:5px">
+                            <svg>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 style="margin-top:10px" id="players2">⠀</h4>
+                    <h2 style="margin-bottom:15px" id="rating2">⠀</h2>
+                </div>
+                </div>
+            </div>
+            </main>
+</body>
+<script src="/dropdown-script.js"></script> 
+</html>

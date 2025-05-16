@@ -1,0 +1,140 @@
+button,
+.dropdown-button{
+  background:#2B2B2B;
+  border-radius:10px;
+  color:#fff;
+  padding:10px 20px;
+  font-family:SUSE, sans-serif;
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  display:inline-block;
+  align-items:flex-start;
+  box-sizing:border-box;
+  text-shadow:3px 3px 9px rgba(0,0,0,.65);
+  outline-style:solid;
+  outline-width:2px;
+  outline-color:#171717DD
+}
+
+.dropdown { 
+  position:relative
+}
+
+.dropdown-menu {
+  position:relative;
+  width:250px;
+  left:calc((66px/2));
+  top:calc(100% + .25rem);
+  background-color:#0E0E0E;
+  border-radius:10px;
+  text-shadow:1px 1px 5px rgba(0,0,0,.65);
+  box-shadow: 0 0px 5px 0 rgba(0,0,0,.25);
+  pointer-events:none;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:opacity 150ms ease-in-out;
+  transition:transform 150ms ease-in-out
+}
+
+.dropdown > .dropdown-active + .dropdown-menu{
+  opacity: 1;
+  transform:translateY(0);
+  pointer-events:auto;
+  transition:opacity 150ms ease-in-out;
+  transition:transform 150ms ease-in-out
+}
+
+.dropdown-buttonSELECT{
+  background:#2B2B2B;
+  border-radius:10px;
+  color:#fff;
+  padding:10px 20px;
+  font-family:SUSE, sans-serif;
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  display:inline-block;
+  align-items:flex-start;
+  box-sizing:border-box;
+  text-shadow:3px 3px 9px rgba(0,0,0,.65);
+  outline-style:solid;
+  outline-width:2px;
+  outline-color:#171717DD
+}
+
+.dropdownSELECT { 
+  position:relative
+}
+
+.dropdown-menuSELECT {
+  position:relative;
+  width:120px;
+  left:calc((196px/2));
+  top:calc(100% + .25rem);
+  background-color:#2B2B2B;
+  border-radius:10px;
+  text-shadow:1px 1px 5px rgba(0,0,0,.65);
+  box-shadow: 0 0px 5px 0 rgba(0,0,0,.25);
+  pointer-events:none;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:opacity 150ms ease-in-out;
+  transition:transform 150ms ease-in-out;
+  z-index:10
+}
+
+.dropdownSELECT > .dropdown-active + .dropdown-menuSELECT{
+  opacity: 1;
+  transform:translateY(0);
+  pointer-events:auto;
+  transition:opacity 150ms ease-in-out;
+  transition:transform 150ms ease-in-out
+}
+
+.ratingteam {
+  text-shadow:none
+}
+
+input {
+  width:200px;
+  background-color:#2B2B2B;
+  border-radius:10px;
+  text-shadow:1px 1px 5px rgba(0,0,0,.65);
+  box-shadow: 0 0px 5px 0 rgba(0,0,0,.25);
+  border-width:3px;
+  font-family:"SUSE",serif;
+  font-weight:600;
+  text-indent: 2px;
+  border-color:#0E0E0E;
+}
+
+.hide {
+  display:none;
+}
+
+.dropdown-button-option {
+  background:#2B2B2B;
+  border-width:0;
+  outline-width:0;
+  font-size:32px;
+  margin-left:9px
+  
+}
+
+.score-input {
+font-size:100px;
+text-decoration: underline;
+background:transparent;
+border-width:0px;
+box-shadow: none;
+width:65px;
+}
+
+.score-input::placeholder {
+  color:#FFFFFF
+}
