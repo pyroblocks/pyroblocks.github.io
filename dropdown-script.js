@@ -371,7 +371,7 @@ function winProbability() {
     //console.log(team1=="" || team2=="")
     if (team1=="" || team2=="") {
         //BAD RESPONSE
-        imageObj.setAttribute('src','/src/logos/_empty_.webp');nameObj.innerText="⠀";
+        imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
         return(false)
     }
@@ -383,7 +383,7 @@ function winProbability() {
     if (serieslength == 1) {
         if (score1 > 1 || score2 > 1 || (score1==1 && score2==1)) {
         //BAD RESPONSE
-        imageObj.setAttribute('src','/src/logos/_empty_.webp');nameObj.innerText="⠀";
+        imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
         return(false)
         } else if (score1==1){
@@ -408,7 +408,7 @@ function winProbability() {
     } else if (serieslength == 3) {
         if (score1 > 2 || score2 > 2 || (score1==2 && score2==2)) {
         //BAD RESPONSE
-        imageObj.setAttribute('src','/src/logos/_empty_.webp');nameObj.innerText="⠀";
+        imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
         return(false)
         } else if (score1==2){
@@ -473,7 +473,7 @@ function winProbability() {
     } else if (serieslength ==5) {
         if (score1 > 3 || score2 > 3 || (score1==3 && score2==3)) {
         //BAD RESPONSE
-        imageObj.setAttribute('src','/src/logos/_empty_.webp');nameObj.innerText="⠀";
+        imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
         return(false)
         } else if (score1==3){
@@ -598,7 +598,7 @@ function winProbability() {
     } else {
         if (score1 > 4 || score2 > 4 || (score1==4 && score2==4)) {
         //BAD RESPONSE
-        imageObj.setAttribute('src','/src/logos/_empty_.webp');nameObj.innerText="⠀";
+        imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
         return(false)
         } else if (score1==4){
