@@ -406,7 +406,7 @@ function winProbability() {
             }
         }
     } else if (serieslength == 3) {
-        if (score1 > 2 || score2 > 2 || (score1==2 && score2==2)) {
+         if (score1 > 2 || score2 > 2 || (score1==2 && score2==2)) {
         //BAD RESPONSE
         imageObj.setAttribute('src','/src/logos/placeholder_matchupmaker.webp');nameObj.innerText="⠀";
         wpObj.innerText = ""
