@@ -67,6 +67,7 @@ function activateDropdown(id) {
         if(dropdown1==0) {
             dropdownbutton.classList.add("dropdown-active")
             dropdown1=1
+            document.getElementById('dropdown1-search').focus();
         } else {
             dropdownbutton.classList.remove("dropdown-active")
             dropdown1=0 
@@ -75,6 +76,7 @@ function activateDropdown(id) {
         if(dropdown2==0) {
             dropdownbutton.classList.add("dropdown-active")
             dropdown2=1
+            document.getElementById('dropdown2-search').focus();
         } else {
             dropdownbutton.classList.remove("dropdown-active")
             dropdown2=0 
