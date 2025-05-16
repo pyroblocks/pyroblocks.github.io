@@ -138,3 +138,8 @@ width:65px;
 .score-input::placeholder {
   color:#FFFFFF
 }
+
+input:focus {
+    outline: none;
+    border: none;
+}
