@@ -60,27 +60,27 @@
                 <div style="margin: 0; display: flex; justify-content:space-between; align-items:center;"><span style="display:inline-block; "><img src="/src/calendar-white.svg" width="24" height="24" class="notext" style="vertical-align:middle;" alt="Last update:">
             <span class="textgradient sheet_timestamp" style="font-size:18px;vertical-align:middle; text-align: left;">Loading...</span></span></div>
             <div class="container" style="display:flex;">
-                <div id="team1" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px">
-                    <img width='250' height='250' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px)"  id="teamlogo1"></image>
+                <div id="team1" style = "display:inline;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px">
+                    <img width='77%' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px);aspect-ratio: 1;"  id="teamlogo1"></image>
                     <div class="dropdown" style="margin-top:10px;height:60px">
-                        <button class="dropdown-button" style="width:250px; font-size:28px;height:60px;vertical-align:middle" onclick="activateDropdown('dropdown1')"id='dropdown1'>Loading...</button>
-                        <div class="dropdown-menu"style="overflow-y:scroll;height: 250px;overflow-x:hidden;top:0px">
+                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle" onclick="activateDropdown('dropdown1')"id='dropdown1'>Loading...</button>
+                        <div class="dropdown-menu"style="--parent-width:77%;width:77%;overflow-y:scroll;height: 255px;overflow-x:hidden;top:0px">
                              <input autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown1-search" style="margin-top:5px;position:sticky;top:5px" >
-                            <svg>
+                            <svg width="100%">
                             </svg>
                         </div>
                     </div>
                     <h4 style="margin-top:10px" id="players1">⠀</h4>
                     <h2 style="margin-bottom:15px" id="rating1">⠀</h2>
                 </div>
-                <div id="versus" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
-                    <div style="width:100px;height:150px;position: absolute;margin-top:60px;margin-left:-16px">
+                <div id="versus" style = "display:inline;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
+                    <div class="score1div" style="width:31%;height:auto;position: absolute;margin-left:-16px">
                         <input autocomplete="off" class="score-input hide" placeholder="⠀"value="0" maxlength="1" id="score1" style="text-align:center"></input>
                     </div>
-                    <h1 style="font-size:75px;margin-top:80px;align-self:center;top:0px">VS</h1>
+                    <h1 style="font-size:75px;margin-top:80px;align-self:center;top:0px" id="versustext">VS</h1>
                         <div class="dropdownSELECT" style="margin-top:10px;height:60px">
-                        <button class="dropdown-buttonSELECT" style="width:120px; font-size:36px;height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdownSELECT')"id='dropdownSELECT'>Bo7</button>
-                        <div class="dropdown-menuSELECT"style="overflow-y:scroll;height:250px;overflow-x:hidden;top:0px">
+                        <button class="dropdown-buttonSELECT" style="width:37%; height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdownSELECT')"id='dropdownSELECT'>Bo7</button>
+                        <div class="dropdown-menuSELECT"style="width:37%;overflow-y:scroll;overflow-x:hidden;top:0px">
                             <button class="dropdown-button-option" onclick="selectSeriesLength(1)">Bo1</button>
                             <button class="dropdown-button-option" onclick="selectSeriesLength(3)">Bo3</button>
                             <button class="dropdown-button-option" onclick="selectSeriesLength(5)">Bo5</button>
@@ -89,24 +89,26 @@
                     </div>
                     <div>
                     </div>
-                    <div style="width:100px;height:150px;position: relative;margin-top:-184px; margin-left:auto; margin-right:-16px">
+                    <div class="score2div" style="width:31%;height:auto;position: relative;margin-left:auto; margin-right:-16px">
                         <input autocomplete="off" class="score-input hide" placeholder=" " value="0" maxlength="1" id="score2" style="text-align:center"></input>
                     </div>
-                        <div style="vertical-align:middle;display:flex;align-items:center">
-                            <div style="display:inline-block;position:relative;margin-top:60px;width:150px">
-                            <img width='150' height='150' src='/src/logos/placeholder_matchupmaker.webp'style="filter: drop-shadow(1rem, 1rem, 10px)" id="finallogo"></image>
-                                        <h4 id="finalname"style='width:316px;left:200px;fontSize=12px'>⠀</h4>
-                            </div>
-                            <h1 style="width:150px;height:150px;font-size:45px;display:inline;vertical-align: middle;text-align:center;margin-top:33%" id="finalodds"></h1>
+                <div style="display:flex; width: 100%; align-items: center; margin-top: 60px; flex-direction: column;">
+                    <div style="display: flex; width: 100%;">
+                        <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+                            <img width='150' height='150' src='/src/logos/placeholder_matchupmaker.webp' style="filter: drop-shadow(1rem, 1rem, 10px)" id="finallogo">
                         </div>
+                        <h1 style="width: 50%; height: 150px; display: flex; align-items: center; justify-content: center; text-align: center;" id="finalodds"></h1>
+                    </div>
+                    <h4 id="finalname" style='width: 200%; text-align: center; font-size: 18px; margin-top: 0px;'>⠀</h4>
                 </div>
-                <div id="team2" style = "display:inline;text-align:center; width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
-                    <img width='250' height='250' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px)" id="teamlogo2"></image>
+                </div>
+                <div id="team2" style = "display:inline;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
+                    <img width='77%' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px);aspect-ratio: 1;" id="teamlogo2"></image>
                     <div class="dropdown" style="margin-top:10px;height:60px">
-                        <button class="dropdown-button" style="width:250px; font-size:28px;height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdown2')"id='dropdown2'>Loading...</button>
-                        <div class="dropdown-menu"style="overflow-y:scroll;height: 250px;overflow-x:hidden;top:0px">
+                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdown2')"id='dropdown2'>Loading...</button>
+                        <div class="dropdown-menu"style="width:77%;overflow-y:scroll;height: 255px;overflow-x:hidden;top:0px">
                              <input autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown2-search" style="margin-top:5px;position:sticky;top:5px">
-                            <svg>
+                            <svg  width="100%">
                             </svg>
                         </div>
                     </div>

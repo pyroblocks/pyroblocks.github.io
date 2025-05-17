@@ -92,6 +92,126 @@ function activateDropdown(id) {
     }
 }
 
+function resizeButtonText() {
+
+    var buttons_get = Array.from(document.getElementsByClassName("dropdown-button"));
+
+    buttons_get.forEach((element,index) =>{     
+    teamname=element.innerText
+    if(window.innerWidth > 1010) {
+        fsize = "28px"
+    //console.log(teamname.length)
+    if (teamname.length > 20) {
+        fsize = "16px"
+    } else if (teamname.length > 13) {
+        fsize = "20px"
+    }
+
+    } else /*if(window.innerWidth > 768)*/ {
+        fsize="20px"
+    if (teamname.length > 20) {
+        fsize = "14px"
+    } else if (teamname.length > 13) {
+        fsize = "16px"
+    }
+    }
+
+    element.style.fontSize = fsize
+
+    })
+
+
+
+
+}
+
+function resizeDropdownText() {
+    var dropdowns_get = Array.from(document.getElementsByClassName("dropdown-menu"));
+    items1 = Array.from(dropdowns_get[0].children[1].children)
+    items2 = Array.from(dropdowns_get[1].children[1].children)
+
+    items1.forEach((element,index) =>{
+
+        if(index%2==1) {
+            nametext=element.children[4].children[0].innerHTML
+            playerstext=element.children[4].children[1].innerHTML
+            //console.log(nametext,playerstext,nametext)
+            yval="9.5"
+        if(window.innerWidth > 1010) {
+            default_teamnamesize="18px"
+            if (nametext.length >= 20) {
+                default_teamnamesize="13.5px"
+            }
+            default_playerlistsize="12px"
+            if (playerstext.length >= 32) {
+                default_playerlistsize="11px"
+            }
+            if (nametext.includes("Non-Qualifying Team")) {
+                yval="19"
+            }
+        } else /*if(window.innerWidth > 768)*/ {
+            default_teamnamesize="12.5px"
+            if (nametext.length >= 20) {
+                default_teamnamesize="9px"
+            }
+            default_playerlistsize="8px"
+            if (playerstext.length >= 32) {
+                default_playerlistsize="7px"
+            }
+            if (nametext.includes("Non-Qualifying Team")) {
+                yval="22"
+            }
+        }
+
+        //console.log(default_teamnamesize,default_playerlistsize,yval)
+        element.children[4].children[0].setAttribute('font-size',default_teamnamesize)
+        element.children[4].children[1].setAttribute('font-size',default_playerlistsize)
+        element.children[4].children[0].setAttribute('y',yval)
+        }
+    })
+
+    items2.forEach((element,index) =>{
+
+        if(index%2==1) {
+            nametext=element.children[4].children[0].innerHTML
+            playerstext=element.children[4].children[1].innerHTML
+            //console.log(nametext,playerstext,nametext)
+            yval="9.5"
+        if(window.innerWidth > 1010) {
+            default_teamnamesize="18px"
+            if (nametext.length >= 20) {
+                default_teamnamesize="13.5px"
+            }
+            default_playerlistsize="12px"
+            if (playerstext.length >= 32) {
+                default_playerlistsize="11px"
+            }
+            if (nametext.includes("Non-Qualifying Team")) {
+                yval="19"
+            }
+        } else /*if(window.innerWidth > 768)*/ {
+            default_teamnamesize="12.5px"
+            if (nametext.length >= 20) {
+                default_teamnamesize="9px"
+            }
+            default_playerlistsize="8px"
+            if (playerstext.length >= 32) {
+                default_playerlistsize="7px"
+            }
+            if (nametext.includes("Non-Qualifying Team")) {
+                yval="22"
+            }
+        }
+
+        //console.log(default_teamnamesize,default_playerlistsize,yval)
+        element.children[4].children[0].setAttribute('font-size',default_teamnamesize)
+        element.children[4].children[1].setAttribute('font-size',default_playerlistsize)
+        element.children[4].children[0].setAttribute('y',yval)
+        }
+    })
+
+}
+
 function handleResponse(csvText) {
 let sheetObjects = csvToObjects(csvText);
 // sheetObjects is now an Array of Objects
@@ -103,7 +223,6 @@ var timestamp_get = Array.from(document.getElementsByClassName("sheet_timestamp"
 timestamp_get.innerText = timestamp
 
 var buttons_get = Array.from(document.getElementsByClassName("dropdown-button"));
-console.log
 buttons_get[0].innerHTML = "Select a Team<img src='/src/simplearrow.svg' style='vertical-align: middle; padding-left:5px;filter: brightness(10000%);transform:scale(1.3)' alt='sorting arrow'>"
 buttons_get[1].innerHTML = "Select a Team<img src='/src/simplearrow.svg' style='vertical-align: middle; padding-left:5px;filter: brightness(10000%);transform:scale(1.3)' alt='sorting arrow'>"
 
@@ -132,24 +251,41 @@ sheetObjects.forEach((element,index) =>{
     regions.push(element["Reg"])
     players.push(element["team"].replace("|",",").replace("|",","))
     ratings.push(element["Rating"])
-    default_teamnamesize="18px"
-    if (element["Team"].length >= 20) {
-        default_teamnamesize="13.5px"
+
+    yval="9.5"
+
+    if(window.innerWidth > 1010) {
+        default_teamnamesize="18px"
+        if (element["Team"].length >= 20) {
+            default_teamnamesize="13.5px"
+        }
+        default_playerlistsize="12px"
+        if (element["team"].length >= 32) {
+            default_playerlistsize="11px"
+        }
+        if (element["Team"].includes("Non-Qualifying Team")) {
+            yval="19"
+        }
+    } else /*if(window.innerWidth > 768)*/ {
+        default_teamnamesize="12.5px"
+        if (element["Team"].length >= 20) {
+            default_teamnamesize="9px"
+        }
+        default_playerlistsize="8px"
+        if (element["team"].length >= 32) {
+            default_playerlistsize="7px"
+        }
+        if (element["Team"].includes("Non-Qualifying Team")) {
+            yval="22"
+        }
     }
-    default_playerlistsize="12px"
-    if (element["team"].length >= 32) {
-        default_playerlistsize="11px"
-    }
+
     tname = element["Team"]
     if (tname.includes("'")) {
         tname = tname.slice(0,tname.indexOf("'")) + "\\" + tname.slice(tname.indexOf("'"))
     }
-    yval="9.5"
-    if (element["Team"].includes("Non-Qualifying Team")) {
-        yval="19"
-    }
-    dropdownstr1 += `<rect x="5" width="240" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(1,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width='237.5' onclick="selectTeam(1,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg></a>\n`
-    dropdownstr2 += `<rect x="5" width="240" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(2,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width='237.5' onclick="selectTeam(2,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg>\n`
+    dropdownstr1 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(1,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(1,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg></a>\n`
+    dropdownstr2 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(2,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(2,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg>\n`
 })
 dropdowns_get[0].children[1].innerHTML = dropdownstr1
 dropdowns_get[1].children[1].innerHTML = dropdownstr2 // COMMENT LOC 2
@@ -168,14 +304,21 @@ function selectSeriesLength(length) {
 }
 
 function selectTeam(num,teamname) {
-    fsize = "28px"
+    if(window.innerWidth > 1010) {
+        fsize = "28px"
     //console.log(teamname.length)
-    if (teamname.length > 25) {
-        fsize="16px"
-    } else if (teamname.length > 20) {
-        fsize = "18px"
+    if (teamname.length > 20) {
+        fsize = "16px"
     } else if (teamname.length > 13) {
-        fsize = "22px"
+        fsize = "20px"
+    }
+    } else /*if(window.innerWidth > 768)*/ {
+        fsize="20px"
+    if (teamname.length > 20) {
+        fsize = "14px"
+    } else if (teamname.length > 13) {
+        fsize = "16px"
+    }
     }
     if (num==1) {
         activateDropdown('dropdown1')
@@ -360,6 +503,10 @@ scoreInput2.addEventListener("input", (e) => {
 }
 })
 
+window.onresize = function(event){
+    resizeDropdownText()
+    resizeButtonText()
+}
 function winProbability() {
     imageObj = document.getElementById('finallogo')
     wpObj = document.getElementById('finalodds')
@@ -389,11 +536,11 @@ function winProbability() {
         wpObj.innerText = ""
         return(false)
         } else if (score1==1){
-            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true) 
         } else if (score2==1){
-            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true)      
         } else {
@@ -414,11 +561,11 @@ function winProbability() {
         wpObj.innerText = ""
         return(false)
         } else if (score1==2){
-            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true) 
         } else if (score2==2){
-            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true)      
         } else {
@@ -479,11 +626,11 @@ function winProbability() {
         wpObj.innerText = ""
         return(false)
         } else if (score1==3){
-            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true) 
         } else if (score2==3){
-            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true)      
         } else {
@@ -604,11 +751,11 @@ function winProbability() {
         wpObj.innerText = ""
         return(false)
         } else if (score1==4){
-            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team1logo);nameObj.innerHTML=team1  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true) 
         } else if (score2==4){
-            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Favored</b>";;
+            imageObj.setAttribute('src',team2logo);nameObj.innerHTML=team2  + " <b>Wins</b>";;
             wpObj.innerText = Number(1).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
             return(true)      
         } else {
