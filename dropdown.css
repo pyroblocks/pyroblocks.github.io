@@ -140,7 +140,9 @@ width:65px;
 
 input:focus {
     outline: none;
-    border: none;
+  border-radius:10px;
+  border-width:3px;
+  border-color:#0E0E0E;
 }
 
 .score1div {
