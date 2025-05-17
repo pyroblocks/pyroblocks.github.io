@@ -138,11 +138,12 @@ width:65px;
   color:#FFFFFF
 }
 
+input:focus:not(.teamsearch) {
+    border: none;
+}
+
 input:focus {
-    outline: none;
-  border-radius:10px;
-  border-width:3px;
-  border-color:#0E0E0E;
+  outline:none;
 }
 
 .score1div {
