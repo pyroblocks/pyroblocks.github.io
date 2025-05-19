@@ -257,11 +257,11 @@ sheetObjects.forEach((element,index) =>{
     if(window.innerWidth > 1010) {
         default_teamnamesize="18px"
         if (element["Team"].length >= 20) {
-            default_teamnamesize="13.5px"
+            default_teamnamesize="13px"
         }
         default_playerlistsize="12px"
         if (element["team"].length >= 32) {
-            default_playerlistsize="11px"
+            default_playerlistsize="10.5px"
         }
         if (element["Team"].includes("Non-Qualifying Team")) {
             yval="19"
