@@ -331,7 +331,7 @@ function selectTeam(num,teamname) {
         logo=document.getElementById("teamlogo1")
         //console.log(logo)
         logo_link = "/src/logos/" + teamname + ".webp"
-        logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
+        logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
         logo.setAttribute('src',logo_link)
         player=document.getElementById('players1')
         player.innerText = players[teams.indexOf(teamname)]
