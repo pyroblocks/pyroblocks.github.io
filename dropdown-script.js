@@ -246,7 +246,7 @@ sheetObjects.forEach((element,index) =>{
     //console.log(element)
     teamcolor = dullcolor[element["Reg"]]
     logo_link = "/src/logos/" + element["Team"] + ".webp"
-    logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
+    logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
     teams.push(element["Team"])
     regions.push(element["Reg"])
     players.push(element["team"].replace("|",",").replace("|",","))

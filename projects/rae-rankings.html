@@ -437,7 +437,7 @@ rbox_get[index*2+1].children[0].innerHTML = "Rating: " + rating // FULLCOLOR BOX
 rbox_get[index*2].setAttribute('fill',dullcolor[region]) // BG BOXES
 
 logo_link = "/src/logos/" + team + ".webp"
-logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
+logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
 rteam_get[index].children[0].setAttribute('xlink:href',logo_link)
 rteam_get[index].children[0].children[0].innerHTML = team + " Logo"
 rteam_get[index].children[1].children[0].innerHTML=team
