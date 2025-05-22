@@ -381,30 +381,30 @@ nav.svelte-jl8vmr a.svelte-jl8vmr:hover {
   color: #fff;
 }
 
-.color-article na {
+na {
  color: var(--region-NA) 
 }
 
-.color-article eu {
+eu {
 color: var(--region-EU) 
 }
 
-.color-article sam {
+sam {
 color: var(--region-SAM) 
 }
 
-.color-article oce {
+oce {
 color: var(--region-OCE) 
 }
 
-.color-article mena {
+mena {
 color: var(--region-MENA) 
 }
 
-.color-article apac {
+apac {
 color: var(--region-APAC) 
 }
 
-.color-article ssa {
+ssa {
 color: var(--region-SSA) 
 }
