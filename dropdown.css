@@ -146,19 +146,16 @@ input:focus {
   outline:none;
 }
 
-.score1div {
-  margin-top:64px
-}
-.score2div {
-  margin-top:-180px
-}
-
-.versustext {
-  font-size:75px;
+#versustext {
+  font-size:85px;
 }
 
 #finalodds {
   font-size: 45px; 
+}
+
+#versuscontainer {
+  padding-top:18%
 }
 
 @media (max-width: 1010px) {
@@ -175,16 +172,16 @@ input:focus {
     font-size:22px;
     padding:0
   }
-  .score1div {
-    margin-top:74px
-  }
-  .score2div {
-    margin-top:-170px
-  }
   #finalodds {
     font-size:30px
   }
   .dropdown-button {
     font-size:20px
   }
+  #versustext {
+    font-size:55px
+  }
+}
+
+@media (max-width: 768px) {
 }
