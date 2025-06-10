@@ -114,7 +114,7 @@ input {
 }
 
 .hide {
-  display:none;
+  opacity:0;
 }
 
 .dropdown-button-option {
