@@ -163,13 +163,13 @@ input:focus {
     font-size:80px
   } 
   .dropdown-button-option {
-    font-size:20px
+    font-size:24px
   }
   .dropdown-menuSELECT {
-    height:190px
+    height:210px
   }
   .dropdown-buttonSELECT {
-    font-size:22px;
+    font-size:28px;
     padding:0
   }
   #finalodds {
