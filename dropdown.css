@@ -190,6 +190,14 @@ input:focus {
   font-size:19px
 }
 
+#dropdown1 {
+  height:60px
+}
+
+#dropdown2 {
+  height:60px
+}
+
 @media (max-width: 1010px) {
   .score-input {
     font-size:80px
@@ -235,6 +243,13 @@ input:focus {
 #versuscontainer {
   padding-top:18%
 }
+#dropdown1 {
+  height:60px
+}
+
+#dropdown2 {
+  height:60px
+}
 }
 
 @media (max-width: 768px) {
@@ -272,12 +287,19 @@ input:focus {
   font-size:10px
 }
 #players1 {
-  font-size:9px
+  font-size:0px
 }
 #players2 {
-  font-size:9px
+  font-size:0px
 }
 #versuscontainer {
   padding-top:0%
+}
+#dropdown1 {
+  height:75px
+}
+
+#dropdown2 {
+  height:75px
 }
 }
