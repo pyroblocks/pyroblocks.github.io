@@ -107,14 +107,21 @@ function resizeButtonText() {
         fsize = "20px"
     }
 
-    } else /*if(window.innerWidth > 768)*/ {
+    } else if(window.innerWidth > 768) {
         fsize="20px"
     if (teamname.length > 20) {
         fsize = "14px"
     } else if (teamname.length > 13) {
         fsize = "16px"
     }
+    } else{
+        fsize="10px"
+        if (teamname.length > 20) {
+        fsize = "7px"
+    } else if (teamname.length > 13) {
+       fsize="6px"
     }
+}
 
     element.style.fontSize = fsize
 
@@ -312,14 +319,21 @@ function selectTeam(num,teamname) {
     } else if (teamname.length > 13) {
         fsize = "20px"
     }
-    } else /*if(window.innerWidth > 768)*/ {
+} else if(window.innerWidth > 768) {
         fsize="20px"
     if (teamname.length > 20) {
         fsize = "14px"
     } else if (teamname.length > 13) {
         fsize = "16px"
     }
+    } else{
+        fsize="10px"
+        if (teamname.length > 20) {
+        fsize = "7px"
+    } else if (teamname.length > 13) {
+       fsize="6px"
     }
+}
     if (num==1) {
         activateDropdown('dropdown1')
         namebox = document.getElementById("dropdown1")

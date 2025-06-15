@@ -59,11 +59,11 @@
                 <h1>RLCS RAE Matchup Maker</h1>
                 <div style="margin: 0; display: flex; justify-content:space-between; align-items:center;"><span style="display:inline-block; "><img src="/src/calendar-white.svg" width="24" height="24" class="notext" style="vertical-align:middle;" alt="Last update:">
             <span class="textgradient sheet_timestamp" style="font-size:18px;vertical-align:middle; text-align: left;">Loading...</span></span></div>
-            <div class="container" style="display:flex;">
+            <div class="container" style="display:inline-flex;">
                 <div id="team1" style = "display:inline;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px">
                     <img width='77%' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px);aspect-ratio: 1;"  id="teamlogo1"></image>
                     <div class="dropdown" style="margin-top:10px;height:60px">
-                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle" onclick="activateDropdown('dropdown1')"id='dropdown1'>Loading...</button>
+                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle;text-wrap: stable;" onclick="activateDropdown('dropdown1')"id='dropdown1'>Loading...</button>
                         <div class="dropdown-menu"style="--parent-width:77%;width:77%;overflow-y:scroll;height: 255px;overflow-x:hidden;top:0px">
                              <input class='teamsearch'autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown1-search" style="margin-top:5px;position:sticky;top:5px" >
                             <svg width="100%">
@@ -73,13 +73,13 @@
                     <h4 style="margin-top:10px" id="players1">⠀</h4>
                     <h2 style="margin-bottom:15px" id="rating1">⠀</h2>
                 </div>
-                <div id="versus" style="display:inline-block;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
+                <div id="versus" style="display:inline-block;text-align:center; width:45%;max-width:325px; position:relative;">
                     <div id="versuscontainer" style="display:flex;align-items:center;text-align:center">
-                        <div class="score1div" style="width:31%;height:auto;position: relative;margin-left:-16px">
+                        <div class="score1div" style="width:31%;height:auto;position: relative">
                             <input autocomplete="off" class="score-input hide" placeholder=" " value="0" maxlength="1" id="score1" style="text-align:center">
                         </div>
-                        <h1 id="versustext" style="align-self:center;margin-top:10px;margin-left:auto;margin-bottom:0px">VS</h1>
-                        <div class="score2div" style="width:31%;height:auto;position:relative;margin-left:auto; margin-right:-16px">
+                        <h1 id="versustext" style="align-self:center;margin-top:10px;margin-bottom:0px">VS</h1>
+                        <div class="score2div" style="width:31%;height:auto;position:relative">
                             <input autocomplete="off" class="score-input hide" placeholder=" " value="0" maxlength="1" id="score2" style="text-align:center">
                         </div>
                     </div>
@@ -96,17 +96,17 @@
                 <div style="display:flex; width: 100%; align-items: center; margin-top: 10px; flex-direction: column;">
                     <div style="display: flex; width: 100%;">
                         <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
-                            <img width="150" height="150" src="/src/logos/placeholder_matchupmaker.webp" style="filter: drop-shadow(1rem, 1rem, 10px)" id="finallogo">
+                            <img src="/src/logos/placeholder_matchupmaker.webp" style="filter: drop-shadow(1rem, 1rem, 10px); aspect-ratio:1;" id="finallogo" >
                         </div>
-                        <h1 style="width: 50%; height: 150px; display: flex; align-items: center; justify-content: center; text-align: center;" id="finalodds"></h1>
+                        <h1 style="width: 50%; display: flex; align-items: center; justify-content: center; text-align: center;" id="finalodds"></h1>
                     </div>
-                    <h4 id="finalname" style="width: 200%; text-align: center; font-size: 18px; margin-top: 0px;min-height:27px"></b></h4>
+                    <h4 id="finalname" style="width: 200%; text-align: center; margin-top: 0px;min-height:27px"></b></h4>
                 </div>
                 </div>
                 <div id="team2" style = "display:inline;text-align:center; width:45%;max-width:325px; position:relative; padding-top:50px; margin-left:auto; margin-right:0">
                     <img width='77%' src='/src/logos/logo semitransparent.webp'style="filter: drop-shadow(1rem, 1rem, 10px);aspect-ratio: 1;" id="teamlogo2"></image>
                     <div class="dropdown" style="margin-top:10px;height:60px">
-                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle;line-height:20px" onclick="activateDropdown('dropdown2')"id='dropdown2'>Loading...</button>
+                        <button class="dropdown-button" style="width:77%; height:60px;vertical-align:middle;text-wrap: stable;" onclick="activateDropdown('dropdown2')"id='dropdown2'>Loading...</button>
                         <div class="dropdown-menu"style="width:77%;overflow-y:scroll;height: 255px;overflow-x:hidden;top:0px">
                              <input class='teamsearch' autocomplete="off" type="text" placeholder="Search for a team..." id="dropdown2-search" style="margin-top:5px;position:sticky;top:5px">
                             <svg  width="100%">
