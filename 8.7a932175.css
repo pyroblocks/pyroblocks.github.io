@@ -167,7 +167,7 @@ a.svelte-z9iu7d.svelte-z9iu7d {
     width: inherit;
     height: inherit;
     box-sizing: inherit;
-    background: url(./src/card_bg.png);
+    background: url(/src/shape.svg);
     padding: 15px;
     display: flex;
     align-items: flex-end;
