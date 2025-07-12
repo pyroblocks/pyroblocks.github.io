@@ -253,7 +253,7 @@ sheetObjects.forEach((element,index) =>{
     //console.log(element)
     teamcolor = dullcolor[element["Reg"]]
     logo_link = "/src/logos/" + element["Team"] + ".webp"
-    logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
+    logo_link = logo_link.replace("%","p").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
     teams.push(element["Team"])
     regions.push(element["Reg"])
     players.push(element["team"].replace("|",",").replace("|",","))
@@ -345,7 +345,7 @@ function selectTeam(num,teamname) {
         logo=document.getElementById("teamlogo1")
         //console.log(logo)
         logo_link = "/src/logos/" + teamname + ".webp"
-        logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
+        logo_link = logo_link.replace("%","p").replace("!","").replace("'","").replace("+","").replace(/\?/g, "")
         logo.setAttribute('src',logo_link)
         player=document.getElementById('players1')
         player.innerText = players[teams.indexOf(teamname)]
@@ -368,7 +368,7 @@ function selectTeam(num,teamname) {
         logo=document.getElementById("teamlogo2")
         //console.log(logo)
         logo_link = "/src/logos/" + teamname + ".webp"
-        logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
+        logo_link = logo_link.replace("%","p").replace("!","").replace("'","").replace("+","").replace("?","")
         logo.setAttribute('src',logo_link)
         player=document.getElementById('players2')
         player.innerText = players[teams.indexOf(teamname)]
@@ -525,8 +525,8 @@ function winProbability() {
     imageObj = document.getElementById('finallogo')
     wpObj = document.getElementById('finalodds')
     nameObj = document.getElementById('finalname')
-    team1logo= ("/src/logos/" + team1 + ".webp").replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
-    team2logo= ("/src/logos/" + team2 + ".webp").replace("%","").replace("!","").replace("'","").replace("+","").replace("?","")
+    team1logo= ("/src/logos/" + team1 + ".webp").replace("%","p").replace("!","").replace("'","").replace("+","").replace("?","")
+    team2logo= ("/src/logos/" + team2 + ".webp").replace("%","p").replace("!","").replace("'","").replace("+","").replace("?","")
     //console.log(team1logo,team2logo)
     rating1=ratings[teams.indexOf(team1)]
     rating2=ratings[teams.indexOf(team2)]
