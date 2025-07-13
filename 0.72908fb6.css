@@ -401,6 +401,12 @@ mena {
 color: var(--region-MENA) 
 }
 
+menaeu {
+    background-image: linear-gradient(90deg,var(--region-EU) 30%, var(--region-MENA) 70%);
+    color: transparent;
+    background-clip: text;
+}
+
 apac {
 color: var(--region-APAC) 
 }
