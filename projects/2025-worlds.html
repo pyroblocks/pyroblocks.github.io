@@ -801,7 +801,7 @@ fetch(sheetURL1)
 function handleResponseTable(csvText) {
 let sheetObjects = csvToObjects(csvText).slice(0,20);
 // sheetObjects is now an Array of Objects
-console.log(sheetObjects)
+//console.log(sheetObjects)
 //console.log(top16[0])
 timestampTable=sheetObjects[0]["datetime"] + "m ET"
 timestampTable = timestampTable.replace("|",",")
