@@ -44,7 +44,7 @@
     "SSA":"#B7B7B7"
   }
   // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
-const sheetId = "1YpM1AbvYpJArVzom3J1xWWIJq2MU7vyaBGvzoepwAiE";
+const sheetId = "1CQ93vuh9o8jxtY72Yfasz4IZ9EZ7uEDhTqVyoFyTvas";
 // sheetName is the name of the TAB in your spreadsheet
 const sheetName = encodeURIComponent("Top Teams");
 const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
