@@ -76,54 +76,8 @@
                             England, of which we know two: <eu>Karmine Corp</eu> and <sam>FURIA Esports</sam>. Here's
                             who else my model predicts to qualify.</p>
                         <h3>What is RAE?</h3>
-                        <p>Alright, I probably owe you an explanation of what exactly RAE is.</p>
-                        <p>RAE, or Region-Adjusted Elo, is exactly what it sounds like: Each team is given an Elo (or
-                            skill rating), which is adjusted based on their region. Elo specifically is based off the
-                            assumption that a team's skill level in any given match is normally distributed. If you want
-                            to learn more about the math behind it, I'd recommend watching <a
-                                href="https://www.youtube.com/watch?v=inXUp5j107I">this video</a> by j3m.</p>
-                        <p>I've been updating RAE Ratings for the RLCS in some form since the 2021-22 season, which
-                            <i>technically</i> makes me the first person to keep track of team ratings in RLCS, to my
-                            knowledge – RocketScience first created his system prior to the 21-22 Spring Major.
-                            The very first system I used went off of team placements instead of match results, which
-                            made it a pretty poor predictor of results. I switched to a proper rating system for the
-                            2022-23 season, and got to a working version I was happy with in 2024, when I finally began
-                            tracking region ratings formulaically instead of estimating them by hand.
-                        </p>
-                        <p>RAE has always been maintained on spreadsheets, and as of now that's where you can find all
-                            of its detailed rankings and predictions – though I did finally get a working version of the
-                            <a href="https://pyroblocks.github.io/projects/rae-rankings">rankings list</a> up a few days
-                            ago, which included me learning how to use JavaScript for the first time. The rankings are automated and update alongside the spreadsheet – I'll work on
-                            getting more functionality onto this site soon enough.
-                        </p>
-                        <p>Anyways, getting back on topic, RAE ratings are relative, meaning that how likely a team is
-                            to win a series against any other team is determined by the difference in their two ratings.
-                            What rating differences correspond to what win probabilities is roughly as follows:</p>
-                        <ul class="mo">
-                            <li>50 rating difference: ~57% win in a Bo5, ~58% in a Bo7</li>
-                            <li>100: ~64%, ~66%</li>
-                            <li>200: ~76%, ~79%</li>
-                            <li>300: ~84%, ~89%</li>
-                            <li>400: ~91%, ~94%</li>
-                        </ul>
-                        <p>These probabilities may seem fairly small, but they add up over the course of a tournament:
-                            For instance, Karmine Corp is only about ~150 rating clear of the rest of the field in EU,
-                            but (spoilers) win a majority of all simulations for the third Birmingham Open.</p>
-                        <p><s>For each respective region, I run 50,000 simulations of its event. This number is a little low as far as simulating tournament odds goes, but does the job within ~2% of the mathematical probabilities for each outcome. Why don't I use more simulations? Because my Python code is inefficient, bloated, and built from a version I made three years ago when I was even worse at programming.</s></p>
-                        <p>I run 1,000,000 simulations of each regions' respective event, which does well enough to get within ~0.5% of the theoretical probabilities for each outcome. For any mid-day odds updates you might see, those will likely use 100,000 simulations instead, in order to save time.</p>
-                        <p>Just a few more things before I get to the actual predictions:</p>
-                        <p>I am currently testing an alternative region rating system. I'll weigh its performance
-                            against the current model's for the Birmingham Major and proceed from there.</p>
-                        <p>RAE uses Elo, not Glicko. Glicko is a version of Elo that adjusts for uncertainty for teams with fewer games played (in mathematical terms, adjusts the standard deviation of the normal distribution of skill for each team rather than just the mean). <a href="https://rocketscience.fyi/esports">RocketScience's model</a> used Glicko.</p>
-                        <p>Don't expect anything much on here for a while. The <a
-                                href="https://docs.google.com/spreadsheets/d/1YpM1AbvYpJArVzom3J1xWWIJq2MU7vyaBGvzoepwAiE/edit?usp=sharing">spreadsheet</a>
-                            will always have the most up-to-date info available, though, and I encourage keeping an eye
-                            on it.</p>
-                        <p>All series scores and results are entered <b>by hand</b>, including the updating of the
-                            rankings page on this website. If results take a while to be processed, that's why. It's
-                            also the reason why these ratings are limited to RLCS <i>only</i>. Maybe I'll consider
-                            automating it over the offseason if octane.gg comes back.</p>
-                        <p>Alright. Without further ado, let's get into which teams the RAE model predicts are headed to
+                        <p>If you'd like a detailed explanation of what exactly RAE is, you can find one <a href="https://pyroblocks.github.io/articles/rae-ratings-methodology">here</a>, but the gist of it is that Region-Adjusted Elo Ratings are an Elo-based model that adjusts ratings based on region. The more you win, and the more you win by, the higher your rating will be. Beat a good team, and your rating will go up a lot. Lose to a bad team, and your rating will go down a lot.</p>
+                        <p>Without further ado, let's get into which teams the RAE model predicts are headed to
                             Birmingham.</p>
                     </div>
                     <div class="alt-box corner-all" id="EU">
