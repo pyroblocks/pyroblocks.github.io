@@ -453,7 +453,7 @@
                             <p>The K-Score for region ratings is also lower than for team ratings (25 vs 67.5 for LAN matches) to avoid overadjusting due to a good event by a specific team.</p>
                             <h4>Updating Team Ratings</h4>
                             <p>For teams not participating at a LAN, their change in rating after a LAN event is the same as their region's change in rating:</p>
-                            <p> $$ R_f=R_i+(RR_f-RRi) $$</p>
+                            <p> $$ R_f=R_i+(RR_f-RR_i) $$</p>
                             <p>Teams participating at a LAN are only affected by changes in region rating half as much; that is, their change in rating due to changes in region rating is equivalent to half of the change in region rating.</p>
                             <h4>Cross-Region Transfers</h4>
                             <p>Players and teams are considered to be a part of the region which they most recently played an event in. For instance, after moving to MENA for the LCQ during RLCS 2025, <menaeu>Synergy</menaeu> was considered to be a MENA team for the sake of updating their rating after the World Championship.</p>
@@ -465,6 +465,19 @@
                             <h4>Major Qualification Odds</h4>
                             <p>When generating major qualification odds, the simulation script will check for the top 5/4/2/1 teams (depending on the region) and mark the appropriate amount as qualified to the major in each simulation.</p>
                             <p>Tiebreakers are the only complication in this; the script accounts for all tiebreaker scenarios with 6 teams or fewer and 5 spots or fewer, in accordance with the <a href="https://www.rocketleague.com/en/competitive/rules">official rulebook</a>. For any greater number of teams, the list of tied ones are truncated based on rating to the highest number the script can run a tiebreaker bracket for. This isn't an exact solution, but happens in so few simulations that the impact is marginal.</p>
+                            <h2>Excitement Index</h2>
+                            <p>The RAE Ratings system also includes a rating scale for matches in a given event, dubbed the Excitement Index.</p>
+                            <p>The Excitement Index ranges from 0-10, and is calculated as the average of a Match Quality score and a Match Closeness score.</p>
+                            <h4>Match Quality</h4>
+                            <p>The Match Quality for a match in a given event is defined as follows:</p>
+                            <p> $$ Q=10*\frac{H(R_1,R_2)-H_{min}}{H_{max}-H_{min}} $$ </p>
+                            <p>Where H is the harmonic mean function, equivalent to M<sub>−1</sub>.</p>
+                            <p>Or, in other words, the Match Quality is where the harmonic mean of the two teams RAE Ratings falls between the worst possible matchup in the event (between the worst best teams) and the best possible matchup (between the two best teams), multiplied by 10.</p>
+                            <h4>Match Closeness</h4>
+                            <p>The Match Closeness for a match in a given event is defined as follows:</p>
+                            <p> $$ C=20(0.5-|0.5-P|) $$ </p>
+                            <p>Where P is the win probability for either team in the matchup.</p>
+                            <p>In essence, this formula remaps the win probability function to output 0 when it is 0% or 100%, scaling to 0.5 when it is at 50%, before rescaling the value to take on a maximum value of 10.</p>
                             <hr>
                             <h2>Version History</h2>
                             <h4>RAE Ratings for RLCS 2026</h4>
