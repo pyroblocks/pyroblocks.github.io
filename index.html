@@ -89,6 +89,15 @@
                             loading="lazy" class="svelte-z9iu7d">
                     </div>
                 </a>
+                <a href="/projects/boston-major" class="svelte-z9iu7d">
+                    <div class="qacc-card svelte-z9iu7d">
+                        <div class="inside-card svelte-z9iu7d">Boston Major</div> <svg width="24" height="24"
+                            class="svelte-z9iu7d">
+                            <use xlink:href="/src/quickaccess.svg#symbol"></use>
+                        </svg> <img width="178" height="100" src="/src/qa-boston.png" alt=""
+                            loading="lazy" class="svelte-z9iu7d">
+                    </div>
+                </a>
                 <a href="/projects/2025-worlds" class="svelte-z9iu7d">
                     <div class="qacc-card svelte-z9iu7d">
                         <div class="inside-card svelte-z9iu7d">2025 Worlds</div> <svg width="24" height="24"
@@ -197,6 +206,7 @@
                     <button class="number svelte-6wsccd" onclick="setPage(3)">3</button>
                     <button class="number svelte-6wsccd" onclick="setPage(4)">4</button>
                     <button class="number svelte-6wsccd" onclick="setPage(5)">5</button>
+                    <button class="number svelte-6wsccd" onclick="setPage(6)">6</button>
                 </div>
             </div>
 
@@ -243,6 +253,7 @@
                     return (`<div class="image-area svelte-1brwhpx"><a href="${this.link}"><img src="${this.img}" width="400" height="200" class="article-img svelte-1brwhpx" alt="${this.alt_text}" loading="lazy"></a></div>\n<div class="text-area svelte-1brwhpx"><a href="${this.link}" class="svelte-1brwhpx"><h3 class="mto">${this.title}</h3></a>\n    <span class="svelte-1brwhpx"><img src="./src/calendar-white.svg" width="24" height="24" class="notext" style="vertical-align:middle;" alt="Published:"> \n        <span style="font-size:18px;vertical-align:middle; text-align: left; "><time datetime="2025-01-01T00:00:00.000Z">${this.date}</time></span></span>\n    <p class="description mbo svelte-1brwhpx">${this.description}</p>\n    </div>\n`)
                 }
             }
+            a15 = new article_template("RAE Predictions — 2026 Boston Major", "RAE Predictions — 2026 Boston Major", "./articles/rae-2026-boston-major-predictions", "[INSERT DATE HERE]", "Who will come out on top in Boston?", "./src/rae-2026-boston-major-predictions.png");
             a14 = new article_template("RAE Predictions — 2026 Boston Open #3 (Week Two)", "RAE Predictions — 2026 Boston Open #3 (Week Two)", "./articles/rae-2026-boston-open-3-odds-p2", "February 3, 2026", "Who will claim North America's tickets to the Boston Major?", "./src/rae-2026-boston-o3-p2.png");
             a13 = new article_template("RAE Predictions — 2026 Boston Open #3 (Week One)", "RAE Predictions — 2026 Boston Open #3 (Week One)", "./articles/rae-2026-boston-open-3-odds-p1", "January 27, 2026", "Which teams will qualify for RLCS' return to Boston?", "./src/rae-2026-boston-o3-p1.png");
             a12 = new article_template("RAE Predictions — 2026 Kickoff LAN", "RAE Predictions — 2026 Kickoff LAN", "./articles/rae-2026-kickoff-predictions", "December 4, 2025", "Who will claim the first LAN title of RLCS 2026?", "./src/rae-2026-kickoff-predictions.png");
@@ -258,7 +269,7 @@
             a2 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week Two)", "RAE's Birmingham Open #3 and Major Odds (Week Two)", "./articles/rae-birmingham-open-3-odds-p2", "February 25, 2025", "Which sixteen teams are set to qualify for the major?", "./src/birmingham-o3-p2.png");
             a1 = new article_template("RAE's Birmingham Open #3 and Major Odds (Week One)", "RAE's Birmingham Open #3 and Major Odds (Week One)", "./articles/rae-birmingham-open-3-odds-p1", "February 17, 2025", "Who does the rating system predict to make it to Birmingham?", "./src/birmingham-o3-p1.png");
             a0 = new article_template("Esportswashing: The Cost of Doing Business", "Local fans of Team Falcons cheer for their team at Gamers8 2023.", "./articles/esportswashing-the-cost-of-doing-business", "May 9, 2024", "Saudi Arabia is coming to esports' rescue. What price will the industry pay?", "./src/esportswashing.jpeg");
-            articles_base = [a14,a13,a12,a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0]
+            articles_base = [a15,a14,a13,a12,a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0]
             articles = []
             articles_base.forEach((element, index) => {
                 if (index % 3 == 0) {

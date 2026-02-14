@@ -77,6 +77,16 @@ table.svelte-l969s8.svelte-l969s8 {
   margin-top:-10px;
   margin-bottom:-10px
 }
+
+.text-icon {
+  max-width:19.25px;
+  max-height:19.25px;
+  vertical-align:middle;
+  margin-top:-10px;
+  margin-bottom:-10px;
+  margin-left:4px;
+}
+
 @media (min-width: 950px) {
   .table-icon {
     max-width:32px;
