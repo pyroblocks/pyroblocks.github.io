@@ -560,7 +560,7 @@ var num_ypos_get = Array.from(document.getElementsByClassName("num"));
   var rbox_widths_get = Array.from(document.getElementsByClassName("ratingbox"));
   var rbox_widths = []
   var rbox_ypos = []
-  rbox_widths_get.forEach((element) => rbox_widths.push(element.getAttribute("width")));
+  rbox_widths_get.forEach((element) => rbox_widths.push(parseFloat(element.getAttribute("width"))));
   rbox_widths_get.forEach((element) => rbox_ypos.push(element.y.baseVal.value));
 
   var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
