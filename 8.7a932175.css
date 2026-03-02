@@ -91,7 +91,7 @@
     background-repeat: no-repeat;
     background-size: 301px 300px, 100% 100%;
     overflow: hidden;
-    box-shadow: 60px 54px 104px #0000008c
+    box-shadow: 60px 54px 104px #0000008c;
 }
 
 .text-area.svelte-gj5y2p.svelte-gj5y2p {
@@ -100,7 +100,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .text-area.svelte-gj5y2p>.svelte-gj5y2p:not(.description) {
@@ -161,7 +161,8 @@ a.svelte-z9iu7d.svelte-z9iu7d {
     display: flex;
     justify-content: right;
     align-items: flex-end;
-    flex-shrink: 0
+    flex-shrink: 0;
+    transition: transform 0.3s;
 }
 
 .inside-card.svelte-z9iu7d.svelte-z9iu7d {
