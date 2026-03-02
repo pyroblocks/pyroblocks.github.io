@@ -19,12 +19,8 @@ button.svelte-6wsccd:active {
 
 .number.svelte-6wsccd {
     background: #181818;
-    transition: transform 0.3s;
 }
 
-.number.svelte-6wsccd:hover {
-    transform: scale(1.05);
-}
 
 .prev.svelte-6wsccd {
     background: #EB39491A;
