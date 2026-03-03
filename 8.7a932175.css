@@ -54,7 +54,12 @@
     padding: 20px;
     column-gap: 30px;
     row-gap: 1px;
-    background: #101010D0
+    background: #101010D0;
+    transition: transform 0.2s;
+}
+
+.bar-article.svelte-1brwhpx.svelte-1brwhpx:hover {
+    transform: scale(1.03);
 }
 
 .text-area.svelte-1brwhpx.svelte-1brwhpx {
@@ -91,7 +96,7 @@
     background-repeat: no-repeat;
     background-size: 301px 300px, 100% 100%;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 .narrow-article.svelte-gj5y2p.svelte-gj5y2p:hover {
     transform: scale(1.03)
@@ -166,7 +171,7 @@ a.svelte-z9iu7d.svelte-z9iu7d {
     justify-content: right;
     align-items: flex-end;
     flex-shrink: 0;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .inside-card.svelte-z9iu7d.svelte-z9iu7d {
