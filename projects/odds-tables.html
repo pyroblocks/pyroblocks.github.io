@@ -67,6 +67,10 @@
       <div class="alt-box" style="margin-top: 20px">
         <h4>Not affiliated with Epic Games, Psyonix, BLAST, or <i>Rocket League</i>.</h4>
         <h1>RLCS RAE Odds Tables</h1>
+        <h4>Upcoming Events</h4>
+        <p><b>March 19-21:</b> <region-tag reg="MENA"></region-tag></p>
+        <p><b>March 20-22:</b> <region-tag reg="NA"></region-tag> <region-tag reg="OCE"></region-tag> <region-tag reg="SSA"></region-tag></p>
+        <p><b>March 27-29:</b> <region-tag reg="EU"></region-tag> <region-tag reg="SAM"></region-tag> <region-tag reg="APAC"></region-tag></p>
   <nav class="tabs svelte-1pkbe26" id="regionnav" style="border-bottom: 3px solid var(--region-NA)">
     <button onclick="swapRegion('NA')" id='nabutton' class="svelte-1pkbe26 current regionbutton">NA</button>
     <button onclick="swapRegion('EU')" id='eubutton' class="svelte-1pkbe26 regionbutton">EU</button>
@@ -1444,7 +1448,21 @@
 </div>
 
 
-
+<script>
+  const computedStyles = window.getComputedStyle(document.documentElement);
+  class RegionTag extends HTMLElement {
+    connectedCallback() {
+      const region = this.getAttribute('reg')
+      this.innerText=region.toUpperCase()
+      this.style.color = computedStyles.getPropertyValue('--region-' + region.toUpperCase())
+      this.style.backgroundColor = computedStyles.getPropertyValue('--regiondark-' + region.toUpperCase())
+      this.style.padding = '6px'
+      this.style.border = '2px solid var(--regiondark-' + region.toUpperCase() + ')'
+      this.style.borderRadius = '12px'
+    }
+  }
+  customElements.define('region-tag', RegionTag);
+</script>
 <script>
 
   function fillTable(sheetObjs, classname, startIndex) {
