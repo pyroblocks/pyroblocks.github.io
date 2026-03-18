@@ -68,9 +68,7 @@
         <h4>Not affiliated with Epic Games, Psyonix, BLAST, or <i>Rocket League</i>.</h4>
         <h1>RLCS RAE Odds Tables</h1>
         <h4>Upcoming Events</h4>
-        <p><b>March 19-21:</b> <region-tag reg="MENA"></region-tag></p>
-        <p><b>March 20-22:</b> <region-tag reg="NA"></region-tag> <region-tag reg="OCE"></region-tag> <region-tag reg="SSA"></region-tag></p>
-        <p><b>March 27-29:</b> <region-tag reg="EU"></region-tag> <region-tag reg="SAM"></region-tag> <region-tag reg="APAC"></region-tag></p>
+        <div id="eventdates"></div>
   <nav class="tabs svelte-1pkbe26" id="regionnav" style="border-bottom: 3px solid var(--region-NA)">
     <button onclick="swapRegion('NA')" id='nabutton' class="svelte-1pkbe26 current regionbutton">NA</button>
     <button onclick="swapRegion('EU')" id='eubutton' class="svelte-1pkbe26 regionbutton">EU</button>
@@ -1452,12 +1450,12 @@
   const computedStyles = window.getComputedStyle(document.documentElement);
   class RegionTag extends HTMLElement {
     connectedCallback() {
-      const region = this.getAttribute('reg')
-      this.innerText=region.toUpperCase()
-      this.style.color = computedStyles.getPropertyValue('--region-' + region.toUpperCase())
-      this.style.backgroundColor = computedStyles.getPropertyValue('--regiondark-' + region.toUpperCase())
+      const region = this.getAttribute('reg').toUpperCase()
+      this.innerText=region
+      this.style.color = computedStyles.getPropertyValue('--region-' + region)
+      this.style.backgroundColor = computedStyles.getPropertyValue('--regiondark-' + region)
       this.style.padding = '6px'
-      this.style.border = '2px solid var(--regiondark-' + region.toUpperCase() + ')'
+      this.style.border = '2px solid var(--regiondark-' + region + ')'
       this.style.borderRadius = '12px'
     }
   }
@@ -1509,7 +1507,6 @@
   const sheetNameTable = encodeURIComponent("OddsTables");
   const sheetURL1 = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetNameTable}`;
 
-
   fetch(sheetURL1)
   .then((response) => response.text())
   .then((csvText) => handleResponseTable(csvText));
@@ -1532,6 +1529,42 @@
   fillTable(sheetObjects,"tableoce",64)
   fillTable(sheetObjects,"tableapac",80)
   fillTable(sheetObjects,"tablessa",96)
+  }
+
+  const sheetNameSchedule = encodeURIComponent("EventSchedule");
+  const sheetURLSchedule = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetNameSchedule}`;
+
+  fetch(sheetURLSchedule)
+  .then((response) => response.text())
+  .then((csvText) => handleResponseSchedule(csvText));
+
+
+  function handleResponseSchedule(csvText) {
+    datediv = document.getElementById('eventdates')
+    let sheetObjects = csvToObjects(csvText);
+    
+    sheetObjects.forEach((element, index) => {
+      var obj = document.createElement('p')
+      obj.innerHTML = '<b>' + element['Daterange'] +':</b> '
+      if (element['Reg1'] != "") {
+        var r1 = document.createElement('region-tag')
+        r1.setAttribute('reg', element['Reg1'])
+        obj.appendChild(r1)
+        obj.innerHTML += ' '
+      }
+      if (element['Reg2'] != "") {
+        var r2 = document.createElement('region-tag')
+        r2.setAttribute('reg', element['Reg2'])
+        obj.appendChild(r2)
+        obj.innerHTML += ' '
+      }
+      if (element['Reg3'] != "") {
+        var r3 = document.createElement('region-tag')
+        r3.setAttribute('reg', element['Reg3'])
+        obj.appendChild(r3)
+      }
+      datediv.appendChild(obj)
+    });
   }
 
   function csvToObjects(csv) {
