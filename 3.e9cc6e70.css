@@ -22,3 +22,17 @@ a.svelte-1pkbe26 {
 a.svelte-1pkbe26:visited {
   color:#fff
 }
+
+button.svelte-1pkbe26 {
+  color:#fff;
+  padding:10px;
+  display:block;
+  background-color:var(--nav-color);
+  border-radius:10px 10px 0 0;
+  border:1px solid transparent;
+  border-bottom:none;
+  font-size:18px
+}
+button.svelte-1pkbe26:visited {
+  color:#fff
+}

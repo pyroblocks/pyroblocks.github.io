@@ -17,6 +17,10 @@ button.svelte-6wsccd:active {
     transform: scale(.95)
 }
 
+.current.regionbutton:active {
+    transform: scale(.95)
+}
+
 .number.svelte-6wsccd {
     background: #181818;
 }
@@ -45,6 +49,11 @@ button.svelte-6wsccd:not(.prev) {
 }
 
 .current.number.svelte-6wsccd {
+    background: #FF6914;
+    transition: .2s
+}
+
+.current.regionbutton {
     background: #FF6914;
     transition: .2s
 }
