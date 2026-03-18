@@ -68,7 +68,10 @@ table.svelte-l969s8.svelte-l969s8 {
   width:100%;
   border-collapse:separate;
   border-spacing:0;
-  table-layout:fixed
+  table-layout:fixed;
+  border:1px #FF6914 solid;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
 }
 .table-icon {
   max-width:24px;
@@ -105,5 +108,10 @@ table.svelte-l969s8.svelte-l969s8 {
   }
   th.svelte-l969s8.svelte-l969s8:last-child {
     border-top-right-radius:20px
+  }
+
+  table.svelte-l969s8.svelte-l969s8 {
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
   }
 }
