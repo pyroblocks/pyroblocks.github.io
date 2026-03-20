@@ -229,7 +229,7 @@ button,
   color:#fff
 }
 
-button:not(.svelte-1pkbe26, dropdown-button), .button {
+button:not(.svelte-1pkbe26, .dropdown-button, .dropdown-buttonSELECT), .button {
   background:var(--standard-gradient);
   border-radius:10px;
   color:#fff;
