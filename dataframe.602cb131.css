@@ -64,7 +64,7 @@ th.svelte-l969s8.svelte-l969s8:first-child {
 th.svelte-l969s8.svelte-l969s8:last-child {
   border-top-right-radius:10px
 }
-table.svelte-l969s8.svelte-l969s8 {
+table.svelte-l969s8.svelte-l969s8:not(.multi) {
   width:100%;
   border-collapse:separate;
   border-spacing:0;
@@ -73,6 +73,16 @@ table.svelte-l969s8.svelte-l969s8 {
   border-top-left-radius:10px;
   border-top-right-radius:10px;
 }
+
+table.svelte-l969s8.svelte-l969s8.multi {
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:fixed;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+
 .table-icon {
   max-width:24px;
   max-height:24px;
