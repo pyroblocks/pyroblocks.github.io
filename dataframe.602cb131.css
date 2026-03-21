@@ -120,7 +120,12 @@ table.svelte-l969s8.svelte-l969s8.multi {
     border-top-right-radius:20px
   }
 
-  table.svelte-l969s8.svelte-l969s8 {
+  table.svelte-l969s8.svelte-l969s8:not(.multi) {
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+  }
+
+  table.svelte-l969s8.svelte-l969s8.multi {
     border-top-left-radius:20px;
     border-top-right-radius:20px;
   }
