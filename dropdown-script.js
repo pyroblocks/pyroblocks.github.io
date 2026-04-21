@@ -253,7 +253,7 @@ sheetObjects.forEach((element,index) =>{
     //console.log(element)
     teamcolor = dullcolor[element["Reg"]]
     logo_link = "/src/logos/" + element["Team"] + ".webp"
-    logo_link = logo_link.replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "")
+    logo_link = logo_link.replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "").replaceAll(":", "")
     teams.push(element["Team"])
     regions.push(element["Reg"])
     players.push(element["team"].replace("|",",").replace("|",","))
@@ -345,7 +345,7 @@ function selectTeam(num,teamname) {
         logo=document.getElementById("teamlogo1")
         //console.log(logo)
         logo_link = "/src/logos/" + teamname + ".webp"
-        logo_link = logo_link.replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "")
+        logo_link = logo_link.replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "").replaceAll(":", "")
         logo.setAttribute('src',logo_link)
         player=document.getElementById('players1')
         player.innerText = players[teams.indexOf(teamname)]

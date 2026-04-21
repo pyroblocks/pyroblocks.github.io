@@ -1543,7 +1543,7 @@
   sheetObjects.forEach((element,index) =>{
     //console.log(element)
     //console.log(tRows[index].children)
-    tlink = element['Team'].replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "")
+    tlink = element['Team'].replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "").replaceAll(":", "")
     tRows[index].children[0].innerHTML = `<img class="table-icon" src="/src/logos/${tlink}.webp" alt="">&nbsp; ${element['Team']}`
     cols.forEach((el,ind) =>{
       tRows[index].children[ind+1].innerHTML = `&nbsp;${element[el]}`
