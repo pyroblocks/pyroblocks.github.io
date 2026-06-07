@@ -552,6 +552,8 @@
     margin: auto;
     width: 70%;
     height: 70%;
+    aspect-ratio:1/1;
+    padding-left:0px;
 }
 
 .pc-icon {
@@ -939,15 +941,26 @@
     border-color: var(--accent)
 }
 
-@media(max-width:350px) {
+@media(max-width:375px) {
+    .stat.cut2 {
+        display:none
+    }
     .stat.cut3 {
         display:none
     }
 }
 
 @media(max-width:450px) {
-    .stat.cut2 {
-        display:none
+    .stat {
+        padding-top:9px !important;
+    }
+    
+    .stat .v {
+        font-size: 12px !important;
+    }
+
+    .stat .k {
+        font-size: 7px !important;
     }
 
 }
