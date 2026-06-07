@@ -680,7 +680,7 @@ function showResult() {
         <div class="sc-total-value">${overall.toFixed(0)}</div>
       </div>
       <div class="sc-foot">
-      <div class="made">Game by <a href="https://twitter.com/Pyroblockx">Pyro</a> and <a href="https://twitter.com/will_a_rinooo">will</div>
+      <div class="made">Game by <a href="https://twitter.com/Pyroblockx">Pyro</a> and <a href="https://twitter.com/will_a_rinooo">will</a></div>
       </div>
     </div>
     <div class="bottom-actions">
