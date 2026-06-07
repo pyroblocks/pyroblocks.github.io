@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EMVZ7S86H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2EMVZ7S86H');
+    </script>
+
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="/src/favicon.png">
+    <meta property="og:title" content="165">
+    <meta property="og:description"
+        content="Build the perfect RLCS all-time team to see if you can get 165 points and the perfect season">
+    <meta name="description"
+        content="Build the perfect RLCS all-time team to see if you can get 165 points and the perfect season">
+    <meta name="viewport" content="initial-scale=1" />
+    <meta name="theme-color" content="#FF6914">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="application-name" content="Pyroblocks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://pyroblocks.github.io/src/[IMAGENAME].png">
+    <meta property="og:image" content="https://pyroblocks.github.io/src/[IMAGENAME].png">
+    <meta property="article:publisher" content="https://pyroblocks.github.io">
+    <meta property="article:author" content="Pyroblocks">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://pyroblocks.github.io/projects/165">
+
+
+    <link href="/0.72908fb6.css" rel="stylesheet">
+    <link href="/8.7a932175.css" rel="stylesheet">
+    <link href="/Pagination.a69edf7a.css" rel="stylesheet">
+    <link href="/dataframe.602cb131.css" rel="stylesheet">
+    <link href="/165.css" rel="stylesheet">
+    <title>165</title><!-- HEAD_svelte-h4fcos_START --><!-- HEAD_svelte-h4fcos_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover" cz-shortcut-listen="true">
+    <div style="display: contents">
+        <div class="centerpiece svelte-jl8vmr">
+            <header class="topnav svelte-jl8vmr" text-align="center">
+                <div class="topnav-upper svelte-jl8vmr">
+                    <header>
+                        <h1><a href="https://pyroblocks.github.io" style="vertical-align: middle"
+                                class="whitelink">Pyroblocks</a></h1>
+                    </header>
+                    <div class="topnav-options svelte-jl8vmr">
+                        <div class="notext"><a class="social notext svelte-jl8vmr"
+                                href="https://twitter.com/Pyroblockx"><img height="45" width="54.68px"
+                                    src="/src/twitter.svg" alt="Twitter"></a>
+                            <a class="social notext svelte-jl8vmr" href="https://www.youtube.com/@Pyroblocks"><img
+                                    height="45" width="63.86px" src="/src/yt.svg" alt="YouTube"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topnav-separator svelte-jl8vmr"></div>
+                <div class="topnav-highlight"></div>
+            </header>
+            </header>
+            <main>
+                <div class="wrap">
+                    <div class="topbar">
+                        <div class="brand">
+                            <div class="logo">165</div>
+                            <div class="round-pill">Round <b id="round-num">1</b>/3</div>
+                        </div>
+                        <button class="icon-btn icon-only" id="howto-btn" title="How to play"
+                            aria-label="How to play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7v.5"></path>
+                                <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"></circle>
+                            </svg></button>
+                    </div>
+                    <div class="context-row show" id="context-row">
+                        <div class="tag-row" id="tags"><span class="tag team" id="tag-team">REG</span><span
+                                class="tag year" id="tag-year">SZN</span></div>
+                        <div class="rerolls" id="rerolls">
+                            <button class="icon-btn" id="rr-season"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M21 12a9 9 0 1 1-3-6.7L21 8"></path>
+                                    <path d="M21 3v5h-5"></path>
+                                </svg>Season</button>
+                        </div>
+                    </div>
+                    <div id="game" style="display: grid">
+                        <div class="left-col">
+                            <section id="spin-view" style="display:flex">
+                                <div class="spin-head">DRAFT THE PERFECT RLCS TEAM</div>
+                                <div class="spin-sub">Build an <b>RLCS</b> lineup that gets 165 points. Roll an RLCS
+                                    season
+                                    +
+                                    region, draft one player onto your roster, and repeat for each starting spot.</div>
+                                <div class="reels">
+                                    <div class="reel team" id="reel-team">
+                                        <div class="label">REGION</div>
+                                        <div class="val" id="rv-team">?</div>
+                                        <div class="cap">NA/EU</div>
+                                    </div>
+                                    <div class="reel year" id="reel-year">
+                                        <div class="label">SEASON</div>
+                                        <div class="val" id="rv-year">?</div>
+                                        <div class="cap">S1-2026</div>
+                                    </div>
+                                </div>
+                                <button class="spin-btn" id="spin-btn">ROLL</button>
+                            </section>
+                            <section id="draft-view" style="display:none">
+                                <div class="controls">
+                                    <input class="search" id="search" placeholder="Search…">
+                                    <select class="sortsel" id="sort">
+                                        <option value="gpg">GPG</option>
+                                        <option value="apg">APG</option>
+                                        <option value="sapg">SAPG</option>
+                                        <option value="shpg">SHPG</option>
+                                    </select>
+                                </div>
+                                <div class="avail">
+                                    <span id="avail-count">13 players available</span>
+                                    <span class="place-hint" id="place-hint" style="display:none">Click a field slot to
+                                        place</span>
+                                </div>
+                                <div class="pool" id="pool">
+                                </div>
+                        </div>
+                        </section>
+                        <div class="right-col">
+                            <div class="field" id="field">
+                                <div class="pool" id="pool">
+                                </div>
+                            </div>
+                            <div class="banner idle" id="banner">Roll, then draft a player onto your roster.</div>
+                        </div>
+                    </div>
+                    <div id="roster-bar" class="active">
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">QB</div>
+                            <div class="rb-lab">QB</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">RB</div>
+                            <div class="rb-lab">RB</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">RB</div>
+                            <div class="rb-lab">RB</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">WR</div>
+                            <div class="rb-lab">WR</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">WR</div>
+                            <div class="rb-lab">WR</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">TE</div>
+                            <div class="rb-lab">TE</div>
+                        </div>
+                        <div class="rb-chip">
+                            <div class="rb-circle empty">FLX</div>
+                            <div class="rb-lab">FLX</div>
+                        </div>
+                    </div>
+                    <section id="result-screen" style="display: none;"></section>
+                    <section id="share-screen" style="display: none;"></section>
+                </div>
+                <div id="pos-sheet">
+                    <div class="sheet-backdrop" id="sheet-backdrop"></div>
+                    <div class="sheet-drawer">
+                        <div class="sheet-head"><span id="sheet-title"></span><button id="sheet-close">×</button></div>
+                        <div class="sheet-body" id="sheet-body"></div>
+                    </div>
+                </div>
+                <div class="overlay" id="howto">
+                    <div class="modal">
+                        <button class="modal-close" id="howto-close">×</button>
+                        <h2>How to Play</h2>
+                        <p class="lead">The objective of <b style="color:var(--accent)">165</b> is to draft an
+                            <b>RLCS</b> team capable of a perfect 165 point season. You are picking real
+                            players’ real seasons. The goal is the best-performing, most well-rounded roster
+                            possible. Success is decided by a non‑linear engine that grades your three players against
+                            every player at their position in their era.
+                        </p>
+                        <h3>1. The Roll</h3>
+                        <p>Each round, a slot machine assigns a random RLCS season (S1–2026) and either NA or EU. Draft
+                            the best
+                            available player into an open slot. Three rounds, one per roster spot.</p>
+                        <h3>2. The Roster</h3>
+                        <p>Three players total. On desktop, drag a placed player to
+                            another eligible slot to rearrange; on mobile, tap a player on the roster bar to move it.
+                        </p>
+                        <h3>3. The Skips</h3>
+                        <p>One Season re‑roll for the entire game.</p>
+                        <h3>4. Scoring</h3>
+                        <ul>
+                            <li><b>Era-relative rating (0–100):</b> Each player is scored by their <b>online-only</b> statistical
+                                performance per
+                                game versus other players <b>in their own era</b>, so a S1 pro competes
+                                fairly with a 2026 one. All three starters are weighted into the rating, <b>though
+                                    better players are weighted more then worse ones</b>. However, no single
+                                position can carry the team to <b style="color:var(--accent)">165</b>.</li>
+                                <li><b>All-around performance</b>: Relative statistical performance is important among <b>all stats, not just goals</b>.</li>
+                            <li><b>Non‑linear curve:</b> Points rise with steep diminishing returns. Going undefeated is
+                                the hardest stretch by far.</li>
+                        </ul>
+                        <h3>5. Grades</h3>
+                        <div class="grade-grid">
+                            <div><b>S</b>: The Perfect Season</div>
+                            <div><b>C</b>: Low-Level LAN Team</div>
+                            <div><b>A+</b>: Dynasty Roster</div>
+                            <div><b>C-</b>: LAN Spot Contender</div>
+                            <div><b>A</b>: LAN Champion</div>
+                            <div><b>D+</b>: Regional Top 8</div>
+                            <div><b>A-</b>: Regional #1 Seed</div>
+                            <div><b>D</b>: Regional Top 8 Contender</div>
+                            <div><b>B+</b>: LAN Contender</div>
+                            <div><b>D-</b>: Regional Regular</div>
+                            <div><b>B</b>: Regional Contender</div>
+                            <div><b>E+</b>: Consistent Regional Qualifier</div>
+                            <div><b>B-</b>: Regional Top 4</div>
+                            <div><b>E</b>: Regional Top 12</div>
+                            <div><b>C+</b>: Major Regular</div>
+                            <div><b>E-</b>: Rebuilding Roster</div>
+                            <div></div>
+                            <div><b>F</b>: Bubble Team</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+</body>
+<script src="/165.js"></script>
+
+</html>
