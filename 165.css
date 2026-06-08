@@ -303,6 +303,16 @@
     margin: 0 auto;
 }
 
+.btn-build-again.export {
+    padding-top: 4px; padding-bottom: 4px; border-radius:5px; background:var(--panel); border: 2px solid #3a3a3a;
+}
+
+.btn-build-again.export:hover {
+    box-shadow: none;
+    transform: none;
+    border-color: #ffae66
+}
+
 .btn-build-again:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 22px rgba(255, 51, 0, 0.28)
@@ -823,7 +833,7 @@
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(2, 5, 16, .78);
+    background: rgba(9, 9, 9, .78);
     backdrop-filter: blur(4px);
     z-index: 50;
     display: none;
@@ -1706,7 +1716,6 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    border-top: 1px solid var(--line)
 }
 
 .sc-foot .made {
@@ -1747,4 +1756,10 @@
     .sc-actions {
         padding: 0 6px
     }
+}
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
 }

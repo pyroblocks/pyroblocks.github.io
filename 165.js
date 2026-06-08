@@ -671,7 +671,9 @@ function showResult() {
         <div style="padding-top: 3px;"><div class="pc-name">${p.n}</div><div class="pc-sub">${subtext}</div></div><div class="pc-stats">${statsHTML(p)}</div></div></div>`;
     }).join("");
     rs.innerHTML = `
-    <div class="share-hint">Screenshot the card below to share your fantasy team</div>
+    <div class="bottom-actions">
+      <button class="btn-build-again export" id="shareimg-btn" onclick="$('shareimg').classList.add('open');">Click to export an image of your team below</button>
+    </div>
     <div class="share-card" id="share-card">
       <div class="sc-head">
         <div class="sc-ava">
@@ -695,7 +697,20 @@ function showResult() {
     <div class="bottom-actions">
       <button class="btn-build-again" id="b-again">Build Another</button>
     </div>`;
-    $("b-again").onclick = startGame;
+    $("b-again").onclick = () => {document.querySelector("#exportcanvas").remove(); startGame()}
+        window.html2canvas(document.querySelector("#share-card"),{
+            backgroundColor: null, scale:2}).then(canvas => {
+                canvas.toBlob((blob) => {
+                        const newImg = document.createElement("img")
+                        newImg.id = 'exportcanvas'
+                        const url = URL.createObjectURL(blob)
+                        newImg.src = url;
+                        newImg.style.width = '75%'
+                        newImg.style.display = 'block'
+                        newImg.style.margin = 'auto'
+                        document.querySelector("#shareimg-modal").appendChild(newImg) 
+                } )
+            })
     window.scrollTo(0, 0);
 }
 function initials(n) { return n.split(/[\s.'-]+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase(); }
@@ -712,6 +727,8 @@ $("sheet-close").onclick = () => closeSheet(false); $("sheet-backdrop").onclick 
 $("howto-btn").onclick = () => $("howto").classList.add("open");
 $("howto-close").onclick = () => $("howto").classList.remove("open");
 $("howto").onclick = e => { if (e.target === $("howto")) $("howto").classList.remove("open"); };
+$("shareimg-close").onclick = () => $("shareimg").classList.remove("open");
+$("shareimg").onclick = e => { if (e.target === $("shareimg")) $("shareimg").classList.remove("open");};
 
 const POS_FILL = { QB: "var(--qb)", RB: "var(--rb)", WR: "var(--wr)", TE: "var(--te)" };
 function slotPosLabel(id) { return id.replace(/[12]/, ""); }
