@@ -8,13 +8,32 @@
     --muted: #9b9b9b;
     --dim: #d8d8d8;
     --accent: #ffae66;
-    --qb: #66b863;
-    --rb: #7CFF71;
-    --wr: #00D7FF;
+    --qb: #c55f5f;
+    --rb: #ffae66;
+    --wr: #fff171;
+    --qbdark: #c55f5f66;
+    --rbdark: #ffae6666;
+    --wrdark: #fff17166;
     --te: #FF7A00;
     --field: #0a1838;
     --field2: #0c1c40;
     --chalk: rgba(255, 255, 255, .14);
+}
+
+p1 {
+    color: var(--qb)
+}
+p2 {
+    color: var(--rb)
+}
+p3 {
+    color: var(--wr)
+}
+
+.pcard.empty.shelig {
+    box-shadow: 0 0px 22px rgba(197, 95, 95, 0.5);
+    border-color: #c55f5f !important;
+    border-style: solid;
 }
 
 .wrap {
@@ -45,7 +64,7 @@
     border-radius: 11px;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, rgb(197, 95, 95), #ffae66);
+    background: linear-gradient(135deg, #c55f5f, #ffae66);
     font-size: 14px;
     color: #03121a;
     letter-spacing: -.5px;
@@ -83,10 +102,6 @@
     white-space: nowrap !important
 }
 
-.icon-btn:hover:not(:disabled) {
-    border-color: #ffae66 !important;
-}
-
 .icon-btn:disabled {
     opacity: .3;
     cursor: not-allowed
@@ -117,7 +132,21 @@
 
 #rr-season,
 #rr-season:hover:not(:disabled) {
-    color: #ffae66
+    color: #c55f5f
+}
+
+#rr-season:hover:not(:disabled) {
+    border-color: #c55f5f !important;
+
+}
+
+#rr-team, #rr-team:hover:not(:disabled) {
+color: #ffae66
+}
+
+#rr-team:hover:not(:disabled) {
+    border-color: #ffae66 !important;
+
 }
 
 .context-row {
@@ -437,11 +466,11 @@
 }
 
 .fbtn {
-    padding: 7px 13px;
-    border-radius: 9px;
-    background: var(--panel);
+    padding: 7px 13px !important;
+    border-radius: 9px !important;
+    background: var(--panel) !important;
     border: 1px solid var(--line2);
-    color: var(--muted);
+    color: var(--muted) !important;
     font-weight: 600;
     font-size: 13px;
     cursor: pointer;
@@ -453,9 +482,9 @@
 }
 
 .fbtn.active {
-    background: var(--accent);
-    color: #03121a;
-    border-color: var(--accent)
+    background: var(--accent) !important;
+    color: #03121a !important;
+    border-color: var(--accent) !important
 }
 
 .search {
@@ -1166,9 +1195,10 @@
 
 .pcard.empty:hover {
     border-style: solid;
-    border-color: var(--accent);
+    border-color: var(--accent) !important;
     cursor: pointer;
-    background: rgba(255, 51, 0, .07)
+    background: rgba(255, 51, 0, .07);
+    box-shadow: 0 0px 22px rgba(255, 174, 102,0.5);
 }
 
 .slot .sl {
