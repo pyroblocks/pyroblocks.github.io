@@ -546,535 +546,61 @@ fetch(sheetURL)
 .then((response) => response.text())
 .then((csvText) => handleResponse(csvText));
 
-
-function handleResponse(csvText) {
-let sheetObjects = csvToObjects(csvText);
-// sheetObjects is now an Array of Objects
-let top16 = sheetObjects.slice(0,20);
-//console.log(top16)
-timestamp=top16[0]["datetime "] + "m ET"
-timestamp = timestamp.replace("|",",")
-
-var rbox_get = Array.from(document.getElementsByClassName("ratingbox"));
-var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
-var tickmark_get = Array.from(document.getElementsByClassName("tickmark"));
-var rtext_get = Array.from(document.getElementsByClassName("ratingtext"));
-var rteam_get = Array.from(document.getElementsByClassName("ratingteam"));
-var timestamp_get = Array.from(document.getElementsByClassName("sheet_timestamp"))[0];
-tickmark_get[0].innerHTML = String(lowDict)
-tickmark_get[1].innerHTML = String(lowDict)
-tickmark_get[2].innerHTML = String(lowDict+twoInterval)
-tickmark_get[3].innerHTML = String(lowDict+twoInterval)
-timestamp_get.innerText = timestamp
-top16.forEach((element, index) =>{
-  //console.log(element)
-  players=element["team"].replace("|",",").replace("|",",")
-  place_str=element["RLCS 2026 - Top Teams by RAE Rating "]
-  rating = element["Rating"]
-  region = element["Reg"]
-  team = element['Team']
-  def_barlength = (parseInt(element["Rating"])-covered)*slope
-  def_y=65*(parseInt(place_str.slice(0,-1))-1)+15
-  //console.log(`${place_str} ${team}: ${rating} | Bar Length: ${def_barlength} | Default y: ${def_y}`)
-rbox_get[index*2+1].setAttribute('fill',fullcolor[region]) // FULLCOLOR BOXES
-rbox_get[index*2+1].setAttribute('width',def_barlength) // FULLCOLOR BOXES
-rbox_get[index*2+1].children[0].innerHTML = "Rating: " + rating // FULLCOLOR BOXES
-
-rbox_get[index*2].setAttribute('fill',dullcolor[region]) // BG BOXES
-
-logo_link = "/src/logos_26worlds/" + team + ".webp"
-logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","")
-rteam_get[index].children[0].setAttribute('xlink:href',logo_link)
-rteam_get[index].children[0].children[0].innerHTML = team + " Logo"
-rteam_get[index].children[1].children[0].innerHTML=team
-rteam_get[index].children[1].children[1].innerHTML=players
-rteam_get[index].setAttribute("x",def_barlength+63)
-
-rtext_get[index].setAttribute("x",def_barlength+40)
-rtext_get[index].innerHTML = rating
-//console.log(rtext_get[index])
-rbox_widths[index*2]=889.5
-rbox_widths[index*2+1]=def_barlength
-rteam_x[index] = def_barlength+63
-rtext_x[index] = def_barlength+40
-
-team_ratings.push(rating)
-team_changes.push(element["chng"])
-if (team.includes("Non-Qualifying Team")){
-  rteam_get[index].children[1].children[0].setAttribute('y',16.5)
-}
-
-resizework += 1
-if(resizework==20){
-  
-  if (window.innerWidth < 768) {
-                        var colorboxes = Array.from(document.getElementsByClassName("colored"));
-                        //console.log(colorboxes);
-                        colorboxes.forEach((element, index) => element.height.baseVal.value = 24)
-
-                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
-                        //console.log(rboxes)
-                        rboxes.forEach((element, index) => {
-                            if (!element.classList.contains("colored")) {
-                                element.height.baseVal.value = 76
-                            }
-                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
-                            if(index <=39){
-                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor(index / 2))
-                        } else if(index <=79){
-                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-40) / 2))
-                        } else if (index <=119){
-                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-80) / 2))
-                        } else {
-                            element.y.baseVal.value = 15 + (15 + 76) * (Math.floor((index-120) / 2))                            
-                        }
-
-
-                        })
-
-                        var nums = Array.from(document.getElementsByClassName("num"));
-                        nums.forEach((element, index) => {
-                        if(index <=19){
-                            element.y.baseVal[0].value = 55 + (15 + 76) * (index)
-                        } else if(index <=39){
-                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-20)
-                        } else if(index <= 47){
-                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-40)
-                        } else {
-                            element.y.baseVal[0].value = 55 + (15 + 76) * (index-60)                            
-                        }
-                        });
-
-                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
-                        rteams.forEach((element, index) => {
-                            element.x.baseVal.value = 60
-                                if(index <=19){
-                                element.y.baseVal.value = 40 + (15 + 76) * (index)
-                            } else if(index <=39){
-                                element.y.baseVal.value = 40 + (15 + 76) * (index-20)
-                            } else if (index <=59){
-                                element.y.baseVal.value = 40 + (15 + 76) * (index-40)
-                            } else{
-                                element.y.baseVal.value = 40 + (15 + 76) * (index-60)                                
-                            }
-                            element.children[1].children[0].style.fontSize = "18px"
-                            element.children[1].children[1].style.fontSize = "12px"
-                        });
-
-                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
-                        rtexts.forEach((element, index) => {
-                            if(index <=19){
-                            element.y.baseVal[0].value = 27 + (15 + 76) * (index)
-                        } else if(index <=39){
-                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-20)
-                        } else if(index <=59){
-                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-40)
-                        } else {
-                            element.y.baseVal[0].value = 27 + (15 + 76) * (index-60)                            
-                        };
-                            element.style.fontSize = "20px"
-                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 45)
-                        });
-
-                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
-                        //console.log(ticklines)
-                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
-                        //console.log(fullbox)
-                        ticklines.forEach((element, index) => {
-                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
-                                element.width.baseVal.value = 0
-                            }
-                            else {
-                                if (element.classList.contains("thickline")) {
-                                    element.width.baseVal.value = 3
-                                }
-                                else {
-                                    element.width.baseVal.value = 1
-                                }
-                            }
-                            //console.log(fullbox*tickline_x[index]+50)
-                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
-                            element.height.baseVal.value = tickline_height + 26 * 40 / 2
-                        });
-
-                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
-                        //console.log(tickmark)
-                        tickmarks.forEach((element, index) => {
-                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
-                            if (element.y.baseVal[0].value != -5) {
-                                element.y.baseVal[0].value = tickline_height + 26 * 40 / 2 + 12
-                            }
-                        });
-
-                        var bline = Array.from(document.getElementsByClassName("bottomline"));
-                        //console.log(rboxes)
-                        bline.forEach((element, index) => {
-                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
-                            if (element.classList.contains("rankings-bg")) {
-                                element.height.baseVal.value = tickline_height + 26 * 40 / 2 + 35
-                            } else {
-                                element.y.baseVal.value = tickline_height + 26 * 40 / 2
-                            }
-                        });
-
-                    } else if (window.innerWidth < 1001) {
-
-                        var nums = Array.from(document.getElementsByClassName("num"));
-                        nums.forEach((element, index) => {
-                            element.y.baseVal[0].value = num_ypos[index]
-                        });
-
-
-                        var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
-                        //console.log(rboxes)
-                        rboxes.forEach((element, index) => {
-                            element.style.width = (rbox_widths[index] * (window.innerWidth / 888) - (rbox_widths[index] * (112 / 888))) + "px"
-                            element.height.baseVal.value = 50
-                            element.y.baseVal.value = rbox_ypos[index]
-                        });
-
-                        var bline = Array.from(document.getElementsByClassName("bottomline"));
-                        //console.log(rboxes)
-                        bline.forEach((element, index) => {
-                            element.style.width = (bottomline[index] * (window.innerWidth / 888) - (bottomline[index] * (112 / 888))) + "px"
-                            if (element.classList.contains("rankings-bg")) {
-                                element.height.baseVal.value = tickline_height + 35
-                            } else {
-                                element.y.baseVal.value = tickline_height
-                            }
-                        });
-
-                        var ticklines = Array.from(document.getElementsByClassName("tickline"));
-                        //console.log(ticklines)
-                        fullbox = parseFloat(rboxes[0].style.width, 100.000000)
-                        //console.log(fullbox)
-                        ticklines.forEach((element, index) => {
-                            if (window.innerWidth <= 300 && !element.classList.contains("thickline")) {
-                                element.width.baseVal.value = 0
-                            }
-                            else {
-                                if (element.classList.contains("thickline")) {
-                                    element.width.baseVal.value = 3
-                                }
-                                else {
-                                    element.width.baseVal.value = 1
-                                }
-                            }
-                            //console.log(fullbox*tickline_x[index]+50)
-                            element.height.baseVal.value = tickline_height
-                            element.x.baseVal.value = (fullbox * tickline_x[index] + 50)
-                        });
-
-                        var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
-                        //console.log(tickmark)
-                        tickmarks.forEach((element, index) => {
-                            element.x.baseVal[0].value = (tickmark_x[index] * fullbox + 50)
-                            if (element.y.baseVal[0].value != -5) {
-                                element.y.baseVal[0].value = tickline_height + 12;
-                            }
-                        });
-
-                        var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
-                        rtexts.forEach((element, index) => {
-                            element.y.baseVal[0].value = (rtext_y[index])
-                            element.style.fontSize = "20px"
-                            element.x.baseVal[0].value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 40)
-                        });
-
-                        var rteams = Array.from(document.getElementsByClassName("ratingteam"));
-                        rteams.forEach((element, index) => {
-                            element.x.baseVal.value = (rbox_widths[2 * index + 1] * (window.innerWidth / 888) - (rbox_widths[2 * index + 1] * (112 / 888)) + 63)
-                            element.y.baseVal.value = rteam_y[index]
-                            //console.log(element.getBoundingClientRect()['left'])
-                            //console.log(window.innerWidth)
-                            element.children[1].children[0].style.fontSize = "18px"
-                            element.children[1].children[1].style.fontSize = "12px"
-                        });
-
-
-
-                    }
-}
-})
-}
-
-
-oddsTable=[]
-const sheetNameTable = encodeURIComponent("Major LBs");
-const sheetURL1 = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetNameTable}`;
-
-
-fetch(sheetURL1)
-.then((response) => response.text())
-.then((csvText) => handleResponseTable(csvText));
-
-
-function handleResponseTable(csvText) {
-let sheetObjects = csvToObjects(csvText).slice(0,20);
-// sheetObjects is now an Array of Objects
-//console.log(sheetObjects)
-//console.log(top16[0])
-timestampTable=sheetObjects[0]["datetime"] + "m ET"
-timestampTable = timestampTable.replace("|",",")
-
-var tRows = Array.from(document.getElementsByClassName("tablerow"));
-//console.log(tRows)
-cols = ['1st', 'Top 2', 'Top 4', 'Top 6', 'Top 8', 'Top 12', 'Top 16', 'Top 18']
-sheetObjects.forEach((element,index) =>{
-  //console.log(element)
-  //console.log(tRows[index].children)
-  tRows[index].children[0].innerHTML = `<img class="table-icon" src="/src/logos_26worlds/${element['Team']}.webp" alt="">&nbsp; ${element['Team']}`
-  cols.forEach((el,ind) =>{
-    tRows[index].children[ind+1].innerHTML = `&nbsp;${element[el]}`
-  if (element[el] === ">99%" || element[el] === "✓") {
-    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,1)'
-  } else if (element[el] === "<1%" || element[el] === "-") {
-    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,0)'
-  } else {
-    tRows[index].children[ind+1].style = `background-color: rgba(239,47,47,${parseFloat(element[el])/100})`
-  }
-  })
-})
-var timestamp_get = Array.from(document.getElementsByClassName("table_timestamp"))[0];
-timestamp_get.innerText = timestampTable
-}
-
-function csvToObjects(csv) {
-const csvRows = csv.split("\n");
-const propertyNames = csvSplit(csvRows[0]);
-let objects = [];
-for (let i = 1, max = csvRows.length; i < max; i++) {
-  let thisObject = {};
-  let row = csvSplit(csvRows[i]);
-  for (let j = 0, max = row.length; j < max; j++) {
-    thisObject[propertyNames[j]] = row[j];
-    // BELOW 4 LINES WILL CONVERT DATES IN THE "ENROLLED" COLUMN TO JS DATE OBJECTS
-    // if (propertyNames[j] === "Enrolled") {
-    //   thisObject[propertyNames[j]] = new Date(row[j]);
-    // } else {
-    //   thisObject[propertyNames[j]] = row[j];
-    // }
-  }
-  objects.push(thisObject);
-}
-return objects;
-}
-
-function csvSplit(row) {
-return row.split(",").map((val) => val.substring(1, val.length - 1));
-}
-
 var num_ypos_get = Array.from(document.getElementsByClassName("num"));
-  var num_ypos = []
-  num_ypos_get.forEach((element) => num_ypos.push(element.y.baseVal[0].value));
-  //console.log(num_ypos)
+      var num_ypos = []
+      num_ypos_get.forEach((element) => num_ypos.push(element.y.baseVal[0].value));
+      //console.log(num_ypos)
 
-  var rbox_widths_get = Array.from(document.getElementsByClassName("ratingbox"));
-  var rbox_widths = []
-  var rbox_ypos = []
-  rbox_widths_get.forEach((element) => rbox_widths.push(element.getAttribute("width")));
-  rbox_widths_get.forEach((element) => rbox_ypos.push(element.y.baseVal.value));
+      var rbox_widths_get = Array.from(document.getElementsByClassName("ratingbox"));
+      var rbox_widths = []
+      var rbox_ypos = []
+      rbox_widths_get.forEach((element) => rbox_widths.push(element.getAttribute("width")));
+      rbox_widths_get.forEach((element) => rbox_ypos.push(element.y.baseVal.value));
 
-  var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
-  var bottomline = []
-  bottomline_get.forEach((element) => bottomline.push(element.getBoundingClientRect()['width']));
-  //console.log(bottomline)
+      var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
+      var bottomline = []
+      bottomline_get.forEach((element) => bottomline.push(element.getBoundingClientRect()['width']));
+      //console.log(bottomline)
 
-  var tickline_x_get = Array.from(document.getElementsByClassName("tickline"));
-  var tickline_x = []
-  var tickline_height = tickline_x_get[0].height.baseVal.value
-  tickline_x_get.forEach((element) => tickline_x.push((element.x.baseVal.value-50)/rbox_widths[0]));
-  //console.log(tickline_height)
+      var tickline_x_get = Array.from(document.getElementsByClassName("tickline"));
+      var tickline_x = []
+      var tickline_height = tickline_x_get[0].height.baseVal.value
+      tickline_x_get.forEach((element) => tickline_x.push((element.x.baseVal.value - 50) / rbox_widths[0]));
+      //console.log(tickline_height)
 
-  var tickmark_x_get = Array.from(document.getElementsByClassName("tickmark"));
-  var tickmark_x = []
-  tickmark_x_get.forEach((element) => tickmark_x.push((element.x.baseVal[0].value-50)/rbox_widths[0]));
-  //console.log(tickmark_x)
+      var tickmark_x_get = Array.from(document.getElementsByClassName("tickmark"));
+      var tickmark_x = []
+      tickmark_x_get.forEach((element) => tickmark_x.push((element.x.baseVal[0].value - 50) / rbox_widths[0]));
+      //console.log(tickmark_x)
 
-  var rtext_x_get = Array.from(document.getElementsByClassName("ratingtext"));
-  var rtext_x = []
-  var rtext_y = []
-  rtext_x_get.forEach((element) => rtext_x.push(element.getAttribute("x")));
-  rtext_x_get.forEach((element) => rtext_y.push(element.y.baseVal[0].value));
-  //console.log(rtext_y)
+      var rtext_x_get = Array.from(document.getElementsByClassName("ratingtext"));
+      var rtext_x = []
+      var rtext_y = []
+      rtext_x_get.forEach((element) => rtext_x.push(element.getAttribute("x")));
+      rtext_x_get.forEach((element) => rtext_y.push(element.y.baseVal[0].value));
+      //console.log(rtext_y)
 
-  var rteam_x_get = Array.from(document.getElementsByClassName("ratingteam"));
-  var rteam_x = []
-  var rteam_y = []
-  rteam_x_get.forEach((element) => rteam_x.push(element.getAttribute("x")));
-  rteam_x_get.forEach((element) => rteam_y.push(element.y.baseVal.value));
+      var rteam_x_get = Array.from(document.getElementsByClassName("ratingteam"));
+      var rteam_x = []
+      var rteam_y = []
+      rteam_x_get.forEach((element) => rteam_x.push(element.getAttribute("x")));
+      rteam_x_get.forEach((element) => rteam_y.push(element.y.baseVal.value));
 
-  window.addEventListener("load", (event) => {
+function barResize() {
 
-    if (window.innerWidth < 768) {
-    var colorboxes = Array.from(document.getElementsByClassName("colored"));
-    //console.log(colorboxes);
-    colorboxes.forEach((element,index) => element.height.baseVal.value = 24)
-
-    var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
-    //console.log(rboxes)
-    rboxes.forEach((element,index) => {
-      if (!element.classList.contains("colored")) {
-      element.height.baseVal.value = 76
-    }
-    element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
-    element.y.baseVal.value = 15+(15+76)*(Math.floor(index/2))
-
-
-  })
-  
-  var nums = Array.from(document.getElementsByClassName("num"));
-  nums.forEach((element,index) =>{
-    element.y.baseVal[0].value = 55+(15+76)*(index)
-  });
-
-  var rteams = Array.from(document.getElementsByClassName("ratingteam"));
-    rteams.forEach((element,index) => {
-    element.x.baseVal.value = 60
-    element.y.baseVal.value = 40+(15+76)*(index)
-    element.children[1].children[0].style.fontSize="18px"
-    element.children[1].children[1].style.fontSize="12px"
-    });
-
-    var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
-    rtexts.forEach((element,index) => {
-    element.y.baseVal[0].value = 27+(15+76)*(index)
-    element.style.fontSize="20px"
-    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+45)
-    });
-
-    var ticklines = Array.from(document.getElementsByClassName("tickline"));
-    //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
-    //console.log(fullbox)
-    ticklines.forEach((element,index) => {
-      if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
-        element.width.baseVal.value = 0
-      }
-      else {
-        if (element.classList.contains("thickline")) {
-        element.width.baseVal.value = 3
-        }
-        else {
-          element.width.baseVal.value = 1
-        }
-      }
-    //console.log(fullbox*tickline_x[index]+50)
-    element.x.baseVal.value = (fullbox*tickline_x[index]+50)
-    element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2
-  });
-
-    var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
-    //console.log(tickmark)
-    tickmarks.forEach((element,index) => {
-      element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50)
-      if (element.y.baseVal[0].value!=-5) {
-        element.y.baseVal[0].value = tickline_height+26*(rbox_widths.length)/2 + 12
-      }
-    });
-
-    var bline = Array.from(document.getElementsByClassName("bottomline"));
-    //console.log(rboxes)
-    bline.forEach((element,index) => {
-      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
-      if (element.classList.contains("rankings-bg")){
-        element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2 + 35
-      } else{
-        element.y.baseVal.value = tickline_height+26*(rbox_widths.length)/2
-      }
-  });
-
-  } else if (window.innerWidth < 1001) {
-
-    var nums = Array.from(document.getElementsByClassName("num"));
-    nums.forEach((element,index) =>{
-    element.y.baseVal[0].value = num_ypos[index]
-  });
-
-
-    var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
-    //console.log(rboxes)
-    rboxes.forEach((element,index) => {
-      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
-      element.height.baseVal.value = 50
-      element.y.baseVal.value = rbox_ypos[index]
-  });
-
-    var bline = Array.from(document.getElementsByClassName("bottomline"));
-    //console.log(rboxes)
-    bline.forEach((element,index) => {
-      element.setAttribute('width', (bottomline[index]*(window.innerWidth/888)-(bottomline[index]*(112/888))) + "px")
-      if (element.classList.contains("rankings-bg")){
-        element.height.baseVal.value = tickline_height+35
-      } else{
-        element.y.baseVal.value = tickline_height
-      }
-  });
-
-    var ticklines = Array.from(document.getElementsByClassName("tickline"));
-    //console.log(ticklines)
-    fullbox = parseFloat(rboxes[0].getAttribute('width'),100.000000)
-    //console.log(fullbox)
-    ticklines.forEach((element,index) => {
-      if(window.innerWidth <=300 && !element.classList.contains("thickline")) {
-        element.width.baseVal.value = 0
-      }
-      else {
-        if (element.classList.contains("thickline")) {
-        element.width.baseVal.value = 3
-        }
-        else {
-          element.width.baseVal.value = 1
-        }
-      }
-    //console.log(fullbox*tickline_x[index]+50)
-    element.height.baseVal.value = tickline_height
-    element.x.baseVal.value = (fullbox*tickline_x[index]+50)
-  });
-
-    var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
-    //console.log(tickmark)
-    tickmarks.forEach((element,index) => {
-      element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50)
-      if (element.y.baseVal[0].value!=-5) {
-      element.y.baseVal[0].value = tickline_height+12;
-      }
-    });
-
-    var rtexts = Array.from(document.getElementsByClassName("ratingtext"));
-    rtexts.forEach((element,index) => {
-      element.y.baseVal[0].value = (rtext_y[index])
-      element.style.fontSize="20px"
-    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+40)
-    });
-
-    var rteams = Array.from(document.getElementsByClassName("ratingteam"));
-    rteams.forEach((element,index) => {
-    element.x.baseVal.value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+63)
-    element.y.baseVal.value = rteam_y[index]
-    //console.log(element.getBoundingClientRect()['left'])
-    //console.log(window.innerWidth)
-    element.children[1].children[0].style.fontSize="18px"
-    element.children[1].children[1].style.fontSize="12px"
-    });
-
-
-
-  }});
-
-
-window.onresize = function(event){
   if (window.innerWidth < 768) {
     var colorboxes = Array.from(document.getElementsByClassName("colored"));
-    //console.log(colorboxes);
     colorboxes.forEach((element,index) => element.height.baseVal.value = 24)
 
+    max_width = rbox_widths[1]
     var rboxes = Array.from(document.getElementsByClassName("ratingbox"));
     rboxes.forEach((element,index) => {
       if (!element.classList.contains("colored")) {
       element.height.baseVal.value = 76
+      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
+    } else {
+      element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888)))/(max_width/rbox_widths[0]) + "px")
     }
-    element.setAttribute('width', (rbox_widths[index]*(window.innerWidth/888)-(rbox_widths[index]*(112/888))) + "px")
     element.y.baseVal.value = 15+(15+76)*(Math.floor(index/2))
 
 
@@ -1097,7 +623,7 @@ window.onresize = function(event){
     rtexts.forEach((element,index) => {
     element.y.baseVal[0].value = 27+(15+76)*(index)
     element.style.fontSize="20px"
-    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+45)
+    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888)))/(max_width/rbox_widths[0])+45
     });
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
@@ -1118,14 +644,14 @@ window.onresize = function(event){
         }
       }
     //console.log(fullbox*tickline_x[index]+50)
-    element.x.baseVal.value = (fullbox*tickline_x[index]+50)
+    element.x.baseVal.value = (fullbox*tickline_x[index]/(max_width/rbox_widths[0])+50)
     element.height.baseVal.value = tickline_height+26*(rbox_widths.length)/2
   });
 
     var tickmarks = Array.from(document.getElementsByClassName("tickmark"));
     //console.log(tickmark)
     tickmarks.forEach((element,index) => {
-      element.x.baseVal[0].value = (tickmark_x[index]*fullbox+50)
+      element.x.baseVal[0].value = (tickmark_x[index]*fullbox/(max_width/rbox_widths[0])+50)
       if (element.y.baseVal[0].value!=-5) {
         element.y.baseVal[0].value = tickline_height+26*(rbox_widths.length)/2 + 12
       }
@@ -1273,7 +799,146 @@ window.onresize = function(event){
   });
 
   }
+
 }
+
+
+      window.addEventListener("load", (event) => {barResize()
+      });
+
+
+      window.onresize = function (event) {barResize()}
+
+
+
+function handleResponse(csvText) {
+let sheetObjects = csvToObjects(csvText);
+// sheetObjects is now an Array of Objects
+let top16 = sheetObjects.slice(0,20);
+//console.log(top16)
+timestamp=top16[0]["datetime "] + "m ET"
+timestamp = timestamp.replace("|",",")
+
+var rbox_get = Array.from(document.getElementsByClassName("ratingbox"));
+var bottomline_get = Array.from(document.getElementsByClassName("bottomline"));
+var tickmark_get = Array.from(document.getElementsByClassName("tickmark"));
+var rtext_get = Array.from(document.getElementsByClassName("ratingtext"));
+var rteam_get = Array.from(document.getElementsByClassName("ratingteam"));
+var timestamp_get = Array.from(document.getElementsByClassName("sheet_timestamp"))[0];
+tickmark_get[0].innerHTML = String(lowDict)
+tickmark_get[1].innerHTML = String(lowDict)
+tickmark_get[2].innerHTML = String(lowDict+twoInterval)
+tickmark_get[3].innerHTML = String(lowDict+twoInterval)
+timestamp_get.innerText = timestamp
+top16.forEach((element, index) =>{
+  //console.log(element)
+  players=element["team"].replace("|",",").replace("|",",")
+  place_str=element["RLCS 2026 - Top Teams by RAE Rating "]
+  rating = element["Rating"]
+  region = element["Reg"]
+  team = element['Team']
+  def_barlength = (parseInt(element["Rating"])-covered)*slope
+  def_y=65*(parseInt(place_str.slice(0,-1))-1)+15
+  //console.log(`${place_str} ${team}: ${rating} | Bar Length: ${def_barlength} | Default y: ${def_y}`)
+rbox_get[index*2+1].setAttribute('fill',fullcolor[region]) // FULLCOLOR BOXES
+rbox_get[index*2+1].setAttribute('width',def_barlength) // FULLCOLOR BOXES
+rbox_get[index*2+1].children[0].innerHTML = "Rating: " + rating // FULLCOLOR BOXES
+
+rbox_get[index*2].setAttribute('fill',dullcolor[region]) // BG BOXES
+
+logo_link = "/src/logos_26worlds/" + team + ".webp"
+logo_link = logo_link.replace("%","").replace("!","").replace("'","").replace("+","")
+rteam_get[index].children[0].setAttribute('xlink:href',logo_link)
+rteam_get[index].children[0].children[0].innerHTML = team + " Logo"
+rteam_get[index].children[1].children[0].innerHTML=team
+rteam_get[index].children[1].children[1].innerHTML=players
+rteam_get[index].setAttribute("x",def_barlength+63)
+
+rtext_get[index].setAttribute("x",def_barlength+40)
+rtext_get[index].innerHTML = rating
+//console.log(rtext_get[index])
+rbox_widths[index*2]=889.5
+rbox_widths[index*2+1]=def_barlength
+rteam_x[index] = def_barlength+63
+rtext_x[index] = def_barlength+40
+
+team_ratings.push(rating)
+team_changes.push(element["chng"])
+if (team.includes("Non-Qualifying Team")){
+  rteam_get[index].children[1].children[0].setAttribute('y',16.5)
+}
+
+resizework += 1
+if(resizework==20){barResize()}
+})
+}
+
+
+oddsTable=[]
+const sheetNameTable = encodeURIComponent("Major LBs");
+const sheetURL1 = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetNameTable}`;
+
+
+fetch(sheetURL1)
+.then((response) => response.text())
+.then((csvText) => handleResponseTable(csvText));
+
+
+function handleResponseTable(csvText) {
+let sheetObjects = csvToObjects(csvText).slice(0,20);
+// sheetObjects is now an Array of Objects
+//console.log(sheetObjects)
+//console.log(top16[0])
+timestampTable=sheetObjects[0]["datetime"] + "m ET"
+timestampTable = timestampTable.replace("|",",")
+
+var tRows = Array.from(document.getElementsByClassName("tablerow"));
+//console.log(tRows)
+cols = ['1st', 'Top 2', 'Top 4', 'Top 6', 'Top 8', 'Top 12', 'Top 16', 'Top 18']
+sheetObjects.forEach((element,index) =>{
+  //console.log(element)
+  //console.log(tRows[index].children)
+  tRows[index].children[0].innerHTML = `<img class="table-icon" src="/src/logos_26worlds/${element['Team']}.webp" alt="">&nbsp; ${element['Team']}`
+  cols.forEach((el,ind) =>{
+    tRows[index].children[ind+1].innerHTML = `&nbsp;${element[el]}`
+  if (element[el] === ">99%" || element[el] === "✓") {
+    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,1)'
+  } else if (element[el] === "<1%" || element[el] === "-") {
+    tRows[index].children[ind+1].style = 'background-color: rgba(239,47,47,0)'
+  } else {
+    tRows[index].children[ind+1].style = `background-color: rgba(239,47,47,${parseFloat(element[el])/100})`
+  }
+  })
+})
+var timestamp_get = Array.from(document.getElementsByClassName("table_timestamp"))[0];
+timestamp_get.innerText = timestampTable
+}
+
+function csvToObjects(csv) {
+const csvRows = csv.split("\n");
+const propertyNames = csvSplit(csvRows[0]);
+let objects = [];
+for (let i = 1, max = csvRows.length; i < max; i++) {
+  let thisObject = {};
+  let row = csvSplit(csvRows[i]);
+  for (let j = 0, max = row.length; j < max; j++) {
+    thisObject[propertyNames[j]] = row[j];
+    // BELOW 4 LINES WILL CONVERT DATES IN THE "ENROLLED" COLUMN TO JS DATE OBJECTS
+    // if (propertyNames[j] === "Enrolled") {
+    //   thisObject[propertyNames[j]] = new Date(row[j]);
+    // } else {
+    //   thisObject[propertyNames[j]] = row[j];
+    // }
+  }
+  objects.push(thisObject);
+}
+return objects;
+}
+
+function csvSplit(row) {
+return row.split(",").map((val) => val.substring(1, val.length - 1));
+}
+
   </script>
     <script>
       function sortTable(n, _id) {
@@ -1340,6 +1005,7 @@ window.onresize = function(event){
           table.children[0].children[0].children[n].innerHTML += "<img src='/src/simplearrow.svg' style='vertical-align: middle; transform: rotate(0deg);' alt='sorting arrow'>"
         }
       }
+      window.onresize = function (event) {barResize()}
     </script>
 	</body>
 </html>
