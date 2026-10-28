@@ -5,7 +5,9 @@
     gap: 15px;
     border-radius: 10px;
     background: #111111;
-    padding: 16px
+    padding: 16px;
+    zoom: 0.5;
+    transition: 0.2s;
 }
 
 button.svelte-6wsccd {
@@ -34,6 +36,18 @@ button.svelte-6wsccd:active {
 .prev.svelte-6wsccd,
 .next.svelte-6wsccd {
     display: none
+}
+
+@media screen and (min-width: 536px) {
+    .pagination-wrapper.svelte-6wsccd {
+        zoom: 0.8;
+    }
+}
+
+@media screen and (min-width: 672px) {
+    .pagination-wrapper.svelte-6wsccd {
+        zoom: 1;
+    }
 }
 
 @media screen and (min-width: 1000px) {
