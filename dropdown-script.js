@@ -44,7 +44,7 @@
     "SSA":"#B7B7B7"
   }
   // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
-const sheetId = "1CQ93vuh9o8jxtY72Yfasz4IZ9EZ7uEDhTqVyoFyTvas";
+const sheetId = "1yKvJGhLjZmrq97HyjfO-KEhHl_2Yqer8Owf8n9miAMs";
 // sheetName is the name of the TAB in your spreadsheet
 const sheetName = encodeURIComponent("Top Teams");
 const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
@@ -291,8 +291,8 @@ sheetObjects.forEach((element,index) =>{
     if (tname.includes("'")) {
         tname = tname.slice(0,tname.indexOf("'")) + "\\" + tname.slice(tname.indexOf("'"))
     }
-    dropdownstr1 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(1,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(1,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg></a>\n`
-    dropdownstr2 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(2,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(2,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"]}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg>\n`
+    dropdownstr1 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(1,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(1,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"].replaceAll("？","?").replaceAll("·",".")}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg></a>\n`
+    dropdownstr2 += `<rect x="5" width="calc(100% - 10px)" height="40" y="${5+45*index}" rx="5" fill="${teamcolor}" class="ratingteam" onclick="selectTeam(2,'${tname}')"></rect>\n<svg x="12.5" y="${45*index}" class="ratingteam" width="calc(100% - 12.5px)" onclick="selectTeam(2,'${tname}')"><style>rect{cursor:pointer;}</style><style>image{cursor:pointer;}</style><style>g{cursor:pointer;}</style><image y="10" width="30" height="30" xlink:href="${logo_link}" loading=lazy><desc> Logo</desc></image><g font-family="SUSE, sans-serif" fill="#ffffff"><text x="37.5" y="${yval}" dominant-baseline="hanging" font-weight="600" font-size="${default_teamnamesize}">${element["Team"].replaceAll("？","?").replaceAll("·",".")}</text><text x="37.5" y="43.5" dominant-baseline="ideographic" font-weight="300" font-size="${default_playerlistsize}">${element["team"].replace("|",",").replace("|",",")}</text></g></svg>\n`
 })
 dropdowns_get[0].children[1].innerHTML = dropdownstr1
 dropdowns_get[1].children[1].innerHTML = dropdownstr2 // COMMENT LOC 2
@@ -339,7 +339,7 @@ function selectTeam(num,teamname) {
         namebox = document.getElementById("dropdown1")
         //console.log(namebox)
         document.getElementById('score1').classList.remove('hide')
-        namebox.innerText = teamname
+        namebox.innerText = teamname.replaceAll("？","?").replaceAll("·",".")
         namebox.style.backgroundColor = fullcolor[regions[teams.indexOf(teamname)]]
         namebox.style.fontSize = fsize
         logo=document.getElementById("teamlogo1")
@@ -362,7 +362,7 @@ function selectTeam(num,teamname) {
         namebox = document.getElementById("dropdown2")
         //console.log(namebox)
         document.getElementById('score2').classList.remove('hide')
-        namebox.innerText = teamname
+        namebox.innerText = teamname.replaceAll("？","?").replaceAll("·",".")
         namebox.style.backgroundColor = fullcolor[regions[teams.indexOf(teamname)]]
         namebox.style.fontSize = fsize
         logo=document.getElementById("teamlogo2")
@@ -414,7 +414,7 @@ searchInput1.addEventListener("input", (e) => {
     svgelements1 = dropdown1_get.children[1].children
     const value = e.target.value.toLowerCase()
     teams.forEach((element,index) => {
-        const isVisible = ((element.toLowerCase()).indexOf(value)!== -1)
+        const isVisible = ((element.toLowerCase().replaceAll("？","?").replaceAll("·",".")).indexOf(value)!== -1)
         //console.log(element,value)
         svgelements1[2*index].classList.toggle('hide',!isVisible)
         svgelements1[2*index+1].classList.toggle('hide',!isVisible)
@@ -447,7 +447,7 @@ searchInput2.addEventListener("input", (e) => {
     svgelements2 = dropdown2_get.children[1].children
     const value = e.target.value.toLowerCase()
     teams.forEach((element,index) => {
-        const isVisible = ((element.toLowerCase()).indexOf(value)!== -1)
+        const isVisible = ((element.toLowerCase().replaceAll("？","?").replaceAll("·",".")).indexOf(value)!== -1)
         //console.log(element,value)
         svgelements2[2*index].classList.toggle('hide',!isVisible)
         svgelements2[2*index+1].classList.toggle('hide',!isVisible)

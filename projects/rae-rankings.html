@@ -399,12 +399,12 @@
     "SSA":"#262626E0"  
   }
   // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
-const sheetId = "1CQ93vuh9o8jxtY72Yfasz4IZ9EZ7uEDhTqVyoFyTvas";
+const sheetId = "1yKvJGhLjZmrq97HyjfO-KEhHl_2Yqer8Owf8n9miAMs";
 // sheetName is the name of the TAB in your spreadsheet
 const sheetName = encodeURIComponent("Top Teams");
 const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
 const lowDict = 1250
-const threeInterval = 350
+const threeInterval = 375
 const slope = 42.5712145367/(threeInterval/5)
 const covered = (lowDict-(threeInterval*0.6))-((71.0737791641982-50)/slope)
 
@@ -450,7 +450,7 @@ function barResize() {
     rtexts.forEach((element,index) => {
     element.y.baseVal[0].value = 27+(15+76)*(index)
     element.style.fontSize="20px"
-    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+45)/(max_width/rbox_widths[0])-18
+    element.x.baseVal[0].value = (rbox_widths[2*index+1]*(window.innerWidth/888)-(rbox_widths[2*index+1]*(112/888))+45)/(max_width/rbox_widths[0])-23
     });
 
     var ticklines = Array.from(document.getElementsByClassName("tickline"));
@@ -697,10 +697,11 @@ timestamp_get.innerText = timestamp
 top100.forEach((element, index) =>{
   //console.log(element)
   players=element["team"].replace("|",",").replace("|",",")
-  place_str=element["RLCS 2026 - Top Teams by RAE Rating "]
+  place_str=element["RLCS Club Championship - RAE Rankings "]
   rating = element["Rating"]
   region = element["Reg"]
   team = element['Team']
+  region_rank = element["ra"]
   def_barlength = (parseInt(element["Rating"])-covered)*slope
   def_y=65*(parseInt(place_str.slice(0,-1))-1)+15
   //console.log(`${place_str} ${team}: ${rating} | Bar Length: ${def_barlength} | Default y: ${def_y}`)
@@ -714,7 +715,7 @@ logo_link = "/src/logos/" + team + ".webp"
 logo_link = logo_link.replaceAll("%","p").replaceAll("!","").replaceAll("'","").replaceAll("+","").replaceAll(/\?/g, "").replaceAll(":", "")
 rteam_get[index].children[0].setAttribute('xlink:href',logo_link)
 rteam_get[index].children[0].children[0].innerHTML = team + " Logo"
-rteam_get[index].children[1].children[0].innerHTML=team
+rteam_get[index].children[1].children[0].innerHTML=`<tspan>${team.replaceAll("？","?").replaceAll("·",".")} </tspan><tspan font-size="12px" fill="#BBBBBB" font-style="italic" y=14>${region} ${region_rank}</tspan>`
 rteam_get[index].children[1].children[1].innerHTML=players
 rteam_get[index].setAttribute("x",def_barlength+62)
 
